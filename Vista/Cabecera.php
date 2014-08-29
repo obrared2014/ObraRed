@@ -1,3 +1,4 @@
+<!-- Cabecera -->
 <div class="container-fluid">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -11,7 +12,6 @@
             </button>
             <a href="?sec=Inicio"><img src="img/LOGO_3.png" width="120px"/></a><!-- logo ObraRed -->
         </div>
-
         <!-- Recoge los enlaces de navegación, formularios y otros contenidos para alternar -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -26,9 +26,15 @@
                     </ul>
                 </li>
                 <li id="contacto_logout" style="display:block"><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>
-                <li id="presupuesto" style="display:none"><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-shopping-cart"></b>&nbsp;Crear Presupuesto</a></li>
-                <li id="buscar" style="display:none"><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
-                <li id="AgregaMateriales" style="display:none"><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
+                <li class="dropdown" style="display:none" id="drop_presupuesto">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-star"></b>&nbsp;Presupuesto <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li id="presupuesto" style="display:none"><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-shopping-cart"></b>&nbsp;Crear Presupuesto</a></li>
+                        <li id="buscar" style="display:none"><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
+                        <li id="AgregaMateriales" style="display:none"><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
+                    </ul>
+                </li>
+                
             </ul>
             <?php
                 session_start();
@@ -42,6 +48,7 @@
                         <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
+                <script type="text/javascript">document.getElementById("drop_presupuesto").style.display="block";</script>
                 <script type="text/javascript">document.getElementById("presupuesto").style.display="block";</script>
                 <script type="text/javascript">document.getElementById("servicios_logout").style.display="none";</script>
                 <script type="text/javascript">document.getElementById("servicios_login").style.display="block";</script>

@@ -16,7 +16,7 @@ if($error==1){
             if($row = mysql_fetch_array($result)){
                 $id = $row['id_persona'];
                 $datos = mysql_query("call datos_usuario($id)");
-                if($row = mysql_fetch_array($datos)){ 
+                if($row = mysql_fetch_array($datos)){
                     session_start();
                     $_SESSION['id_persona'] = $id;
                     $_SESSION['rut'] = $row['rut'];
@@ -27,7 +27,7 @@ if($error==1){
                     $_SESSION['actividad'] = $row ['actividad'];
                     $_SESSION['telefono'] = $row ['telefono'];
                     $_SESSION['direccion'] = $row ['direccion'];
-                    header("Location:../Index.php?sec=Inicio");
+                    header("Location:../Index.php?sec=Presupuesto");
                 }
             }
             else{
