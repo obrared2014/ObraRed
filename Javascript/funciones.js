@@ -1,3 +1,29 @@
+function buscarMateriales(){
+	
+	$tipo = $("#tipo_material1").val();
+	
+	if($tipo === ""){
+			$("#material1").html("<option value=''>Seleccione Material</option>");
+	}else {
+		$.ajax({
+			dataType: "json",
+			data: {"tipo_material": $tipo},
+			url:   'Materiales/buscar.php',
+			type:  'post',
+			beforeSend: function(){
+				//Lo que se hace antes de enviar el formulario
+				},
+			success: function(respuesta){
+				//lo que se si el destino devuelve algo
+				$("#material1").html(respuesta.html);
+			},
+			error:	function(xhr,err){ 
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+			}
+		});
+	}
+        
+}   
 //Cubicar Medidas
 function cubicarMedidas(){
     
