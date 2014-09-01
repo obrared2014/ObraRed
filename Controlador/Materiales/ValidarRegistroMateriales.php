@@ -1,11 +1,12 @@
 <?php
-    include("../conexion.php");
+    include("../../Modelo/conexion.php");
+ 
     if($error==1){
         if($con){
             if(!$database){
                echo '<script languaje="javascript">
                     alert("Error al seleccionar la Base de Datos");
-                    location.href = "../Index.php?sec=Agrega_Materiales";
+                    location.href = "../../index.php?sec=Agrega_Materiales";
                 </script>';        
             }else{
                 
@@ -37,14 +38,14 @@
 
                       echo ' <script languaje="javascript">
                             alert("Error al ingresar los datos");
-                            location.href = "../Index.php?sec=Agrega_Materiales";
+                            location.href = "../../index.php?sec=Agrega_Materiales";
                         </script>';
 
                 }else{
                         echo '
                         <script languaje="javascript">
                             alert("Se ingresaron los datos con exito");
-                            location.href = "../Index.php?sec=Agrega_Materiales";
+                            location.href = "../../index.php?sec=Agrega_Materiales";
                         </script>';
                 }    
             }
@@ -54,7 +55,7 @@
     }else{
         echo '<script languaje="javascript">
             alert("Error al intentar conectar a la base de datos!");
-            location.href = "../Index.php?sec=Agrega_Materiales";        
+            location.href = "../../index.php?sec=Agrega_Materiales";        
         </script>';   
     }
 
