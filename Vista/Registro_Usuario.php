@@ -7,7 +7,7 @@
                 <h3 class="modal-title" id="myModalLabel">Registro Usuario</h3>
             </div>
             <div class="modal-body">
-                <form class="form" action="ValidarRegistro.php" name="registro_usuario" method="POST">
+                <form class="form" action="./Controlador/ValidarRegistro.php" name="registro_usuario" method="POST">
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
@@ -49,7 +49,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="telefono" placeholder="Fono" required="true">
+                                <input type="text" class="form-control" name="telefono" placeholder="Fono" required="true" onkeypress="ValidaSoloNumeros()">
                             </div>
                         </div>
                         <div class="col-lg-4">

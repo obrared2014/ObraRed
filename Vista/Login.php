@@ -19,17 +19,6 @@
                     </div>
                 </div>
             </form>
-            <?php
-                if(isset($_SESSION['nombre'])){
-            ?>
-            <div class="form-group" style="display: block">
-                <div class="alert alert-warning">
-                    <a href="#" class="alert-link">Favor Ingrese su usuario y contraseña para completar la actualizacion de datos</a>
-                </div>
-            </div>
-            <?php
-                }
-            ?>
         </div>
     </div>
 </div>

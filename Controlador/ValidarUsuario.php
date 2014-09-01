@@ -5,8 +5,7 @@ if($error==1){
     if($con){
         if(!$database){
            echo '<script languaje="javascript">
-                alert("Error al seleccionar la Base de Datos");
-                location.href = "../Index.php?sec=Login";
+                location.href = "../Index.php?sec=Codigo&id_Codigo=01";
             </script>';        
         }else{
             $usuario = $_POST["user"];
@@ -32,17 +31,18 @@ if($error==1){
             }
             else{
                 echo '<script languaje="javascript">
-                        location.href = "../Index.php?sec=Error&id_error=01";
+                        location.href = "../Index.php?sec=Codigo&id_Codigo=02";
                     </script>';
             }       
         }
     }else{
-            echo '<script language="javascript">alert("Error al tratar de conectar con MySQL");</script>'; 
+            echo '<script language="javascript">
+                    location.href = "../Index.php?sec=Codigo&id_Codigo=01";
+               </script>'; 
     }//conexion a la base de datos con errores filtrados.  
 }else{
     echo '<script languaje="javascript">
-        alert("Error al intentar conectar a la base de datos!");
-        location.href = "../Index.php?sec=Inicio";
+        location.href = "../Index.php?sec=Codigo&id_Codigo=01";
     </script>';   
 }
 mysql_free_result($result);

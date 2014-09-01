@@ -1,24 +1,14 @@
 <!-- Perfil de usuario -->
-<script src="bootstrap/js/jQueryRut.js"></script>
-<script src="bootstrap/js/jquery.Rut.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-    $('#rut').Rut({ 
-        on_error: function(){ alert('Favor ingrese un rut correcto'); } 
-    });
-    $("#content > ul").tabs();
-    });
-</script>
 <div class="col-lg-12">
     <div class="page-header">
         <h1>Actualización de datos</h1>
     </div>
-    <form class="form" action="ValidarActualizacion.php" name="perfil_usuario" method="POST">
+    <form class="form" action="./Controlador/ValidarActualizacion.php" name="perfil_usuario" method="POST">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="id" name="id" required="true" value="<?php echo $_SESSION['id_persona'] ?>" style="display: none">
-                    <input type="text" class="form-control" id="rut" name="rut" required="true" value="<?php echo $_SESSION['rut'] ?>">
+                    <input type="text" class="form-control" id="rut" name="rut" required="true" maxlength="12" value="<?php echo $_SESSION['rut'] ?>">
                 </div>
             </div>
         </div>
@@ -47,7 +37,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="telefono" required="true" value="<?php echo $_SESSION['telefono'] ?>">
+                    <input type="text" class="form-control" name="telefono" required="true" onkeypress="ValidaSoloNumeros()" value="<?php echo $_SESSION['telefono'] ?>">
                 </div>
             </div>
         </div>
