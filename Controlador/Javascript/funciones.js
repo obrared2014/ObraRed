@@ -58,29 +58,42 @@ function ingresaMedidas(){
 //Fin Funciones para mostrar u ocultar divs
 //Validaciones
 function soloNumeros(evt){
-  var theEvent = evt || window.event;
-  var key = theEvent.keyCode || theEvent.which;
-  key = String.fromCharCode( key );
-  var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
-  }
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    var regex = /[0-9]|\./;
+    if( !regex.test(key) && theEvent.keyCode!='8' && theEvent.keyCode!='9'&& theEvent.keyCode!='46') {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+}
+
+function isNumeric(o){
+	//alert(o);
+	r=(/^\d+(\.\d{1,2})?$/.test(o));
+	//alert(r);
+	return r;
 }
 //Fin Validaciones
 function metrosCubicosRadier(){
 //    alert("queeeee");
+    var alto,ancho,largo,metrosCubicos,litros;
+    alto=document.getElementById("alto").value;
+    ancho=document.getElementById("ancho").value;
+    largo=document.getElementById("largo").value;
+    if(isNumeric(alto)&&isNumeric(ancho)&&isNumeric(largo)){
     var cemento=1;
     var arena=93;
     var ripio=160;
     var agua=27;
     
+    var precioCemento=5000;
+    var precioArena=16000;
+    var precioRipio=18000;
+    
     var mezcla;
     
-    var alto,ancho,largo,metrosCubicos,litros;
-    alto=document.getElementById("alto").value;
-    ancho=document.getElementById("ancho").value;
-    largo=document.getElementById("largo").value;
+
     metrosCubicos=alto*ancho*largo;
     if(document.getElementById("centimetros").checked===true){
         metrosCubicos=metrosCubicos/1000000;
@@ -88,19 +101,27 @@ function metrosCubicosRadier(){
     litros=metrosCubicos*1000;
     mezcla=litros/167;
     cemento=Math.round(cemento*mezcla);
-    arena=Math.round(arena*mezcla);
-    ripio=Math.round(ripio*mezcla);
+    arena=Math.round((arena*mezcla));
+    ripio=Math.round((ripio*mezcla));
     agua=Math.round(agua*mezcla);
     
-    if(litros<1000){
-        alert("Lo mínimo que puede calcular es 1 m3 (metro cúbico)");
-    }else{
+    arena=arena/1000;
+    ripio=ripio/1000;
+    
+    precioCemento=Math.round(precioCemento*cemento);
+    precioArena=Math.round(precioArena*arena);
+    precioRipio=Math.round(precioRipio*ripio);
+    
         alert("Metros Cúbicos = "+metrosCubicos);   
         alert("Litros = "+litros); 
-        alert("Cemento de 42,5 Kilos= "+cemento); 
-        alert("Arena = "+arena/1000+" m3"); 
-        alert("Ripio = "+ripio/1000+" m3"); 
+        alert("Cemento de 42,5 Kilos= "+cemento+", por un total de $"+precioCemento+".- pesos."); 
+        alert("Arena = "+arena+"m3, por un total de $"+precioArena+".- pesos." ); 
+        alert("Ripio = "+ripio+" m3, por un total de $"+precioRipio+".- pesos."); 
         alert("Agua = "+agua+" Litros"); 
+        alert("El presupuesto aproximado es de $"+(precioArena+precioCemento+precioRipio)+".- pesos."); 
+
+    }else{
+        alert("Debe ingresar sólo valores numéricos");
     }
     
 }
