@@ -8,7 +8,7 @@ function buscarMateriales(){
 		$.ajax({
 			dataType: "json",
 			data: {"tipo_material": $tipo},
-			url:   'Materiales/buscar.php',
+			url:   'Controlador/Materiales/buscar.php',
 			type:  'post',
 			beforeSend: function(){
 				//Lo que se hace antes de enviar el formulario
@@ -98,9 +98,9 @@ function metrosCubicosRadier(){
         alert("Metros Cúbicos = "+metrosCubicos);   
         alert("Litros = "+litros); 
         alert("Cemento de 42,5 Kilos= "+cemento); 
-        alert("Arena = "+arena); 
-        alert("Ripio = "+ripio); 
-        alert("Agua = "+agua); 
+        alert("Arena = "+arena/1000+" m3"); 
+        alert("Ripio = "+ripio/1000+" m3"); 
+        alert("Agua = "+agua+" Litros"); 
     }
     
 }

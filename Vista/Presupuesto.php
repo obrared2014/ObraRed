@@ -67,7 +67,7 @@
                         <select name="tipo_material1" id="tipo_material1" class="form-control">
                             <option value="">Seleccione Tipo</option>
                                 <?php
-                                    require_once("Materiales/funciones.php");
+                                    require_once("Controlador/Materiales/funciones.php");
                                     $tipo = devuelveTipoMaterial();
 
                                     foreach($tipo as $indice => $registro){

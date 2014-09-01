@@ -1,6 +1,5 @@
 <?php
 require_once("funciones.php");
-
 if(isset($_POST['tipo_material'])){
 	
 	$material = devuelveMateriales($_POST['tipo_material']);

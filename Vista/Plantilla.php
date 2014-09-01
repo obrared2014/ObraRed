@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="bootstrap/css/footer.css"/>
         <script src="bootstrap/js/jQuery.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="javascript/funciones.js"></script>
+        <script type="text/javascript" src="Controlador/Javascript/funciones.js"></script>
     </head>
     <body>
         <div class="container">
