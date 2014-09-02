@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <form class="form" action="Controlador/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
+            <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
                 <div class="row">
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
@@ -14,7 +14,7 @@
                             <select name="tipo_material" id="tipo_material" class="form-control" required="true">
                                 <option value="">Seleccione Tipo</option>
                                     <?php
-                                    include("Controlador/Materiales/funciones.php");
+                                    include_once './Modelo/Materiales/consultasMateriales.php';
                                     $tipo = devuelveTipoMaterial();
 
                                     foreach($tipo as $indice => $registro){

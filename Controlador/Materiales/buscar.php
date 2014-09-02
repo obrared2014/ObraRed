@@ -1,5 +1,6 @@
 <?php
-require_once("funciones.php");
+//require_once("funciones.php");
+require_once("../../Modelo/Materiales/consultasMateriales.php");
 if(isset($_POST['tipo_material'])){
 	
 	$material = devuelveMateriales($_POST['tipo_material']);

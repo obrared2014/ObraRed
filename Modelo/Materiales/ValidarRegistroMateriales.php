@@ -1,5 +1,5 @@
 <?php
-    include("../../Modelo/conexion.php");
+    include("../Conexion.php");
  
     if($error==1){
         if($con){
@@ -34,19 +34,17 @@
                 $precio3 = $_POST["precio3"];                
                 
                 $insertar = mysql_query("call insertar_material('$tipo','$material','$descripcion_material','$alto','$ancho','$largo','$precio1','$precio2','$precio3')");
-                
-                if(!$insertar){
-
-                      echo ' <script languaje="javascript">
-                            alert("Error al ingresar los datos");
-                            window.history.back();
-                            //location.href = "../../index.php?sec=Agrega_Materiales";
-                        </script>';
-
-                }else{
+                $id= mysql_result($insertar, 0);
+//                if($insertar>0){
+                if($id){ 
                         echo '
                         <script languaje="javascript">
                             alert("Se ingresaron los datos con exito");
+                            location.href = "../../index.php?sec=Agrega_Materiales";
+                        </script>';  
+                }else{
+                      echo ' <script languaje="javascript">
+                            alert("Error al ingresar los datos");
                             location.href = "../../index.php?sec=Agrega_Materiales";
                         </script>';
                 }                
