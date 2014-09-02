@@ -45,3 +45,7 @@
         </div><!-- fin carousel -->
     </div>
 </div>
+
+<br/>
+<h1>iniciar sesion y pinchar en link para que vean el pdf</h1>
+<a href="Vista/PDF.php">PDF</a>
