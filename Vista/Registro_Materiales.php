@@ -11,7 +11,7 @@
                     <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                         <div class="form-group">
-                            <select name="tipo_material" id="tipo_material" class="form-control" required="true">
+                            <select name="tipo_material" id="tipo_material" class="form-control" required="true" onchange="buscarMateriales();">
                                 <option value="">Seleccione Tipo</option>
                                     <?php
                                     include_once './Modelo/Materiales/consultasMateriales.php';
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                         <div class="form-group">
-                            <select name="material" id="material" class="form-control" required="true">
+                            <select name="material" id="material" class="form-control" required="true" onchange="buscarDetalles();">
                                 <option value="" >Seleccione Material</option>
                                 
                             </select>
@@ -137,8 +137,8 @@
 </script>
 <script>
     
-$("#tipo_material").on("change", buscarMateriales);
-$("#material").on("change", buscarDetalles);
+//$("#tipo_material").on("change", buscarMateriales);
+//$("#material").on("change", buscarDetalles);
 
 function buscarMateriales(){
 	
