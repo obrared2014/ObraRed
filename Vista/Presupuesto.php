@@ -6,7 +6,8 @@
         </div>
     </div>
     <div class="col-lg-12">
-        <form class="form-horizontal" action="Index.php?sec=Cotizacion" method="POST" name="form_presupuesto_medidas">
+        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas">
+            <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>">
             <div class="row">        
                 <div class="col-lg-3">
                     <div class="panel panel-default">
@@ -14,10 +15,10 @@
                         <div class="panel-body">
                             <select name="construccion" id="construccion" class="form-control">
                                 <option value="">Elija su Opción</option>
-                                <option value="1">Techo</option>
-                                <option value="2">Radier</option>
-                                <option value="3">Muro</option>
-                                <option value="4">Casa</option>                                
+                                <option value="Techo">Techo</option>
+                                <option value="Radier">Radier</option>
+                                <option value="Muro">Muro</option>
+                                <option value="Casa">Casa</option>                                
                             </select>
                         </div>
                     </div>    
@@ -34,8 +35,8 @@
                                       <option value="2">Metros</option>
                                 </select>-->
                                     Unidad de Medida<br>
-                                    <input type="radio" name="unidadMedida" id="centimetros" value="centimetros" onClick="activaCampos();" onChange="cambiaUm(this);">Centimetros<br>
-                                    <input type="radio" name="unidadMedida" id="metros"  value="metros" onClick="activaCampos();" onChange="cambiaUm(this);">Metros
+                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this);">Centimetros<br>
+                                    <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this);">Metros
                                 </div>                    
                                 <div class="col-lg-3"> 
                                     Alto<br>
@@ -70,15 +71,21 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select name="material1" id="material1" class="form-control">
+                                <select name="material1" id="material1" class="form-control" onchange="buscarMaterialesDetalles();">
                                     <option value="" >Seleccione Material</option>
                                 </select>
                             </div>  
+                            <div class="form-group">
+                                <select name="detalleMaterial1" id="detalleMaterial1" class="form-control">
+                                    <option value="" >Seleccione Detalle</option>
+                                </select>
+                            </div>                             
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">
+<!--                    <input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
+                    <input type="submit" class="btn btn-block btn-primary btn-large" value="Cotizar">
                 </div>
             </div>
         </form>

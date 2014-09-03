@@ -30,7 +30,7 @@ if($error==1){
                 }
             }
             else{
-                echo '<script languaje="javascript">
+                echo '<script language="javascript">
                         location.href = "../Index.php?sec=Codigo&id_Codigo=02";
                     </script>';
             }       

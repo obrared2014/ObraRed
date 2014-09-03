@@ -24,6 +24,32 @@ function buscarMateriales(){
 	}
         
 }   
+function buscarMaterialesDetalles(){
+	
+	$tipo = $("#material1").val();
+	
+	if($tipo === ""){
+			$("#detalleMaterial1").html("<option value=''>Seleccione Detalle</option>");
+	}else {
+		$.ajax({
+			dataType: "json",
+			data: {"material1": $tipo},
+			url:   'Controlador/Materiales/buscarDetalles.php',
+			type:  'post',
+			beforeSend: function(){
+				//Lo que se hace antes de enviar el formulario
+				},
+			success: function(respuesta){
+				//lo que se si el destino devuelve algo
+				$("#detalleMaterial1").html(respuesta.html);
+			},
+			error:	function(xhr,err){ 
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+			}
+		});
+	}
+        
+}  
 //Cubicar Medidas
 function cubicarMedidas(){
     
@@ -132,11 +158,11 @@ function activaCampos(){
     document.getElementById("largo").disabled=false;    
 }
 
-function cambiaUm(a){    
+function cambiaUm(a){   
     alto=document.getElementById("alto").value;
     ancho=document.getElementById("ancho").value;
     largo=document.getElementById("largo").value; 
-    if(a.value==="metros"){
+    if(a=="M"){
         document.getElementById("alto").value=alto/100;
         document.getElementById("ancho").value=ancho/100;
         document.getElementById("largo").value=largo/100;        
