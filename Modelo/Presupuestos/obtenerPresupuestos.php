@@ -39,26 +39,26 @@
                 if($row = mysql_fetch_array($datos)){
                     session_start();
                     $_SESSION['id_presupuesto'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idPersona'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['descripcion'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['fecha'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['alto'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['ancho'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['largo'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['metrosCubicos'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idRegion'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idCiudad'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idCemento'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idArena'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['idRipio'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['cantidadCemento'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['cantidadArena'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['cantidadRipio'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['totalCemento'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['totalArena'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['totalRipio'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['cantidadAgua'] = $row['id_presupuesto_radier'];
-//                    $_SESSION['totalPresupuesto'] = $row['id_presupuesto_radier'];
+                    $_SESSION['idPersona'] = $row['id_persona'];
+                    $_SESSION['descripcion'] = $row['descripcion_presupuesto'];
+                    $_SESSION['fecha'] = $row['fecha_presupuesto'];
+                    $_SESSION['alto'] = $row['alto'];
+                    $_SESSION['ancho'] = $row['ancho'];
+                    $_SESSION['largo'] = $row['largo'];
+                    $_SESSION['metrosCubicos'] = $row['metrosCubicos'];
+                    $_SESSION['idRegion'] = $row['id_region'];
+                    $_SESSION['idCiudad'] = $row['id_ciudad'];
+                    $_SESSION['idCemento'] = $row['id_cemento'];
+                    $_SESSION['idArena'] = $row['id_arena'];
+                    $_SESSION['idRipio'] = $row['id_ripio'];
+                    $_SESSION['cantidadCemento'] = $row['cantidad_cemento'];
+                    $_SESSION['cantidadArena'] = $row['cantidad_arena'];
+                    $_SESSION['cantidadRipio'] = $row['cantidad_ripio'];
+                    $_SESSION['totalCemento'] = $row['total_cemento'];
+                    $_SESSION['totalArena'] = $row['total_arena'];
+                    $_SESSION['totalRipio'] = $row['total_ripio'];
+                    $_SESSION['cantidadAgua'] = $row['cantidad_agua'];
+                    $_SESSION['totalPresupuesto'] = $row['total_presupuesto'];
                     header("Location:../../Index.php?sec=Cotizacion");
                 }
 //                if($insertar>0){
