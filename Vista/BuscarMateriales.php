@@ -41,7 +41,7 @@ loadDoc("k="+str,"Vista/proc3.php",function()
     <div class="panel panel-default">
         <div class="panel-heading">Busqueda </div>
         <div class="panel-body">
-            <form class="form" method="post" action="result.php"> 
+            <form class="form" method="post" action="Index.php?sec=ResBuscar"> 
                 <?php
                 $con = conexion();
                 $res = mysql_query("select * from regionm", $con);
