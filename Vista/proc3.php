@@ -21,7 +21,7 @@ if($k==='3')
         $nombre='nombre_materiales';
     }
 ?>
-<select id="comuna" name="comuna"  class="form-control" required="true"><!--cuando seleccionan comuna se ejecuta la funcion myFunction2() ubicada en el archivo index.php-->
+<select id="comuna" name="tipo_busqueda"  class="form-control" required="true"><!--cuando seleccionan comuna se ejecuta la funcion myFunction2() ubicada en el archivo index.php-->
 <option value="" class="form-control">Seleccione </option>
 <?php while($fila=mysql_fetch_array($res)){ ?>
  <option value="<?php echo $fila[$id]; ?>"  ><?php echo $fila[$nombre]; ?></option>
