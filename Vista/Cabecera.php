@@ -1,4 +1,5 @@
 <!-- Cabecera -->
+<?php session_start(); ?>
 <div class="container-fluid">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -37,7 +38,6 @@
                 
             </ul>
             <?php
-                session_start();
                 if(isset($_SESSION['nombre'])){
             ?>
             <ul class="nav navbar-nav navbar-right">

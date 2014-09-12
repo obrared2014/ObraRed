@@ -35,8 +35,8 @@
                                       <option value="2">Metros</option>
                                 </select>-->
                                     Unidad de Medida<br>
-                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this);">Centimetros<br>
-                                    <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this);">Metros
+                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);">Centimetros<br>
+                                    <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this.value);">Metros
                                 </div>                    
                                 <div class="col-lg-3"> 
                                     Alto<br>
