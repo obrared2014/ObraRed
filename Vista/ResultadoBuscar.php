@@ -11,10 +11,29 @@
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
       <script>
         <?php
+                  $id_region = $_POST['region'];
+                  $id_comuna = $_POST['comuna'];
+                  $id_local  = $_POST['nombre_local'];
+                  $eleccion  = $_POST['elegir'];
+                  $tipo      = $_POST['tipo_busqueda'];
+                  
+                $con = conexion();
+                
+                $res = mysql_query("select * from comuna where id_comuna=".$id_comuna."", $con);
+                while ($fila = mysql_fetch_array($res))
+                        
+                {
+                    
+                    $comuna =$fila['nombre'];
+                    $LatComuna=$fila['latComuna'];
+                    $LongComuna=$fila['longComuna']; 
+                }
+//                $LatComuna=  floatval($LatComuna1);
+//                $LongComuna=  floatval($LongComuna1);
  //*****************************************************************************          
-        $comuna='estacioncentral';
-        $LatComuna=-33.46260212728504;
-        $LongComuna= -70.70323389999999;
+//        $comuna='estacioncentral';
+//        $LatComuna=-33.46260212728504;
+//        $LongComuna= -70.70323389999999;
         $locales = array
        (
            array('local 1',-33.463707505445925,-70.70272964470519),
@@ -31,7 +50,14 @@ function initialize() {
     zoom: 13,
     center: <?php echo $comuna ?>
   }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+ var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+//var mapOptions = {
+//  zoom: 13,
+//  center: new google.maps.LatLng(<?php // echo $LatComuna ?>,<?php // echo $LongComuna ?>),
+//  mapTypeId: google.maps.MapTypeId.ROADMAP
+//};
+//map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
   
   
 <?php for ($i = 0; $i < count($locales); $i++) { ?>         
@@ -50,22 +76,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
               <div class="col-lg-6">
                   <h1>resultados</h1>
                   <?php
-                  $id_region = $_POST['region'];
-                  $id_comuna = $_POST['comuna'];
-                  $id_local  = $_POST['nombre_local'];
-                  $eleccion  = $_POST['elegir'];
-                  $tipo      = $_POST['tipo_busqueda'];
-                  
-                $con = conexion();
-                
+//                  $id_region = $_POST['region'];
+//                  $id_comuna = $_POST['comuna'];
+//                  $id_local  = $_POST['nombre_local'];
+//                  $eleccion  = $_POST['elegir'];
+//                  $tipo      = $_POST['tipo_busqueda'];
+//                  
+//                $con = conexion();
+echo '<h3>'.$LatComuna.'</h3><br>';
+echo '<h3>'.$LongComuna.'</h3><br>';
                 $res = mysql_query("select * from regionm where id_region=".$id_region."", $con);
                 while ($fila = mysql_fetch_array($res))
                 {
-                    echo 'id ='.$fila['id_region'].' region = '.$fila['nombre'].'<br>'; 
+                    echo 'id region ='.$fila['id_region'].' region = '.$fila['nombre'].'<br>'; 
                 }
                 
-                
-
                 $res = mysql_query("select * from comuna where id_comuna=".$id_comuna."", $con);
                 while ($fila = mysql_fetch_array($res))
                 {
@@ -76,14 +101,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 while ($fila = mysql_fetch_array($res))
                 {
                     echo 'id local ='.$fila['id_local'].' nombre local = '.$fila['nombre'].' <br>direccion = '.$fila['direccion'].'   '.$fila['latLocal'].''.$fila['lonLocal'].' <br>'; 
-                }  
-                  
-                  
-                  
-                  
-                
-                
-
+                }                
                   ?>
               </div>
               
