@@ -2,8 +2,11 @@ function buscarMateriales(){
 	
 	$tipo = $("#tipo_material1").val();
 	
-	if($tipo === ""){
+	if($tipo == ""){
 			$("#material1").html("<option value=''>Seleccione Material</option>");
+//                        $("#material1").val("");
+                        $("#material1").change();
+                        
 	}else {
 		$.ajax({
 			dataType: "json",
@@ -21,6 +24,7 @@ function buscarMateriales(){
 				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
 			}
 		});
+                $("#material1").change();
 	}
         
 }   
@@ -28,7 +32,7 @@ function buscarMaterialesDetalles(){
 	
 	$tipo = $("#material1").val();
 	
-	if($tipo === ""){
+	if($tipo == ""){
 			$("#detalleMaterial1").html("<option value=''>Seleccione Detalle</option>");
 	}else {
 		$.ajax({

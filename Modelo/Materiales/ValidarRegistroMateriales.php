@@ -1,6 +1,5 @@
 <?php
     include("../Conexion.php");
- 
     if($error==1){
         if($con){
             if(!$database){
@@ -75,7 +74,7 @@
         </script>';   
     }
 
-    mysql_free_result($result);
-    mysql_close();
+//    mysql_free_result($id);
+//    mysql_close();
 
 ?>
