@@ -1,103 +1,78 @@
 <!--Registro_Materiales.php-->
 <meta content="900" http-equiv="REFRESH"> </meta>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="row">
+        <div class="col-lg-12">
             <div class="page-header">
                 <h1>Registro de Materiales</h1>
             </div>
         </div>
+    </div>
+    <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
         <div class="row">
-            <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
-                <div class="row">
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <select name="tipo_material" id="tipo_material" class="form-control" required="true" onchange="buscarMateriales();">
-                                <option value="">Seleccione Tipo</option>
-                                    <?php
-                                    include_once './Modelo/Materiales/consultasMateriales.php';
-                                    $tipo = devuelveTipoMaterial();
-
-                                    foreach($tipo as $indice => $registro){
-                                            echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
-                                    }
-                                    ?>                                
-                                <option value="otro">Otro</option>
-                            </select>
-                           
-                            <br/>
-                            <input type="text" class="form-control" id="tipo_otro" name="tipo_otro" placeholder="Escriba Tipo" style="display: none">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <select name="material" id="material" class="form-control" required="true" onchange="buscarDetalles();">
-                                <option value="" >Seleccione Material</option>
-                                
-                            </select>
-                            <br/>
-                            <input type="text" class="form-control" id="material_otro" name="material_otro" placeholder="Escriba Material" style="display: none">
-                        </div>
-                    </div>                    
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-7">&nbsp;</div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <select name="tipo_material" id="tipo_material" class="form-control" required="true" onchange="buscarMateriales();">
+                        <option value="">Seleccione Tipo</option>
+                            <?php
+                                include_once './Modelo/Materiales/consultasMateriales.php';
+                                $tipo = devuelveTipoMaterial();
+                                foreach($tipo as $indice => $registro){
+                                    echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
+                                }
+                            ?>                                
+                        <option value="otro">Otro</option>
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="descripcion" placeholder="Descripción del Material" required="true">
-                        </div>
-                    </div>
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">&nbsp;</div>  
-                </div>                
-                <div class="row">
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="alto" placeholder="Alto" required="true">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="largo" placeholder="Largo" required="true">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="ancho" placeholder="Ancho" required="true">
-                        </div>
-                    </div>
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="tipo_otro" name="tipo_otro" placeholder="Escriba Tipo" style="display: none" />
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <select name="material" id="material" class="form-control" required="true" onchange="buscarDetalles();">
+                        <option value="" >Seleccione Material</option>
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="precio1" placeholder="Precio Referencial 1" required="true">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="precio2" placeholder="Precio Referencial 2">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="precio3" placeholder="Precio Referencial 3">
-                        </div>
-                    </div>
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">&nbsp;</div>
-                </div>                
-                <div class="row">
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1">&nbsp;</div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar">
-                        </div>
-                    </div>
-                    <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">&nbsp;</div>
-                </div>
-            </form>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="text" class="form-control form-group" id="material_otro" name="material_otro" placeholder="Escriba Material" style="display: none"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="text" class="form-control form-group" name="descripcion" placeholder="Descripción del Material" required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="alto" placeholder="Alto" required="true"/>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="largo" placeholder="Largo" required="true"/>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="ancho" placeholder="Ancho" required="true"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="precio1" placeholder="Precio Referencial 1" required="true"/>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="precio2" placeholder="Precio Referencial 2"/>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" class="form-control form-group" name="precio3" placeholder="Precio Referencial 3">
+            </div>
+        </div>                
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar"/>
+            </div>
+        </div>
+    </form>
 <script type="text/javascript">
    function selecciona_otro(){
        var valor=document.getElementById('tipo_material').value;
@@ -118,7 +93,8 @@
 //       alert(tipo_sel);
        if(tipo_sel==='otro'){
            if(document.getElementById('tipo_material').value==="otro"){
-              document.getElementById("material").disabled=true; 
+              //document.getElementById("material").disabled=true;
+              document.getElementById("material").style.display="none";
            }           
            document.getElementById("material_otro").style.display="block";
            document.getElementById("material_otro").required=true;

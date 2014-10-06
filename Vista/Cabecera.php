@@ -23,16 +23,16 @@
                         <li><a href="?sec=Nosotros"><b class="glyphicon glyphicon-question-sign"></b>&nbsp;Quienes Somos</a></li>
                         <li><a href="?sec=Vision"><b class="glyphicon glyphicon-eye-open"></b>&nbsp;Visión</a></li>
                         <li><a href="?sec=Mision"><b class="glyphicon glyphicon-ok-sign"></b>&nbsp;Misión</a></li>
-                        <li id="contacto_login" style="display: none"><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>
+                        <li><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>
                     </ul>
                 </li>
-                <li id="contacto_logout" style="display:block"><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>
-                <li class="dropdown" style="display:none" id="drop_presupuesto">
+                <!--<li id="contacto_logout" style="display:block"><a data-toggle="modal" href="#" data-target="#formulario-contacto"><b class="glyphicon glyphicon-envelope"></b>&nbsp;Contacto</a></li>-->
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-star"></b>&nbsp;Presupuesto <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li id="presupuesto" style="display:none"><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-shopping-cart"></b>&nbsp;Crear Presupuesto</a></li>
-                        <li id="buscar" style="display:none"><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
-                        <li id="AgregaMateriales" style="display:none"><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
+                        <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-shopping-cart"></b>&nbsp;Crear Presupuesto</a></li>
+                        <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
+                        <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
                     </ul>
                 </li>
                 
@@ -48,14 +48,14 @@
                         <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
-                <script type="text/javascript">document.getElementById("drop_presupuesto").style.display="block";</script>
-                <script type="text/javascript">document.getElementById("presupuesto").style.display="block";</script>
+                <!--<script type="text/javascript">document.getElementById("drop_presupuesto").style.display="block";</script>-->
+                <!--<script type="text/javascript">document.getElementById("presupuesto").style.display="block";</script>-->
                 <script type="text/javascript">document.getElementById("servicios_logout").style.display="none";</script>
                 <script type="text/javascript">document.getElementById("servicios_login").style.display="block";</script>
-                <script type="text/javascript">document.getElementById("contacto_logout").style.display="none";</script>
-                <script type="text/javascript">document.getElementById("contacto_login").style.display="block";</script>
-                <script type="text/javascript">document.getElementById("buscar").style.display="block";</script>
-                <script type="text/javascript">document.getElementById("AgregaMateriales").style.display="block";</script>
+                <!--<script type="text/javascript">document.getElementById("contacto_logout").style.display="none";</script>-->
+                <!--<script type="text/javascript">document.getElementById("contacto_login").style.display="block";</script>-->
+                <!--<script type="text/javascript">document.getElementById("buscar").style.display="block";</script>-->
+                <!--<script type="text/javascript">document.getElementById("AgregaMateriales").style.display="block";</script>-->
             </ul>
             <?php }else{ ?>
                 <ul class="nav navbar-nav navbar-right">

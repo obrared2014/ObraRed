@@ -7,10 +7,15 @@
                echo '<script languaje="javascript">
                     alert("Error al seleccionar la Base de Datos");
                     location.href = "../../index.php?sec=Agrega_Materiales";
-                </script>';        
+                </script>';      
             }else{
                 
-                $idUsuario=$_POST["idUsuario"];
+                if(isset($_POST["idUsuario"])){
+                    $idUsuario = 0;
+                }else{
+                    $idUsuario=$_POST["idUsuario"];
+                }
+//                $idUsuario=$_POST["idUsuario"];
                 $tipoPresupuesto=$_POST["construccion"];
                 $unidadMedida=$_POST["unidadMedida"];
                 $altoP=$_POST["alto"];
@@ -19,9 +24,9 @@
                 //$idDetalle=$_POST["detalleMaterial1"];
                 $idCemento=1;
                 $idArena=2;
-                $idRipio=3;   
+                $idRipio=3;
                 $descripcion="Calculo Radier";
-                    echo '<script languaje="javascript">
+                echo '<script languaje="javascript">
                     alert("Radier='.$tipoPresupuesto
                             .' ID='.$idUsuario
                             .' Descipcion='.$descripcion

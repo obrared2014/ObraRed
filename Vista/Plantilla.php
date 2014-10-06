@@ -26,7 +26,7 @@
                     $seccion='Inicio';
                 }
                 if(!$_SESSION){
-                    include 'Oferta.php';
+//                    include 'Oferta.php';
                     switch($seccion){
                         case "Inicio":
                             include 'Carousel.php';
@@ -48,6 +48,15 @@
                             break;
                         case "Codigo":
                             include 'Codigo.php';
+                            break;
+                        case "Presupuesto":
+                            include 'Presupuesto.php';
+                            break;
+                        case "Buscar":
+                            include 'BuscarMateriales.php';
+                            break;
+                        case "Agrega_Materiales":
+                            include 'Registro_Materiales.php';
                             break;
                         default:
                             include 'Carousel.php';

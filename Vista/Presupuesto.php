@@ -54,20 +54,20 @@
                         </div>
                     </div><!-- fin panel medidas-->
                 </div>
-                <div class="col-lg-3">
+<!--                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">Seleccione los productos</div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <select name="tipo_material1" id="tipo_material1" class="form-control" onchange="buscarMateriales();">
                                     <option value="">Seleccione Tipo</option>
-                                        <?php
-                                            require_once("Modelo/Materiales/consultasMateriales.php");
-                                            $tipo = devuelveTipoMaterial();
-                                            foreach($tipo as $indice => $registro){
-                                                    echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
-                                            }
-                                        ?>                                
+                                        //<?php
+//                                            require_once("Modelo/Materiales/consultasMateriales.php");
+//                                            $tipo = devuelveTipoMaterial();
+//                                            foreach($tipo as $indice => $registro){
+//                                                    echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
+//                                            }
+//                                        ?>                                
                                 </select>
                             </div>
                             <div class="form-group">
@@ -82,7 +82,7 @@
                             </div>                             
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="col-lg-12">
 <!--                    <input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
                     <input type="submit" class="btn btn-block btn-primary btn-large" value="Cotizar">
