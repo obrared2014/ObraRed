@@ -10,64 +10,44 @@
                 <form class="form" action="./Controlador/ValidarRegistro.php" name="registro_usuario" method="POST">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="rut" name="rut" placeholder="Rut" required="true" maxlength="12">
-                            </div>
+                            <input type="text" class="form-control form-group" id="rut" name="rut" placeholder="Rut" required="true" maxlength="12">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="true" onkeypress="ValidaSoloLetras()">
-                            </div>
+                            <input type="text" class="form-control form-group" name="nombre" placeholder="Nombre" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="ap_paterno" placeholder="Ap. Paterno" required="true" onkeypress="ValidaSoloLetras()">
-                            </div>
+                                <input type="text" class="form-control form-group" name="ap_paterno" placeholder="Ap. Paterno" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="ap_materno" placeholder="Ap Materno" required="true" onkeypress="ValidaSoloLetras()">
-                            </div>
+                            <input type="text" class="form-control form-group" name="ap_materno" placeholder="Ap Materno" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="direccion" placeholder="Direccion" required="true">
-                            </div>
+                            <input type="text" class="form-control form-group" name="direccion" placeholder="Direccion" required="true">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="email" placeholder="Email" required="true">
-                            </div>  
+                            <input type="email" class="form-control form-group" name="email" placeholder="Email" required="true">  
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="telefono" placeholder="Fono" required="true" onkeypress="ValidaSoloNumeros()">
-                            </div>
+                            <input type="text" class="form-control form-group" name="telefono" placeholder="Fono" required="true" onkeypress="ValidaSoloNumeros()">
                         </div>
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="actividad" placeholder="Actividad" required="true" onkeypress="ValidaSoloLetras()">
-                            </div>
+                            <input type="text" class="form-control form-group" name="actividad" placeholder="Actividad" required="true" onkeypress="ValidaSoloLetras()">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
-                            </div>
+                            <input type="text" class="form-control form-group" name="user" placeholder="Usuario" required="true">
                         </div>
                         <div class="col-lg-4">
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="password_usuario" placeholder="Contraseña" required="true">
-                            </div>
+                            <input type="password" class="form-control form-group" name="password_usuario" placeholder="Contraseña" required="true">
                         </div>
                     </div>
                 </form>

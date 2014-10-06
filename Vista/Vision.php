@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1>Visión</h1>
+            <h1><b class="glyphicon glyphicon-eye-open"></b> Visión</h1>
         </div>
     </div>
     <div class="col-lg-3">
@@ -11,7 +11,7 @@
     <div class="col-lg-9">
         <h3>
             <p>
-                Nos orientamos a estar siempre a la vanguardia en del mercado en 
+                Nos orientamos a estar siempre a la vanguardia del mercado en 
                 relación a qué tipo de materiales se están ocupando según su 
                 calidad y precio.
                 A partir de esa premisa, el objetivo es cumplir con las 

@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1>Quienes Somos</h1>
+            <h1><b class="glyphicon glyphicon-question-sign"></b> Quienes Somos</h1>
         </div>
     </div>
     <div class="col-lg-3">

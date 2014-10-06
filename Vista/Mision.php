@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1>Misión</h1>
+            <h1><b class="glyphicon glyphicon-ok-sign"></b> Misión</h1>
         </div>
     </div>
     <div class="col-lg-3">

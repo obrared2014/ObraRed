@@ -2,13 +2,13 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1>Generar Presupuesto</h1>
+            <h1><b class="glyphicon glyphicon-shopping-cart"></b> Generar Presupuesto</h1>
         </div>
     </div>
     <div class="col-lg-12">
         <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas">
             <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>">
-            <div class="row">        
+            <div class="row">
                 <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">Seleccione el tipo de construcción</div>
@@ -40,7 +40,7 @@
                                 </div>                    
                                 <div class="col-lg-3"> 
                                     Alto<br>
-                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled /> 
+                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled/> 
                                 </div> 
                                 <div class="col-lg-3"> 
                                     Ancho<br>
@@ -84,8 +84,9 @@
                     </div>
                 </div>-->
                 <div class="col-lg-12">
-<!--                    <input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
-                    <input type="submit" class="btn btn-block btn-primary btn-large" value="Cotizar">
+                    <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
+                    <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Cotizar <span class="glyphicon glyphicon-ok"></span></button>
+                    <!--<input type="submit" class="btn btn-block btn-primary btn-large" value="Cotizar">-->
                 </div>
             </div>
         </form>

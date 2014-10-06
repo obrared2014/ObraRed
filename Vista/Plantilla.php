@@ -13,9 +13,6 @@
         <script type="text/javascript" src="Controlador/Javascript/jQueryRut.js"></script>
         <script type="text/javascript" src="Controlador/Javascript/jquery.Rut.js"></script>
         <script type="text/javascript" language="javascript" src="bootstrap/js/ajax.js"></script>
-
-
-
     </head>
     <body>
         <div class="container">

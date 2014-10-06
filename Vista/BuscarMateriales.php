@@ -37,7 +37,7 @@ loadDoc("k="+str,"Vista/proc3.php",function()
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><span class="glyphicon glyphicon-search"/> Buscar</h1>
+            <h1><b class="glyphicon glyphicon-search"></b> Buscar</h1>
         </div>
     </div>
     
@@ -45,7 +45,7 @@ loadDoc("k="+str,"Vista/proc3.php",function()
         <div class="panel panel-default">
             <div class="panel-heading">Busqueda </div>
             <div class="panel-body">
-                <form class="form" method="post" action="Index.php?sec=ResBuscar"> 
+                <form class="form" method="post" action="Index.php?sec=ResBuscar" name="buscar_materiales"> 
                     <?php
                     $con = conexion();
                     $res = mysql_query("select * from regionm", $con);
@@ -71,7 +71,8 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                     <div class="form-group" id="myDiv"></div><!--div donde aparecen comuna-->
                     <div class="form-group" id="myDiv2"  ></div><!--div locales -->
                     <div>
-                        <button type="submit" class="btn btn-large btn-block btn-primary " >Buscar</button>
+                        <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar materiales <span class="glyphicon glyphicon-ok"></span></button>
+                        <!--<button type="submit" class="btn btn-large btn-block btn-primary " >Buscar</button>-->
                     </div>
                 </form>
             </div>

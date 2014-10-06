@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="page-header">
-                <h1>Registro de Materiales</h1>
+                <h1><b class="glyphicon glyphicon-plus"></b> Registro de Materiales</h1>
             </div>
         </div>
     </div>
@@ -69,7 +69,8 @@
         </div>                
         <div class="row">
             <div class="col-lg-12">
-                <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar"/>
+                <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar materiales <span class="glyphicon glyphicon-ok"></span></button>
+                <!--<input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar"/>-->
             </div>
         </div>
     </form>
@@ -79,11 +80,11 @@
        if(valor==='otro'){
            document.getElementById("tipo_otro").style.display="block";
            document.getElementById("tipo_otro").required=true;
-           
            selecciona_material(valor);
        }else{
            document.getElementById("tipo_otro").style.display="none";
            document.getElementById("tipo_material").required=true;
+           document.getElementById("material").style.display="block";
 //           document.getElementById("material").required="true"; 
            selecciona_material(valor);
        }

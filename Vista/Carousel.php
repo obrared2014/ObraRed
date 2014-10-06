@@ -47,5 +47,5 @@
 </div>
 
 <br/>
-<h1>iniciar sesion y pinchar en link para que vean el pdf</h1>
-<a href="Vista/PDF.php">PDF</a>
+<div class="alert alert-info" role="alert"><h3>Quieres un presupuesto para empezar a construir tu Obra.? <a href="?sec=Presupuesto">PINCHA AQUÍ</a></h3></div>
+<!--<a href="Vista/PDF.php">PDF</a>-->
