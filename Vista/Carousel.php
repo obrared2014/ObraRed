@@ -47,5 +47,9 @@
 </div>
 
 <br/>
-<div class="alert alert-info" role="alert"><h3>La manera más fácil de obtener un presupuesto para tu Obra.</h3></div>
+
+<div class="alert alert-info" role="alert">
+    <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary btn-lg">Presupuesto Gratis</button></a>
+<!--    <h4>La manera más fácil de obtener un presupuesto para tu Obra.</h4>-->
+</div>
 <!--<a href="Vista/PDF.php">PDF</a>-->

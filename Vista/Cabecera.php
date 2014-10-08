@@ -68,12 +68,7 @@
                     </li>
                 </ul>
             <?php } ?>
-<!--                <ul class="nav navbar-nav navbar-right">
-                    <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary">Presupuesto Gratis</button></a>
-                </ul>            -->
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a href="?sec=Presupuesto"><button type="button" class="btn btn-primary">Presupuesto Gratis</button></a></li>
-            </ul>
+
             </div><!-- /.navbar-collapse -->
             
         </div><!-- /.container-fluid -->
