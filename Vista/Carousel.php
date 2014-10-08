@@ -1,4 +1,5 @@
 <!--Carousel.php -->
+<hr>
 <div class="row">
     <div class="col-lg-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"><!-- comienzo carousel -->
@@ -45,11 +46,5 @@
         </div><!-- fin carousel -->
     </div>
 </div>
-
-<br/>
-
-<div class="alert alert-info" role="alert">
-    <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary btn-lg">Presupuesto Gratis</button></a>
-<!--    <h4>La manera más fácil de obtener un presupuesto para tu Obra.</h4>-->
-</div>
+<hr>
 <!--<a href="Vista/PDF.php">PDF</a>-->
