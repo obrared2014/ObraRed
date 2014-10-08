@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-shopping-cart"></b> Generar Presupuesto</h1>
+            <h1><b class="glyphicon glyphicon-list-alt"></b> Generar Presupuesto</h1>
         </div>
     </div>
     <div class="col-lg-12">

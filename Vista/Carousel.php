@@ -47,5 +47,5 @@
 </div>
 
 <br/>
-<div class="alert alert-info" role="alert"><h3>Quieres un presupuesto para empezar a construir tu Obra.? <a href="?sec=Presupuesto">PINCHA AQUÍ</a></h3></div>
+<div class="alert alert-info" role="alert"><h3>La manera más fácil de obtener un presupuesto para tu Obra.</h3></div>
 <!--<a href="Vista/PDF.php">PDF</a>-->

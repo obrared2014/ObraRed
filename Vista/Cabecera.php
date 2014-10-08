@@ -30,7 +30,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-star"></b>&nbsp;Presupuesto <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-shopping-cart"></b>&nbsp;Crear Presupuesto</a></li>
+                        <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
                         <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
                         <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
                     </ul>
@@ -40,7 +40,7 @@
             <?php
                 if(isset($_SESSION['nombre'])){
             ?>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['ap_paterno'] ?> <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
@@ -58,7 +58,7 @@
                 <!--<script type="text/javascript">document.getElementById("AgregaMateriales").style.display="block";</script>-->
             </ul>
             <?php }else{ ?>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-user"></b>&nbsp;Inicio de Sesión</a>
                         <ul class="dropdown-menu" role="menu">
@@ -68,10 +68,22 @@
                     </li>
                 </ul>
             <?php } ?>
+<!--                <ul class="nav navbar-nav navbar-right">
+                    <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary">Presupuesto Gratis</button></a>
+                </ul>            -->
+            <ul class="nav navbar-nav navbar-nav">
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>  
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+              <li class="dropdown"><a href="?sec=Presupuesto"><button type="button" class="btn btn-primary btn-lg btn-block">Presupuesto Gratis</button></a></li>
+            </ul>
             </div><!-- /.navbar-collapse -->
+            
         </div><!-- /.container-fluid -->
     </nav>
 </div>
+<div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
