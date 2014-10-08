@@ -58,7 +58,7 @@
                 <!--<script type="text/javascript">document.getElementById("AgregaMateriales").style.display="block";</script>-->
             </ul>
             <?php }else{ ?>
-                <ul class="nav navbar-nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-user"></b>&nbsp;Inicio de Sesión</a>
                         <ul class="dropdown-menu" role="menu">
