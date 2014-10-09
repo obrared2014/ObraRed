@@ -38,10 +38,7 @@
                                     <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);">Centimetros<br>
                                     <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this.value);">Metros
                                 </div>                    
-                                <div class="col-lg-3"> 
-                                    Alto<br>
-                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled/> 
-                                </div> 
+
                                 <div class="col-lg-3"> 
                                     Ancho<br>
                                     <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho" onkeypress="soloNumeros(event);" disabled /> 
@@ -50,6 +47,10 @@
                                     Largo<br>
                                     <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo" onkeypress="soloNumeros(event);" disabled /> 
                                 </div>
+                                <div class="col-lg-3"> 
+                                    Alto<br>
+                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled/> 
+                                </div>                                 
                             </div>
                         </div>
                     </div><!-- fin panel medidas-->

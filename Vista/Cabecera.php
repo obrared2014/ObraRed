@@ -78,6 +78,7 @@
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
 
 <?php 
     include 'Vista/Registro_Usuario.php';
