@@ -7,6 +7,7 @@
                     <div class="text-center">
                         <img src="img/LOGO_2.png">
                     </div>
+                    <div class="row">&nbsp;</div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="user" placeholder="Usuario" required="true">
                     </div>

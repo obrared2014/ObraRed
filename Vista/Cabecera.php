@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="?sec=Inicio"><img src="img/LOGO_3.png" width="120px"/></a><!-- logo ObraRed -->
+            <a href="?sec=Inicio"><img src="img/LOGO_2.png" width="120px"/></a><!-- logo ObraRed -->
         </div>
         <!-- Recoge los enlaces de navegación, formularios y otros contenidos para alternar -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -40,7 +40,7 @@
             <?php
                 if(isset($_SESSION['nombre'])){
             ?>
-            <ul class="nav navbar-nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['ap_paterno'] ?> <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
@@ -74,7 +74,6 @@
         </div><!-- /.container-fluid -->
     </nav>
 </div>
-<div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>

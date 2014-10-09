@@ -1,5 +1,5 @@
 <!--Registro_Materiales.php-->
-<meta content="900" http-equiv="REFRESH"> </meta>
+<meta content="900" http-equiv="REFRESH"/>
     <div class="row">
         <div class="col-lg-12">
             <div class="page-header">
@@ -9,64 +9,68 @@
     </div>
     <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <select name="tipo_material" id="tipo_material" class="form-control" required="true" onchange="buscarMateriales();">
-                        <option value="">Seleccione Tipo</option>
-                            <?php
-                                include_once './Modelo/Materiales/consultasMateriales.php';
-                                $tipo = devuelveTipoMaterial();
-                                foreach($tipo as $indice => $registro){
-                                    echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
-                                }
-                            ?>                                
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <input type="text" class="form-control" id="tipo_otro" name="tipo_otro" placeholder="Escriba Tipo" style="display: none" />
-            </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <select name="material" id="material" class="form-control" required="true" onchange="buscarDetalles();">
-                        <option value="" >Seleccione Material</option>
-                    </select>
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Tipos de Material </div>
+                    <div class="panel-body">
+                        <div class="col-lg-6">
+                            <select name="tipo_material" id="tipo_material" class="form-control form-group" required="true" onchange="buscarMateriales();">
+                                <option value="">Seleccione Tipo</option>
+                                    <?php
+                                        include_once './Modelo/Materiales/consultasMateriales.php';
+                                        $tipo = devuelveTipoMaterial();
+                                        foreach($tipo as $indice => $registro){
+                                            echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
+                                        }
+                                    ?>                                
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <select name="material" id="material" class="form-control form-group" required="true" onchange="buscarDetalles();">
+                                <option value="" >Seleccione Material</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control form-group" id="tipo_otro" name="tipo_otro" placeholder="Escriba Tipo" style="display: none" />
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control form-group" id="material_otro" name="material_otro" placeholder="Escriba Material" style="display: none"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <input type="text" class="form-control form-group" id="material_otro" name="material_otro" placeholder="Escriba Material" style="display: none"/>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Detalle Material </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control form-group" name="descripcion" placeholder="Descripción del Material" required="true">
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="alto" placeholder="Alto" required="true"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="largo" placeholder="Largo" required="true"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="ancho" placeholder="Ancho" required="true"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="precio1" placeholder="Precio Referencial 1" required="true"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="precio2" placeholder="Precio Referencial 2"/>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control form-group" name="precio3" placeholder="Precio Referencial 3">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <input type="text" class="form-control form-group" name="descripcion" placeholder="Descripción del Material" required="true">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="alto" placeholder="Alto" required="true"/>
-            </div>
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="largo" placeholder="Largo" required="true"/>
-            </div>
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="ancho" placeholder="Ancho" required="true"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="precio1" placeholder="Precio Referencial 1" required="true"/>
-            </div>
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="precio2" placeholder="Precio Referencial 2"/>
-            </div>
-            <div class="col-lg-4">
-                <input type="text" class="form-control form-group" name="precio3" placeholder="Precio Referencial 3">
-            </div>
-        </div>                
         <div class="row">
             <div class="col-lg-12">
                 <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>

@@ -2,9 +2,8 @@
 <div class="row navbar-right navbar-header">
     <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary"><b>Presupuesto Gratis</b></button></a>
 </div>
-<hr>
+<hr style="width: 950px;" align="left">
 <div class="row">
-    
     <div class="col-lg-12 " >
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel"><!-- comienzo carousel -->
             <ol class="carousel-indicators"><!-- Indicadores -->
