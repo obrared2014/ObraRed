@@ -10,7 +10,7 @@
         <div class="col-lg-12">&nbsp;</div>
         <div class="col-lg-9">
             <div class="col-lg-3">
-                <img src="./img/LOGO_3.png" width="100px" class="img-rounded">
+                <a href="?sec=Inicio"><img src="img/LOGO_2.png" width="120px"/></a><!-- logo ObraRed -->
             </div>
             <div class="col-lg-6">
                 <h6>
