@@ -71,8 +71,8 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                     <div class="form-group" id="myDiv"></div><!--div donde aparecen comuna-->
                     <div class="form-group" id="myDiv2"  ></div><!--div locales -->
                     <div>
-                        <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar <span class="glyphicon glyphicon-ok"></span></button>
-                        <!--<button type="submit" class="btn btn-large btn-block btn-primary " >Buscar</button>-->
+                        <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar <span class="glyphicon glyphicon-ok"></span></button>-->
+                        <button type="submit" class="btn btn-large btn-block btn-primary " >Buscar</button>
                     </div>
                 </form>
             </div>

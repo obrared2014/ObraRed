@@ -20,7 +20,7 @@
                 <td>Cemento</td>
                 <td>Cemento de 42,5 Kilos</td>
                 <td><?php echo $_SESSION['cantidadCemento']?></td>
-                <td>$4.700</td>
+                <td>$<?php echo $_SESSION['precioCemento']?></td>
                 <td>$<?php echo $_SESSION['totalCemento']?></td>            
             </tr>
             <tr>
@@ -28,7 +28,7 @@
                 <td>Arena</td>
                 <td>Arena Gruesa</td>
                 <td><?php echo $_SESSION['cantidadArena']?> m3</td>
-                <td>$18.000</td>
+                <td>$<?php echo $_SESSION['precioArena']?></td>
                 <td>$<?php echo $_SESSION['totalArena']?></td>            
             </tr>     
             <tr>
@@ -36,7 +36,7 @@
                 <td>Ripio</td>
                 <td>Ripio</td>
                 <td><?php echo $_SESSION['cantidadRipio']?> m3</td>
-                <td>$13.000</td>
+                <td>$<?php echo $_SESSION['precioRipio']?></td>
                 <td>$<?php echo $_SESSION['totalRipio']?></td>            
             </tr>               
             <tr>

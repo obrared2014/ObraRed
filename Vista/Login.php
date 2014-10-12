@@ -15,7 +15,8 @@
                         <input type="password" class="form-control" name="password_usuario" placeholder="Contraseña" required="true">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="login_usuario.submit()">Entrar <span class="glyphicon glyphicon-ok"></span></button>
+                        <input type="submit" class="btn btn-block btn-primary btn-large" value="Entrar"/>
+                        <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="login_usuario.submit()">Entrar <span class="glyphicon glyphicon-ok"></span></button>-->
                         <button type="button" class="btn btn-block btn-danger" data-dismiss="modal">Cerrar <span class="glyphicon glyphicon-remove"></span></button>
                     </div>
                 </div>

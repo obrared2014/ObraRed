@@ -1,11 +1,80 @@
+//function buscarMateriales(){
+//	
+//	$tipo = $("#tipo_material").val();
+//	
+//	if($tipo == ""){
+//			$("#material").html("<option value=''>Seleccione Material</option>");
+//                        selecciona_otro();
+//	}else if($tipo == "otro"){
+//			$("#material").html("<option value='otro'>Otro</option>");                        
+//                            selecciona_otro();
+//                        
+//	}else {
+//		$.ajax({
+//			dataType: "json",
+//			data: {"tipo_material": $tipo},
+//			url:   'Controlador/Materiales/buscar.php',
+//			type:  'post',
+//			beforeSend: function(){
+//				//Lo que se hace antes de enviar el formulario
+//				},
+//			success: function(respuesta){
+//				//lo que se si el destino devuelve algo
+//				$("#material").html(respuesta.html);
+//			},
+//			error:	function(xhr,err){ 
+//				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+//			}
+//		});
+//              $("#material").change();  
+//	}
+//        
+//        
+//}   
+//function buscarMaterialesDetalles(){
+//	
+//	$tipo = $("#material").val();
+//	
+//	if($tipo == ""){
+//			$("#detalleMaterial").html("<option value=''>Seleccione Material Detalle</option>");
+//                        selecciona_material($tipo);
+//	}else if($tipo == "otro"){
+//			$("#detalleMaterial").html("<option value='otro'>Otro</option>");                        
+//                            selecciona_material($tipo);
+//                        
+//	}else {
+//		$.ajax({
+//			dataType: "json",
+//			data: {"material": $tipo},
+//			url:   'Controlador/Materiales/buscarDetalles.php',
+//			type:  'post',
+//			beforeSend: function(){
+//				//Lo que se hace antes de enviar el formulario
+//				},
+//			success: function(respuesta){
+//				//lo que se si el destino devuelve algo
+//				$("#detalleMaterial").html(respuesta.html);
+//			},
+//			error:	function(xhr,err){ 
+//				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+//			}
+//		});
+//                $("#detalleMaterial").change();
+//                
+//	}
+//        
+//        
+//}  
 function buscarMateriales(){
 	
-	$tipo = $("#tipo_material1").val();
+	$tipo = $("#tipo_material").val();
 	
-	if($tipo == ""){
-			$("#material1").html("<option value=''>Seleccione Material</option>");
-//                        $("#material1").val("");
-                        $("#material1").change();
+	if($tipo === ""){
+			$("#material").html("<option value=''>Seleccione Material</option>");
+                        selecciona_otro();
+	}else if($tipo === "otro"){
+			$("#material").html("<option value='otro'>Otro</option>");                        
+                            selecciona_otro();
                         
 	}else {
 		$.ajax({
@@ -18,42 +87,27 @@ function buscarMateriales(){
 				},
 			success: function(respuesta){
 				//lo que se si el destino devuelve algo
-				$("#material1").html(respuesta.html);
+				$("#material").html(respuesta.html);
 			},
 			error:	function(xhr,err){ 
 				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
 			}
 		});
-                $("#material1").change();
+                selecciona_otro();
 	}
         
 }   
-function buscarMaterialesDetalles(){
+function buscarDetalles(){
 	
-	$tipo = $("#material1").val();
-	
-	if($tipo == ""){
-			$("#detalleMaterial1").html("<option value=''>Seleccione Detalle</option>");
-	}else {
-		$.ajax({
-			dataType: "json",
-			data: {"material1": $tipo},
-			url:   'Controlador/Materiales/buscarDetalles.php',
-			type:  'post',
-			beforeSend: function(){
-				//Lo que se hace antes de enviar el formulario
-				},
-			success: function(respuesta){
-				//lo que se si el destino devuelve algo
-				$("#detalleMaterial1").html(respuesta.html);
-			},
-			error:	function(xhr,err){ 
-				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
-			}
-		});
-	}
-        
-}  
+	$tipo = $("#material").val();
+
+            selecciona_material($tipo);
+
+}
+
+
+
+
 //Cubicar Medidas
 function cubicarMedidas(){
     

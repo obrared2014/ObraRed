@@ -80,10 +80,13 @@ function devuelveMaterialesDetalles($material = ''){
 	if($material != ''){
 		$consulta .= "($material)";
 	}
-	
+//	if($material == 'otro'){
+//                $material='';
+//		$consulta .= "($material)";
+//	}	
 	$conexion = conectarDb();
 	$sentencia = $conexion->prepare($consulta);
-	$sentencia->bindParam('material1',$estado);
+	$sentencia->bindParam('material',$estado);
 	
 	try {
 		if(!$sentencia->execute()){

@@ -56,6 +56,9 @@
                     $_SESSION['idCemento'] = $row['id_cemento'];
                     $_SESSION['idArena'] = $row['id_arena'];
                     $_SESSION['idRipio'] = $row['id_ripio'];
+                    $_SESSION['precioCemento'] = $row['precio_cemento'];
+                    $_SESSION['precioArena'] = $row['precio_arena'];
+                    $_SESSION['precioRipio'] = $row['precio_ripio'];                    
                     $_SESSION['cantidadCemento'] = $row['cantidad_cemento'];
                     $_SESSION['cantidadArena'] = $row['cantidad_arena'];
                     $_SESSION['cantidadRipio'] = $row['cantidad_ripio'];
