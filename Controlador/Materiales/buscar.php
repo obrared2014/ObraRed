@@ -1,9 +1,22 @@
 <?php
+
+
+    include '../../Modelo/datosBD.php';
+//                                        $base=$basedatos;
+
+//                                        $servidor = "localhost";
+//                                        $puerto = "3306";
+//                                        $basedatos = "db_obrared";
+//                                        $usuario = "root";
+//                                        $contrasena = "root";
+//    $tipo = devuelveTipoMaterial($basedatos,$puerto,$servidor,$usuario,$contrasena);
+
 //require_once("funciones.php");
 require_once("../../Modelo/Materiales/consultasMateriales.php");
+//inclu
 if(isset($_POST['tipo_material'])){
 	
-	$material = devuelveMateriales($_POST['tipo_material']);
+	$material = devuelveMateriales($_POST['tipo_material'],$basedatos,$puerto,$servidor,$usuario,$contrasena);
 	
 	$html = "<option value=''>Seleccione Material</option>";
 	foreach($material as $indice => $registro){

@@ -1,9 +1,10 @@
 <?php
 //require_once("funciones.php");
+include '../../Modelo/datosBD.php';
 require_once("../../Modelo/Materiales/consultasMateriales.php");
 if(isset($_POST['material'])){
 	
-	$material = devuelveMaterialesDetalles($_POST['material']);
+	$material = devuelveMaterialesDetalles($_POST['material'],$basedatos,$puerto,$servidor,$usuario,$contrasena);
 	
 	$html = "<option value=''>Seleccione Material Detalle</option>";
 	foreach($material as $indice => $registro){

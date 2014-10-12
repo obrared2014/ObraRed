@@ -1,18 +1,21 @@
 <?php
 
 /* Archivo para funciones */
-//include("conexion.php");
-function conectarDb(){
+//include("datosBD.php");
+
+function conectarDb($base,$port,$serv,$user,$pass){
+        
+    
 	try{
-		$servidor = "localhost";
-		$puerto = "3306";
-		$basedatos = "db_obrared";
-		$usuario = "root";
-		$contrasena = "root";
+//		$servidor = "localhost";
+//		$puerto = "3306";
+////		$basedatos = "db_obrared";
+//		$usuario = "root";
+//		$contrasena = "root";
 	
-		$conexion = new PDO("mysql:host=$servidor;port=$puerto;dbname=$basedatos",
-							$usuario,
-							$contrasena,
+		$conexion = new PDO("mysql:host=$serv;port=$port;dbname=$base",
+							$user,
+							$pass,
 							array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		
 		$conexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -23,11 +26,11 @@ function conectarDb(){
 	}
 }
 
-function devuelveTipoMaterial(){
+function devuelveTipoMaterial($base,$port,$serv,$user,$pass){
 	$resultado = false;
 	$consulta = "call tipos_materiales";
 	
-	$conexion = conectarDb();
+	$conexion = conectarDb($base,$port,$serv,$user,$pass);
 	$sentencia = $conexion->prepare($consulta);
 	
 	try {
@@ -46,7 +49,7 @@ function devuelveTipoMaterial(){
 	return $resultado;
 }
 
-function devuelveMateriales($tipo = ''){
+function devuelveMateriales($tipo = '',$basedatos,$puerto,$servidor,$usuario,$contrasena){
 	$resultado = false;
 	$consulta = "call lista_materiales";
 	
@@ -54,7 +57,7 @@ function devuelveMateriales($tipo = ''){
 		$consulta .= "($tipo)";
 	}
 	
-	$conexion = conectarDb();
+	$conexion = conectarDb($basedatos,$puerto,$servidor,$usuario,$contrasena);
 	$sentencia = $conexion->prepare($consulta);
 	$sentencia->bindParam('tipo_material',$estado);
 	
@@ -73,7 +76,10 @@ function devuelveMateriales($tipo = ''){
 	
 	return $resultado;
 }
-function devuelveMaterialesDetalles($material = ''){
+function devuelveMaterialesDetalles($material = '',$base,$port,$serv,$user,$pass){
+    
+    
+    
 	$resultado = false;
 	$consulta = "call lista_materiales_detalles";
 	
@@ -84,7 +90,7 @@ function devuelveMaterialesDetalles($material = ''){
 //                $material='';
 //		$consulta .= "($material)";
 //	}	
-	$conexion = conectarDb();
+	$conexion = conectarDb($base,$port,$serv,$user,$pass);
 	$sentencia = $conexion->prepare($consulta);
 	$sentencia->bindParam('material',$estado);
 	

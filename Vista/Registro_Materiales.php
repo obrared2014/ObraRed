@@ -19,7 +19,15 @@
                                 <option value="">Seleccione Tipo</option>
                                     <?php
                                         include_once './Modelo/Materiales/consultasMateriales.php';
-                                        $tipo = devuelveTipoMaterial();
+                                        include './Modelo/datosBD.php';
+//                                        $base=$basedatos;
+                                                                               
+//                                        $servidor = "localhost";
+//                                        $puerto = "3306";
+//                                        $basedatos = "db_obrared";
+//                                        $usuario = "root";
+//                                        $contrasena = "root";
+                                        $tipo = devuelveTipoMaterial($basedatos,$puerto,$servidor,$usuario,$contrasena);
                                         foreach($tipo as $indice => $registro){
                                             echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
                                         }
@@ -120,7 +128,7 @@
            document.getElementById("material_otro").style.display="block";
            document.getElementById("material_otro").required=true;
            document.getElementById("material").required=false;   
-//           document.getElementById("tipo_material").required=false;
+           document.getElementById("tipo_material").required=false;
 //           alert(tipo_sel);
        }else{
            document.getElementById("material").disabled=false;
