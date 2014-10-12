@@ -10,12 +10,18 @@
     </div>
     <div class="col-lg-9">
         <h3>
-            <p>
+            <span>
                 Entregar a nuestros clientes una ayuda de excelencia con una 
                 precisión considerable, que respondan a sus necesidades en 
                 relación a empezar una construcción. Todo lo anterior basándose 
                 en sólidos principios y valores corporativos.
-            </p>
+            </span>
         </h3>
     </div>
 </div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>

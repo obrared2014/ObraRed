@@ -79,3 +79,9 @@ loadDoc("k="+str,"Vista/proc3.php",function()
         </div>
     </div>
 </div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>

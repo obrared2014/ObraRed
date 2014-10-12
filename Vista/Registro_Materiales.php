@@ -7,6 +7,7 @@
             </div>
         </div>
     </div>
+<div>
     <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
         <div class="row">
             <div class="col-lg-12">
@@ -77,14 +78,22 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        <!--<div class="row">-->
             <div class="col-lg-12">
                 <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
                 <input type="submit" class="btn btn-block btn-primary btn-large" value="Registrar"/>
             </div>
+        <!--</div>-->            
         </div>
+
     </form>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
 <script type="text/javascript">
    function selecciona_otro(){
        var valor=document.getElementById('tipo_material').value;

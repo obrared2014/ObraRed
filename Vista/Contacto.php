@@ -37,7 +37,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="formulario_contacto.submit()">Enviar <span class="glyphicon glyphicon-ok"></span></button>
+                <input type="submit" class="btn btn-block btn-primary btn-large" value="Enviar">
+                <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="formulario_contacto.submit()">Enviar <span class="glyphicon glyphicon-ok"></span></button>-->
                 <button type="button" class="btn btn-block btn-danger" data-dismiss="modal">Cerrar <span class="glyphicon glyphicon-remove"></span></button>
             </div>
         </div>

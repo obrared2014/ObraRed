@@ -10,12 +10,17 @@
     </div>
     <div class="col-lg-9">
         <h3>
-            <p>
+            <span>
                 ObraRed es una empresa nacida en el año 2014 con la idea de 
                 facilitar tanto en el presupuesto o como la búsqueda de 
                 materiales para empezar una obra de construcción.
-            </p>
+            </span>
         </h3>
     </div>
 </div>
-
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>

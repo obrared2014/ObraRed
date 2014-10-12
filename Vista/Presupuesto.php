@@ -92,6 +92,12 @@
         </form>
     </div>
 </div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
 <!--<script>    
 //    $("#tipo_material1").on("change", buscarMateriales);
 </script>-->
