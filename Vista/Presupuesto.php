@@ -13,7 +13,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Seleccione el tipo de construcción</div>
                         <div class="panel-body">
-                            <select name="construccion" id="construccion" class="form-control">
+                            <select name="construccion" id="construccion" class="form-control" required="true">
                                 <option value="">Elija su Opción</option>
                                 <option value="Techo">Techo</option>
                                 <option value="Radier">Radier</option>
@@ -35,20 +35,20 @@
                                       <option value="2">Metros</option>
                                 </select>-->
                                     Unidad de Medida<br>
-                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);">Centimetros<br>
+                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);" required="true">Centimetros<br>
                                     <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this.value);">Metros
                                 </div>                    
                                 <div class="col-lg-3"> 
                                     Alto<br>
-                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled/> 
+                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div> 
                                 <div class="col-lg-3"> 
                                     Ancho<br>
-                                    <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho" onkeypress="soloNumeros(event);" disabled /> 
+                                    <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div> 
                                 <div class="col-lg-3"> 
                                     Largo<br>
-                                    <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo" onkeypress="soloNumeros(event);" disabled /> 
+                                    <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div>
                             </div>
                         </div>
@@ -83,10 +83,10 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="col-lg-12">
+                <div class="col-lg-offset-4">
                     <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
                     <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>-->
-                    <input type="submit" class="btn btn-block btn-primary btn-large" value="Calcular">
+                    <input type="submit" class="btn btn-primary" style="width: 350px" value="Calcular">
                 </div>
             </div>
         </form>

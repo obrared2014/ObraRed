@@ -87,9 +87,9 @@
                 </div>
             </div>
         <!--<div class="row">-->
-            <div class="col-lg-12">
+            <div class="col-lg-offset-4">
                 <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
-                <input type="submit" class="btn btn-block btn-primary btn-large" value="Registrar"/>
+                <input type="submit" class="btn btn-primary" style="width: 350px" value="Registrar"/>
             </div>
         <!--</div>-->            
         </div>

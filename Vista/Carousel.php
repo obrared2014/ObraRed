@@ -1,10 +1,12 @@
 <!--Carousel.php -->
-<div class="row navbar-right navbar-header">
-    <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary"><b>Presupuesto Gratis</b></button></a>
-</div>
-<hr style="width: 950px;" align="left">
 <div class="row">
-    <div class="col-lg-12 " >
+    <div class="col-lg-offset-10">
+        <a href="?sec=Presupuesto"><button type="button" class="btn btn-primary"><b>Presupuesto Gratis</b></button></a>
+    </div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="row">
+    <div class="col-lg-12">
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel"><!-- comienzo carousel -->
             <ol class="carousel-indicators"><!-- Indicadores -->
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>

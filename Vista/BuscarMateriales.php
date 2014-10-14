@@ -70,9 +70,9 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                     </div>
                     <div class="form-group" id="myDiv"></div><!--div donde aparecen comuna-->
                     <div class="form-group" id="myDiv2"  ></div><!--div locales -->
-                    <div>
+                    <div class="col-lg-offset-4">
                         <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar <span class="glyphicon glyphicon-ok"></span></button>-->
-                        <button type="submit" class="btn btn-large btn-block btn-primary " >Buscar</button>
+                        <button type="submit" class="btn btn-primary" style="width: 350px">Buscar</button>
                     </div>
                 </form>
             </div>
