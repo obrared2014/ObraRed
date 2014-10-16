@@ -1,4 +1,13 @@
 <!-- cotización -->
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li><a href="?sec=Presupuesto">Presupuesto</a></li>
+            <li class="active">Calcular</li>
+        </ol>
+    </div>
+</div>
 <div style="overflow: auto;">
 <h4>Nos es grato entregarle la cotización para la construcci&oacute;n de un Cobertizo de 12 m2 con los materiales seleccionados</h4>
 <br/>
