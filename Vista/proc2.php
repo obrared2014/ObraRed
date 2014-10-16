@@ -1,8 +1,7 @@
 <?php
-include("conexion_busqueda.php");
-$con=conexion();
-$r=$_POST['r'];
-$res=mysql_query("select * from local where id_comuna_local=".$r."",$con);
+require_once("../Controlador/Busqueda_P/Busqueda_Principal.php"); 
+$r= filter_input(INPUT_POST, 'r');
+$res=  Traer_Locales($r);
 ?>
 
 <select id="local" name="nombre_local"class="form-control"  >
