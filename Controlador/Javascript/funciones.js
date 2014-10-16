@@ -329,6 +329,15 @@ function cambiaUm(a,Um_presu){
     }
 }
 
+function imprSelec(muestra){
+    var ficha=document.getElementById(muestra);
+    var ventimp=window.open(' ','popimpr');
+    ventimp.document.write(ficha.innerHTML);
+    ventimp.document.close();
+    ventimp.print();
+    ventimp.close();
+}
+
 //    1. 1 saco de cemento (42,5 kgs).
 //    2. 93 lts de arena.
 //    3. 160 lts de ripio.

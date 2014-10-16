@@ -8,7 +8,7 @@
         </ol>
     </div>
 </div>
-<div style="overflow: auto;">
+<div style="overflow: auto;" id="imprimir">
 <h4>Nos es grato entregarle la cotización para la construcci&oacute;n de un Cobertizo de 12 m2 con los materiales seleccionados</h4>
 <br/>
     <table class="table table-striped">
@@ -65,7 +65,7 @@
             <tr>
                 <td colspan="4">&nbsp;</td>
                 <td colspan="1"><button type="button" class="btn btn-primary">Enviar a E-mail <b class="glyphicon glyphicon-send"></b></button></td> 
-                <td colspan="1"><button type="button" class="btn btn-primary" onclick="javascript:window.print()">Imprimir <b class="glyphicon glyphicon-print"></b></button></td>   
+                <td colspan="1"><button type="button" class="btn btn-primary" onclick="javascript:imprSelec('imprimir')">Imprimir <b class="glyphicon glyphicon-print"></b></button></td>   
             </tr>  
         </tbody>
     </table>

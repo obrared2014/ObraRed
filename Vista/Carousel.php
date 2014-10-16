@@ -71,14 +71,13 @@
                                     <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
                                 </tr>
                                 <tr>
+                                    <td>Ancho: </td>
+                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" disabled required="true"/></td>
+                                </tr>
+                                <tr>
                                     <td>Largo: </td>
                                     <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
                                 </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td>&nbsp;</td>
-                                </tr>       
-                                
                                 <tr>
                                     <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
                                 </tr>
