@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="col-lg-12">
+                <div class="col-lg-4 col-lg-offset-4">
                     <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
                     <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>-->
                     <input type="submit" class="btn btn-block btn-primary btn-large" value="Calcular">

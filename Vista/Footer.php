@@ -5,7 +5,9 @@
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
-
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
 <div class="navbar navbar-default navbar-fixed-bottom color_footer">
     <div class="container">
         <div class="col-lg-12">&nbsp;</div>
