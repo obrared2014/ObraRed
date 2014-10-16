@@ -37,7 +37,7 @@
                                     Unidad de Medida<br>
                                     <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);" required="true">Centimetros<br>
                                     <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this.value);">Metros
-                                </div>                    
+                                </div>
                                 <div class="col-lg-3"> 
                                     Alto<br>
                                     <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled required="true"/> 
@@ -49,7 +49,7 @@
                                 <div class="col-lg-3"> 
                                     Largo<br>
                                     <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo" onkeypress="soloNumeros(event);" disabled required="true"/> 
-                                </div>
+                                </div>                               
                             </div>
                         </div>
                     </div><!-- fin panel medidas-->
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="col-lg-offset-4">
+                <div class="col-lg-4 col-lg-offset-4">
                     <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
                     <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>-->
                     <input type="submit" class="btn btn-primary" style="width: 350px" value="Calcular">

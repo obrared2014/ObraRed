@@ -32,9 +32,10 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
                         <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
-                        <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-plus"></b>&nbsp;Agregar Materiales</a></li>    
+                        <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>    
                     </ul>
                 </li>
+                <li><a href="?sec=Inicio"><b class="glyphicon glyphicon-home"></b>&nbsp;Mis Presupuesto</a></li>
                 
             </ul>
             <?php
@@ -74,6 +75,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 </div>
+<div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
 <div class="row">&nbsp;</div>
