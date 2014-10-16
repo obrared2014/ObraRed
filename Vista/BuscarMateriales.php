@@ -1,4 +1,4 @@
-<?php include("conexion_busqueda.php");?>  
+
 
 <script>
 function myFunction(str)
@@ -53,9 +53,9 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                 <div class="panel-heading">Busqueda </div>
                 <div class="panel-body">
                     <?php
-                    $con = conexion();
-                    $res = mysql_query("select * from regionm", $con);
-                    $res2 = mysql_query("select * from tipo_busqueda", $con);
+                    include_once './Controlador/Busqueda_P/Busqueda_Principal.php';
+                    $res=  Traer_Regiones();
+                    $res2=  Traer_Tipo_Busqueda();
                     ?>
                     <div class="form-group">
                         <select  name="elegir" class="form-control" onchange="myFunction3(this.value)" required="true">
