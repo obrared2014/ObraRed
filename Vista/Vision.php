@@ -1,4 +1,12 @@
-<!--Vision.php-->  
+<!--Vision.php-->
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li class="active">Visión</li>
+        </ol>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
@@ -21,11 +29,5 @@
         </h3>
     </div>
 </div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
 
 

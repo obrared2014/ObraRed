@@ -1,21 +1,157 @@
 <!--Carousel.php -->
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li class="active">Inicio</li>
+        </ol>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-4">
-         <!--Nav tabs--> 
+        <!--Nav tabs--> 
         <ul class="nav nav-tabs" role="tablist">
-            <li class="active "><a class="btn-primary" href="#home" role="tab" data-toggle="tab">Radier</a></li>
-            <li><a class="btn-primary"  href="#profile" role="tab" data-toggle="tab">Muro</a></li>
-          <li><a class="btn-primary" href="#messages" role="tab" data-toggle="tab">Techumbre</a></li>
-          <li><a class="btn-primary" href="#settings" role="tab" data-toggle="tab">Casa</a></li>
+            <li class="active "><a class="btn-primary" href="#radier_basico" role="tab" data-toggle="tab">Radier</a></li>
+            <li><a class="btn-primary"  href="#muro_basico" role="tab" data-toggle="tab">Muro</a></li>
+            <li><a class="btn-primary" href="#techo_basico" role="tab" data-toggle="tab">Techumbre</a></li>
+            <li><a class="btn-primary" href="#casa_basica" role="tab" data-toggle="tab">Casa</a></li>
         </ul>
-         <!--Tab panes--> 
+        <!--Tab panes--> 
         <div class="tab-content">
-          <div class="tab-pane active" id="home">Radier</div>
-          <div class="tab-pane" id="profile">Muro</div>
-          <div class="tab-pane" id="messages">Techumbre</div>
-          <div class="tab-pane" id="settings">Casa</div>
+            <div class="tab-pane active" id="radier_basico"><!-- Panel Radier -->
+                <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_radier">
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <div class="row">
+                        <div class="col-lg-12" name="div_medidas" id="div_medidas">
+                            <table class="table table-bordered">
+                                <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('radier');" onChange="cambiaUm(this.value,'radier');" required="true">Centimetros
+                                        <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('radier');" onChange="cambiaUm(this.value,'radier');">Metros
+                                    </td>
+                                </tr>
+                                <tr class="active"><th colspan="2">Medidas</th></tr>
+                                <tr>
+                                    <td>Alto: </td>
+                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Ancho: </td>
+                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Largo: </td>
+                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="tab-pane" id="muro_basico"><!-- Panel Muro -->
+                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_muro">
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <div class="row">
+                        <div class="col-lg-12" name="div_medidas" id="div_medidas">
+                            <table class="table table-bordered">
+                                <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('muro');" onChange="cambiaUm(this.value,'muro');" required="true">Centimetros
+                                        <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('muro');" onChange="cambiaUm(this.value,'muro');">Metros
+                                    </td>
+                                </tr>
+                                <tr class="active"><th colspan="2">Medidas</th></tr>
+                                <tr>
+                                    <td>Alto: </td>
+                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Largo: </td>
+                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="tab-pane" id="techo_basico"><!-- Panel Techo -->
+                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_techo">
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <div class="row">
+                        <div class="col-lg-12" name="div_medidas" id="div_medidas">
+                            <table class="table table-bordered">
+                                <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('techo');" onChange="cambiaUm(this.value,'techo');" required="true">Centimetros
+                                        <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('techo');" onChange="cambiaUm(this.value,'techo');">Metros
+                                    </td>
+                                </tr>
+                                <tr class="active"><th colspan="2">Medidas</th></tr>
+                                <tr>
+                                    <td>Alto: </td>
+                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Ancho: </td>
+                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Largo: </td>
+                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="tab-pane" id="casa_basica"><!-- Panel Casa -->
+                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_casa">
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <div class="row">
+                        <div class="col-lg-12" name="div_medidas" id="div_medidas">
+                            <table class="table table-bordered">
+                                <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('casa');" onChange="cambiaUm(this.value,'casa');" required="true">Centimetros
+                                        <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('casa');" onChange="cambiaUm(this.value,'casa');">Metros
+                                    </td>
+                                </tr>
+                                <tr class="active"><th colspan="2">Medidas</th></tr>
+                                <tr>
+                                    <td>Alto: </td>
+                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Ancho: </td>
+                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Largo: </td>
+                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div class="col-lg-8">

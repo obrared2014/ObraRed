@@ -36,13 +36,22 @@ loadDoc("k="+str,"Vista/proc3.php",function()
 </script>
 <div class="row">
     <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li class="active">Buscar</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="page-header">
             <h1><b class="glyphicon glyphicon-search"></b> Buscar</h1>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">Busqueda </div>
-            <div class="panel-body">
-                <form class="form" method="post" action="Index.php?sec=ResBuscar" name="buscar_materiales"> 
+        <form class="form" method="post" action="Index.php?sec=ResBuscar" name="buscar_materiales">
+            <div class="panel panel-default">
+            
+                <div class="panel-heading">Busqueda </div>
+                <div class="panel-body">
                     <?php
                     $con = conexion();
                     $res = mysql_query("select * from regionm", $con);
@@ -67,12 +76,14 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                     </div>
                     <div class="form-group" id="myDiv"></div><!--div donde aparecen comuna-->
                     <div class="form-group" id="myDiv2"  ></div><!--div locales -->
-                    <div class="col-lg-4 col-lg-offset-4">
-                        <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar <span class="glyphicon glyphicon-ok"></span></button>-->
-                        <button type="submit" class="btn btn-primary" style="width: 350px">Buscar</button>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="buscar_materiales.submit()">Buscar <span class="glyphicon glyphicon-ok"></span></button>-->
+                    <button type="submit" class="btn btn-block btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

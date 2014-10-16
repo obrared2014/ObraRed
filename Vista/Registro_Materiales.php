@@ -1,12 +1,20 @@
 <!--Registro_Materiales.php-->
 <meta content="900" http-equiv="REFRESH"/>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="page-header">
-                <h1><b class="glyphicon glyphicon-floppy-open"></b> Registro de Materiales</h1>
-            </div>
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li class="active">Agregar Materiales</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1><b class="glyphicon glyphicon-floppy-open"></b> Registro de Materiales</h1>
         </div>
     </div>
+</div>
 <div>
     <form class="form" action="./Modelo/Materiales/ValidarRegistroMateriales.php" name="registro_materiales" method="POST">
         <div class="row">
@@ -89,7 +97,7 @@
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4">
                 <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
-                <input type="submit" class="btn btn-primary" style="width: 350px" value="Registrar"/>
+                <input type="submit" class="btn btn-block btn-primary" value="Registrar"/>
             </div>       
         </div>
     </form>

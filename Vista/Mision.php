@@ -1,6 +1,14 @@
 <!--Mision.php-->
 <div class="row">
     <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li class="active">Misión</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="page-header">
             <h1><b class="glyphicon glyphicon-ok-sign"></b> Misión</h1>
         </div>
@@ -19,9 +27,3 @@
         </h3>
     </div>
 </div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>

@@ -1,6 +1,14 @@
 <!-- presupuesto -->
 <div class="row">
     <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="?sec=Inicio">Inicio</a></li>
+            <li class="active">Crear Presupuesto</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="page-header">
             <h1><b class="glyphicon glyphicon-list-alt"></b> Generar Presupuesto</h1>
         </div>
@@ -29,26 +37,26 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-lg-3">
-        <!--                           <select name="metrosOcentimetros" id="metrosOcentimetros" class="form-control" onChange="unidadMedida();"  required >
+                            <!-- <select name="metrosOcentimetros" id="metrosOcentimetros" class="form-control" onChange="unidadMedida();"  required >
                                       <option value="">Unidad de Medida</option>
                                       <option value="1">Centímetros</option>
                                       <option value="2">Metros</option>
                                 </select>-->
                                     Unidad de Medida<br>
-                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos();" onChange="cambiaUm(this.value);" required="true">Centimetros<br>
-                                    <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos();" onChange="cambiaUm(this.value);">Metros
+                                    <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('presu');" onChange="cambiaUm(this.value,'presu');" required="true">Centimetros<br>
+                                    <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('presu');" onChange="cambiaUm(this.value,'presu');">Metros
                                 </div>
                                 <div class="col-lg-3"> 
                                     Alto<br>
-                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto" onkeypress="soloNumeros(event);" disabled required="true"/> 
+                                    <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_presu" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div> 
                                 <div class="col-lg-3"> 
                                     Ancho<br>
-                                    <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho" onkeypress="soloNumeros(event);" disabled required="true"/> 
+                                    <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_presu" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div> 
                                 <div class="col-lg-3"> 
                                     Largo<br>
-                                    <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo" onkeypress="soloNumeros(event);" disabled required="true"/> 
+                                    <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_presu" onkeypress="soloNumeros(event);" disabled required="true"/> 
                                 </div>                               
                             </div>
                         </div>
@@ -86,18 +94,12 @@
                 <div class="col-lg-4 col-lg-offset-4">
                     <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
                     <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>-->
-                    <input type="submit" class="btn btn-primary" style="width: 350px" value="Calcular">
+                    <input type="submit" class="btn btn-block btn-primary" value="Calcular">
                 </div>
             </div>
         </form>
     </div>
 </div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
-<div class="row">&nbsp;</div>
 <!--<script>    
 //    $("#tipo_material1").on("change", buscarMateriales);
 </script>-->
