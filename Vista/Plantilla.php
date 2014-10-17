@@ -49,6 +49,9 @@
                         case "Presupuesto":
                             include 'Presupuesto.php';
                             break;
+                        case "ResBuscar":
+                            include 'ResultadoBuscar.php';
+                            break;
                         case "Buscar":
                             include 'BuscarMateriales.php';
                             break;
