@@ -5,7 +5,7 @@ function myFunction(str)
 {
 loadDoc("q="+str,"Vista/proc.php",function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  if (xmlhttp.readyState===4 && xmlhttp.status===200)
     {
     document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
     }
@@ -16,7 +16,7 @@ function myFunction2(str)
 {
 loadDoc("r="+str,"Vista/proc2.php",function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  if (xmlhttp.readyState===4 && xmlhttp.status===200)
     {
     document.getElementById("myDiv2").innerHTML=xmlhttp.responseText;
     }
@@ -27,7 +27,7 @@ function myFunction3(str)
 {
 loadDoc("k="+str,"Vista/proc3.php",function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  if (xmlhttp.readyState===4 && xmlhttp.status===200)
     {
     document.getElementById("myDiv3").innerHTML=xmlhttp.responseText;
     }
