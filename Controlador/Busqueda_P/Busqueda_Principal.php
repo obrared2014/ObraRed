@@ -1,20 +1,9 @@
 <?php
-
-
-//function conexion(){
-// $con = mysql_connect("localhost","root","root");
-// if (!$con){
-//  die('Could not connect: ' . mysql_error());
-// }
-// mysql_select_db("db_obrared", $con);
-// return($con);
-//}
-
 function Traer_Tipo_Busqueda()
 {
     require_once ('./Modelo/Buscar_P_Con/Buscar_P_C.php');
-    $res2 = Traer_Tipo_Busqueda_C();
-    Return $res2;
+    $res = Traer_Tipo_Busqueda_C();
+    Return $res;
 }
 
 function Traer_Regiones()
@@ -31,7 +20,6 @@ function Traer_Comunas($q)
     return $res;
 }
 
-
 function Traer_Locales($r)
 {
     require_once ('../Modelo/Buscar_P_Con/Buscar_P_C.php');
@@ -42,7 +30,7 @@ function Traer_Locales($r)
 function Devuelve_Eleccion_Busqueda($k)
 {
     require_once ('../Modelo/Buscar_P_Con/Buscar_P_C.php');
-    $respuesta=  Devuelve_Eleccion_Busqueda_C($k);
-    Return $respuesta ;
+    $res=  Devuelve_Eleccion_Busqueda_C($k);
+    Return $res ;
 }
 

@@ -1,6 +1,4 @@
 <?php
-
-
 function conexion() {
     $con = mysql_connect("localhost", "root", "root");
     if (!$con) {

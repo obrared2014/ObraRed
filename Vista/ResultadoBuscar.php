@@ -1,4 +1,8 @@
-<?php include("conexion_busqueda.php");?>
+<?php
+//include("conexion_busqueda.php");
+require_once ('./Modelo/Buscar_P_Con/Buscar_P_C.php');
+
+?>
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
       <style>
         html, body,#map-canvas {
