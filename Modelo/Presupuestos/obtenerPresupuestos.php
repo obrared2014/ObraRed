@@ -14,6 +14,10 @@
 
                 if($tipoConstruccion=='Radier'){
                     obtienePresupuestoRadier();
+                }else{
+               echo '<script languaje="javascript">
+                    location.href = "../../index.php?sec=Presupuesto";
+                </script>';                        
                 }
             }
         }else{
