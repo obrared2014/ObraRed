@@ -15,18 +15,30 @@
     </div>
     <div class="col-lg-12">
         <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas">
-            <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>">
+            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
+                                                                                echo $_SESSION["id_persona"];
+                                                                        }else{
+                                                                            0;} ?>">
+            <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">Seleccione el tipo de construcción</div>
                         <div class="panel-body">
-                            <select name="construccion" id="construccion" class="form-control" required="true">
-                                <option value="">Elija su Opción</option>
-                                <option value="Techo">Techo</option>
+                            <select name="construccion" id="construccion" class="form-control" required="true" onchange="javascript:textoSeleccionado();">
+                                <option value="">Elija el Tipo de Construcción</option>
+<!--                                <option value="Techo">Techo</option>
                                 <option value="Radier">Radier</option>
                                 <option value="Muro">Muro</option>
-                                <option value="Casa">Casa</option>                                
+                                <option value="Casa">Casa</option>                                -->
+                                    <?php
+                                        include_once './Modelo/Materiales/consultasMateriales.php';
+                                        include './Modelo/datosBD.php';
+                                        $tipo = devuelveTipoMaterial($basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                        foreach($tipo as $indice => $registro){
+                                            echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
+                                        }
+                                    ?>    
                             </select>
                         </div>
                     </div>    
@@ -100,8 +112,14 @@
         </form>
     </div>
 </div>
-<!--<script>    
+<script>    
+    alert(document.getElementById("idUsuario").value);
 //    $("#tipo_material1").on("change", buscarMateriales);
-</script>-->
+    function textoSeleccionado(){ 
+        var combo = document.getElementById("construccion"); 
+        var seleccionado = combo.options[combo.selectedIndex].text; 
+        document.getElementById("nombreConstruccion").value=seleccionado;
+    } 
+</script>
 
 

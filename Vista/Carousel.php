@@ -19,7 +19,12 @@
         <div class="tab-content">
             <div class="tab-pane active" id="radier_basico"><!-- Panel Radier -->
                 <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_radier">
-                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
+                                                                                echo $_SESSION["id_persona"];
+                                                                        }else{
+                                                                            0;} ?>">
+                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Radier">
+                    <input type="hidden" name="construccion" id="construccion" value="1">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
@@ -54,7 +59,11 @@
             
             <div class="tab-pane" id="muro_basico"><!-- Panel Muro -->
                 <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_muro">
-                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
+                                                                                echo $_SESSION["id_persona"];
+                                                                        }else{
+                                                                            0;} ?>">
+                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Muro">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
@@ -89,7 +98,11 @@
             
             <div class="tab-pane" id="techo_basico"><!-- Panel Techo -->
                 <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_techo">
-                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
+                                                                                echo $_SESSION["id_persona"];
+                                                                        }else{
+                                                                            0;} ?>">
+                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Muro">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">

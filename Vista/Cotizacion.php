@@ -9,10 +9,11 @@
     </div>
 </div>
 <div style="overflow: auto;" id="imprimir">
-<h4>Nos es grato entregarle la cotización para la construcci&oacute;n de un Cobertizo de 12 m2 con los materiales seleccionados</h4>
+<h4>Estimado <?php echo $_SESSION['Persona']?> Nos es grato entregarle la cotización para la construcci&oacute;n de un <?php echo $_SESSION['descripcion']?> 
+    de <?php echo $_SESSION['metrosCubicos']?> m3 con los materiales seleccionados</h4>
 <br/>
     <table class="table table-striped">
-        <?php echo "PRESUPUESTO Nº".$_SESSION['id_presupuesto']?>
+        <?php echo "PRESUPUESTO Nº ".$_SESSION['id_presupuesto']?>
         <thead>
             <tr>
                 <th>Item</th>
@@ -26,24 +27,24 @@
         <tbody>
             <tr>
                 <td><?php echo $_SESSION['idCemento']?></td>
-                <td>Cemento</td>
-                <td>Cemento de 42,5 Kilos</td>
+                <td><?php echo $_SESSION['nombreCemento']?></td>
+                <td><?php echo $_SESSION['Cemento']?></td>
                 <td><?php echo $_SESSION['cantidadCemento']?></td>
                 <td>$<?php echo $_SESSION['precioCemento']?></td>
                 <td>$<?php echo $_SESSION['totalCemento']?></td>            
             </tr>
             <tr>
                 <td><?php echo $_SESSION['idArena']?></td>
-                <td>Arena</td>
-                <td>Arena Gruesa</td>
+                <td><?php echo $_SESSION['nombreArena']?></td>
+                <td><?php echo $_SESSION['Arena']?></td>
                 <td><?php echo $_SESSION['cantidadArena']?> m3</td>
                 <td>$<?php echo $_SESSION['precioArena']?></td>
                 <td>$<?php echo $_SESSION['totalArena']?></td>            
             </tr>     
             <tr>
                 <td><?php echo $_SESSION['idRipio']?></td>
-                <td>Ripio</td>
-                <td>Ripio</td>
+                <td><?php echo $_SESSION['nombreRipio']?></td>
+                <td><?php echo $_SESSION['Ripio']?></td>
                 <td><?php echo $_SESSION['cantidadRipio']?> m3</td>
                 <td>$<?php echo $_SESSION['precioRipio']?></td>
                 <td>$<?php echo $_SESSION['totalRipio']?></td>            
