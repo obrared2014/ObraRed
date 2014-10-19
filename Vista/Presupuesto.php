@@ -113,7 +113,7 @@
     </div>
 </div>
 <script>    
-    alert(document.getElementById("idUsuario").value);
+//    alert(document.getElementById("idUsuario").value);
 //    $("#tipo_material1").on("change", buscarMateriales);
     function textoSeleccionado(){ 
         var combo = document.getElementById("construccion"); 
