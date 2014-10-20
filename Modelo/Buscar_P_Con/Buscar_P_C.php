@@ -1,4 +1,5 @@
 <?php
+
 function conexion() {
     $con = mysql_connect("localhost", "root", "root");
     if (!$con) {
@@ -7,48 +8,114 @@ function conexion() {
     mysql_select_db("db_obrared", $con);
     return($con);
 }
-
+//============================================================================
 function Traer_Tipo_Busqueda_C() {
     $con = conexion();
     $res2 = mysql_query("select * from tipo_busqueda", $con);
     Return $res2;
 }
-
+function Mostrar_Tipo_Busqueda_C($var) {
+    $con = conexion();
+    $res2 = mysql_query("select * from tipo_busqueda where id_tipo_b=".$var."", $con);
+    Return $res2;
+}
+//============================================================================
 function Traer_Regiones_C() {
     $con = conexion();
     $res = mysql_query("select * from regionm", $con);
     return $res;
 }
-
+function Mostrar_Region_C($var) {
+    $con = conexion();
+    $res2 = mysql_query("select * from regionm where id_region=".$var."", $con);
+    Return $res2;
+}
+//============================================================================
 function Traer_Comunas_C($q) {
     $con = conexion();
     $res = mysql_query("select * from comuna where id_region_comuna=" . $q . "", $con);
+    
     return $res;
 }
+function Mostrar_Comuna_C($var) {
+    $con = conexion();
+    $res2 = mysql_query("select * from comuna where id_comuna=".$var."", $con);
+    Return $res2;
+}
+//function Traer_Datos_Comuna_C($var) {
+//    $con = conexion();
+//    $res2 = mysql_query("select * from comuna where id_comuna=".$var."", $con);
+//    Return $res2;
+//}
+//============================================================================
 function Traer_Locales_C($r)
 {
     $con=  conexion();
     $res=mysql_query("select * from local where id_comuna_local=".$r."",$con);
     return $res;
 }
+//============================================================================
+function Traer_Mat_por_Tipo_Contruccion_C($r)
+{
+    $con=  conexion();
+    $res=mysql_query("select * from tbl_materiales where id_tipo_materiales=".$r."",$con);
+    return $res;
+}
+//============================================================================
+
 function Devuelve_Eleccion_Busqueda_C($k)
 {
-    $con = conexion();
+    $res=null;
+    $id=null;
+    $nombre=null;
+    $nombre_buscar=null;
+    $con = conexion();    
     if ($k ==='1'){
-        $res = mysql_query("select * from tbl_materiales_tipo ",$con);
-        $id='id_tipo_materiales';
-        $nombre='nombre_tipo_materiales';       
+          $res = mysql_query("select * from tbl_materiales_tipo ",$con);
+          $id='id_tipo_materiales';
+          $nombre='nombre_tipo_materiales';
+          $nombre_buscar='Seleccione Tipo de Construccion';
     }
-if ($k === '2'){//rubro
+if ($k === '2'){
         $res = mysql_query("select * from tipo_local ",$con);
         $id='id_tipo_local';
         $nombre='nombre_tipo_local';
+        $nombre_buscar='Seleccione Local';
     }
-if($k ==='3'){ //nombre materiales
-        $res = mysql_query("select * from tbl_materiales ",$con); 
-        $id='id_materiales_tipo';
-        $nombre='nombre_materiales';
-    }
-    $respuesta=array($res,$id,$nombre);
+    $respuesta=array($res,$id,$nombre,$nombre_buscar);
     Return $respuesta ;
+}
+function Mostrar_Materiales_Tipo_C($k)
+{
+        $con = conexion();    
+        $res = mysql_query("select * from tbl_materiales_tipo where id_tipo_materiales=".$k."",$con);
+        Return $res;         
+}
+function Mostrar_Local_Tipo_C($k)
+{
+        $con = conexion();    
+        $res = mysql_query("select * from local where id_tipo_local_l=".$k."",$con);
+        Return $res;         
+}
+//============================================================================
+function Trae_Local_x_Tipo_Material_C($region,$comuna,$tipo_material)
+{
+   $con = conexion();    
+   $res = mysql_query("select * from tbl_local where id_region_local=".$region." and id_comuna_local = ".$comuna." and id_tipo_material_local = ".$tipo_material."",$con);
+    return $res;
+}
+function Trae_Local_x_Tipo_Local_C($region,$comuna,$tipo_local)
+{
+   $con = conexion();    
+   $res = mysql_query("select * from tbl_local where id_region_local=".$region." and id_comuna_local = ".$comuna." and id_tipo_local_l = ".$tipo_local."",$con);
+    return $res;
+}
+function Trae_Nombre_Tipo_Local_C($k) {
+    $con = conexion();
+    $nombre='';
+    $res = mysql_query("select * from tipo_local where id_tipo_local=" . $k . "", $con);
+    while ($fila = mysql_fetch_array($res)) {
+        $nombre = $fila['nombre_tipo_local'];
+    }
+    Return $nombre;
 }

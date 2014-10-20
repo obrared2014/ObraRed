@@ -50,7 +50,7 @@
                             include 'Presupuesto.php';
                             break;
                         case "ResBuscar":
-                            include 'ResultadoBuscar.php';
+                            include 'ResBuscar_2.php';
                             break;
                         case "Buscar":
                             include 'BuscarMateriales.php';
@@ -95,7 +95,7 @@
                             include 'Perfil.php';
                             break;
                         case "ResBuscar":
-                            include 'ResultadoBuscar.php';
+                            include 'ResBuscar_2.php';
                             break;                
                         case "Buscar":
                             include 'BuscarMateriales.php';
