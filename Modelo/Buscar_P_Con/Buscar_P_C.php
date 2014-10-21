@@ -11,18 +11,18 @@ function conexion() {
 //============================================================================
 function Traer_Tipo_Busqueda_C() {
     $con = conexion();
-    $res2 = mysql_query("select * from tipo_busqueda", $con);
+    $res2 = mysql_query("select * from tipo_busqueda  order by nombre", $con);
     Return $res2;
 }
 function Mostrar_Tipo_Busqueda_C($var) {
     $con = conexion();
-    $res2 = mysql_query("select * from tipo_busqueda where id_tipo_b=".$var."", $con);
+    $res2 = mysql_query("select * from tipo_busqueda where id_tipo_b=".$var." order by nombre", $con);
     Return $res2;
 }
 //============================================================================
 function Traer_Regiones_C() {
     $con = conexion();
-    $res = mysql_query("select * from regionm", $con);
+    $res = mysql_query("select * from regionm  order by nombre", $con);
     return $res;
 }
 function Mostrar_Region_C($var) {
@@ -33,7 +33,7 @@ function Mostrar_Region_C($var) {
 //============================================================================
 function Traer_Comunas_C($q) {
     $con = conexion();
-    $res = mysql_query("select * from comuna where id_region_comuna=" . $q . "", $con);
+    $res = mysql_query("select * from comuna where id_region_comuna=" . $q . " order by nombre", $con);
     
     return $res;
 }
@@ -71,13 +71,13 @@ function Devuelve_Eleccion_Busqueda_C($k)
     $nombre_buscar=null;
     $con = conexion();    
     if ($k ==='1'){
-          $res = mysql_query("select * from tbl_materiales_tipo ",$con);
+          $res = mysql_query("select * from tbl_materiales_tipo order by nombre_tipo_materiales",$con);
           $id='id_tipo_materiales';
           $nombre='nombre_tipo_materiales';
           $nombre_buscar='Seleccione Tipo de Construccion';
     }
 if ($k === '2'){
-        $res = mysql_query("select * from tipo_local ",$con);
+        $res = mysql_query("select * from tipo_local order by nombre_tipo_local",$con);
         $id='id_tipo_local';
         $nombre='nombre_tipo_local';
         $nombre_buscar='Seleccione Local';
