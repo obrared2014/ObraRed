@@ -9,16 +9,68 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default"><!-- Menu Radier -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#radier">
+                            Radier
+                        </a>
+                    </h4>
+                </div>
+                <div id="radier" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default"><!-- Menu Muro -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#muro">
+                            Muro
+                        </a>
+                    </h4>
+                </div>
+                <div id="muro" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default"><!-- Menu Techumbre -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#techumbre">
+                            Techumbre
+                        </a>
+                    </h4>
+                </div>
+                <div id="techumbre" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="row">
+    <div class="col-lg-12">
         <div class="page-header">
             <h1><b class="glyphicon glyphicon-list-alt"></b> Generar Presupuesto</h1>
         </div>
     </div>
     <div class="col-lg-12">
         <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas">
-            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
-                                                                                echo $_SESSION["id_persona"];
-                                                                        }else{
-                                                                            0;} ?>">
+            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
+// if(isset($_SESSION["id_persona"])){
+//                                                                                echo $_SESSION["id_persona"];
+//                                                                        }else{
+//                                                                            0;} 
+?>">
             <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="">
             <div class="row">
                 <div class="col-lg-3">
@@ -27,33 +79,33 @@
                         <div class="panel-body">
                             <select name="construccion" id="construccion" class="form-control" required="true" onchange="javascript:textoSeleccionado();">
                                 <option value="">Elija el Tipo de Construcción</option>
-<!--                                <option value="Techo">Techo</option>
+                                <option value="Techo">Techo</option>
                                 <option value="Radier">Radier</option>
                                 <option value="Muro">Muro</option>
-                                <option value="Casa">Casa</option>                                -->
-                                    <?php
-                                        include_once './Modelo/Materiales/consultasMateriales.php';
-                                        include './Modelo/datosBD.php';
-                                        $tipo = devuelveTipoMaterial($basedatos,$puerto,$servidor,$usuario,$contrasena);
-                                        foreach($tipo as $indice => $registro){
-                                            echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
-                                        }
-                                    ?>    
+                                <option value="Casa">Casa</option>                                
+<?php
+//                                        include_once './Modelo/Materiales/consultasMateriales.php';
+//                                        include './Modelo/datosBD.php';
+//                                        $tipo = devuelveTipoMaterial($basedatos,$puerto,$servidor,$usuario,$contrasena);
+//                                        foreach($tipo as $indice => $registro){
+//                                            echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
+//                                        }
+?>    
                             </select>
                         </div>
                     </div>    
                 </div>
-                <div class="col-lg-9" name="div_medidas" id="div_medidas"><!-- panel solicitando las medidas de la obra-->
+                <div class="col-lg-9" name="div_medidas" id="div_medidas"> panel solicitando las medidas de la obra
                     <div class="panel panel-default">
                         <div class="panel-heading">Ingrese las Medidas de su obra (Ejemplo Unidad de Medida: Metros 1.5 = 150 Centímetros)</div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-lg-3">
-                            <!-- <select name="metrosOcentimetros" id="metrosOcentimetros" class="form-control" onChange="unidadMedida();"  required >
+                             <select name="metrosOcentimetros" id="metrosOcentimetros" class="form-control" onChange="unidadMedida();"  required >
                                       <option value="">Unidad de Medida</option>
                                       <option value="1">Centímetros</option>
                                       <option value="2">Metros</option>
-                                </select>-->
+                                </select>
                                     Unidad de Medida<br>
                                     <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('presu');" onChange="cambiaUm(this.value,'presu');" required="true">Centimetros<br>
                                     <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('presu');" onChange="cambiaUm(this.value,'presu');">Metros
@@ -72,9 +124,9 @@
                                 </div>                               
                             </div>
                         </div>
-                    </div><!-- fin panel medidas-->
+                    </div> fin panel medidas
                 </div>
-<!--                <div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">Seleccione los productos</div>
                         <div class="panel-body">
@@ -87,7 +139,8 @@
 //                                            foreach($tipo as $indice => $registro){
 //                                                    echo "<option value=".$registro['id_tipo_materiales'].">".$registro['nombre_tipo_materiales']."</option>";
 //                                            }
-//                                        ?>                                
+//                                        
+?>                                
                                 </select>
                             </div>
                             <div class="form-group">
@@ -102,17 +155,17 @@
                             </div>                             
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <div class="col-lg-4 col-lg-offset-4">
-                    <!--<input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">-->
-                    <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>-->
+                    <input type="button" class="btn btn-block btn-primary btn-large" value="Cotizar" onclick="metrosCubicosRadier();">
+                    <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="form_presupuesto_medidas.submit()">Calcular <span class="glyphicon glyphicon-ok"></span></button>
                     <input type="submit" class="btn btn-block btn-primary" value="Calcular">
                 </div>
             </div>
         </form>
     </div>
-</div>
-<script>    
+</div>-->
+<!--<script>    
 //    alert(document.getElementById("idUsuario").value);
 //    $("#tipo_material1").on("change", buscarMateriales);
     function textoSeleccionado(){ 
@@ -120,6 +173,6 @@
         var seleccionado = combo.options[combo.selectedIndex].text; 
         document.getElementById("nombreConstruccion").value=seleccionado;
     } 
-</script>
+</script>-->
 
 

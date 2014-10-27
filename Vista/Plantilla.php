@@ -7,12 +7,12 @@
         <title></title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="bootstrap/css/footer.css"/>
-        <script type="text/javascript" src="bootstrap/js/jQuery.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="Controlador/Javascript/funciones.js"></script>
         <script type="text/javascript" src="Controlador/Javascript/jQueryRut.js"></script>
         <script type="text/javascript" src="Controlador/Javascript/jquery.Rut.js"></script>
         <script type="text/javascript" language="javascript" src="bootstrap/js/ajax.js"></script>
+        <script type="text/javascript" src="bootstrap/js/jQuery.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
