@@ -70,6 +70,12 @@
                         <div class="col-lg-6">
                             <input type="text" class="form-control form-group" id="material_detalle" name="material_detalle" required="true" placeholder="Escriba Detalle de Material"/>                            
                         </div>
+                        <div class="col-lg-6">
+                            <select name="materialBase" id="materialBase" class="form-control form-group" required="true" onchange="buscarDetalles();">
+                                <option value="N" >NO</option>
+                                <option value="S" >SI</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="panel-body">
                         <div class="col-lg-4">

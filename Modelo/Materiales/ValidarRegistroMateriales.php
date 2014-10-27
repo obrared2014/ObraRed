@@ -33,12 +33,13 @@
                 $largo = $_POST["largo"];
                 $ancho = $_POST["ancho"];
                 $precio = $_POST["precio"];
+                $base = $_POST["materialBase"];
 //                $precio1 = $_POST["precio1"];
 //                $precio2 = $_POST["precio2"];
 //                $precio3 = $_POST["precio3"];                
 //                
 //                $insertar = mysql_query("call insertar_material('$tipo','$material','$descripcion_material','$alto','$ancho','$largo','$precio1','$precio2','$precio3')");
-                $insertar = mysql_query("call insertar_materiales('$tipo','$material','$descripcion_material','$alto','$ancho','$largo','$precio')");
+                $insertar = mysql_query("call insertar_materiales('$tipo','$material','$descripcion_material','$alto','$largo','$ancho','$precio','$base')");
                 $id= mysql_result($insertar, 0);
 //                if($insertar>0){
                 if($id){ 

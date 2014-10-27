@@ -14,6 +14,8 @@
 
                 if($tipoConstruccion=='Radier'){
                     obtienePresupuestoRadier();
+                }else if($tipoConstruccion=='Techo'){
+                    obtienePresupuestoTecho();
                 }else{
                echo '<script languaje="javascript">
                     location.href = "../../index.php?sec=Presupuesto";

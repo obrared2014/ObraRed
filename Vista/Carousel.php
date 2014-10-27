@@ -24,7 +24,8 @@
                                                                         }else{
                                                                             0;} ?>">
                     <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Radier">
-                    <input type="hidden" name="construccion" id="construccion" value="1">
+                   <input type="hidden" name="construccion" id="construccion" value="1"> <!-- se debe cambiar esto ya que debe encontrar el id-->
+                    <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
@@ -64,6 +65,7 @@
                                                                         }else{
                                                                             0;} ?>">
                     <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Muro">
+                    <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
@@ -97,12 +99,13 @@
             </div>
             
             <div class="tab-pane" id="techo_basico"><!-- Panel Techo -->
-                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_techo">
+                <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_techo">
                     <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
                                                                                 echo $_SESSION["id_persona"];
                                                                         }else{
                                                                             0;} ?>">
-                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Muro">
+                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Techo">
+                    <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
@@ -115,8 +118,14 @@
                                 </tr>
                                 <tr class="active"><th colspan="2">Medidas</th></tr>
                                 <tr>
-                                    <td>Alto: </td>
-                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>Aguas: </td>
+                                    <td>
+                                        <select name="aguas" id="aguas_techo"  class="form-control" required disabled>
+                                            <option value="">Cantidad de Aguas</option>
+                                            <option value="1">1 Aguas</option>
+                                            <option value="2">2 Aguas</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
@@ -137,7 +146,12 @@
             
             <div class="tab-pane" id="casa_basica"><!-- Panel Casa -->
                 <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_casa">
-                    <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $_SESSION['id_persona']?>"/>
+                    <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php if(isset($_SESSION["id_persona"])){
+                                                                                echo $_SESSION["id_persona"];
+                                                                        }else{
+                                                                            0;} ?>">
+                    <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Casa">
+                    <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">

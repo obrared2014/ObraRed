@@ -1,70 +1,3 @@
-//function buscarMateriales(){
-//	
-//	$tipo = $("#tipo_material").val();
-//	
-//	if($tipo == ""){
-//			$("#material").html("<option value=''>Seleccione Material</option>");
-//                        selecciona_otro();
-//	}else if($tipo == "otro"){
-//			$("#material").html("<option value='otro'>Otro</option>");                        
-//                            selecciona_otro();
-//                        
-//	}else {
-//		$.ajax({
-//			dataType: "json",
-//			data: {"tipo_material": $tipo},
-//			url:   'Controlador/Materiales/buscar.php',
-//			type:  'post',
-//			beforeSend: function(){
-//				//Lo que se hace antes de enviar el formulario
-//				},
-//			success: function(respuesta){
-//				//lo que se si el destino devuelve algo
-//				$("#material").html(respuesta.html);
-//			},
-//			error:	function(xhr,err){ 
-//				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
-//			}
-//		});
-//              $("#material").change();  
-//	}
-//        
-//        
-//}   
-//function buscarMaterialesDetalles(){
-//	
-//	$tipo = $("#material").val();
-//	
-//	if($tipo == ""){
-//			$("#detalleMaterial").html("<option value=''>Seleccione Material Detalle</option>");
-//                        selecciona_material($tipo);
-//	}else if($tipo == "otro"){
-//			$("#detalleMaterial").html("<option value='otro'>Otro</option>");                        
-//                            selecciona_material($tipo);
-//                        
-//	}else {
-//		$.ajax({
-//			dataType: "json",
-//			data: {"material": $tipo},
-//			url:   'Controlador/Materiales/buscarDetalles.php',
-//			type:  'post',
-//			beforeSend: function(){
-//				//Lo que se hace antes de enviar el formulario
-//				},
-//			success: function(respuesta){
-//				//lo que se si el destino devuelve algo
-//				$("#detalleMaterial").html(respuesta.html);
-//			},
-//			error:	function(xhr,err){ 
-//				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
-//			}
-//		});
-//                $("#detalleMaterial").change();
-//                
-//	}
-//        
-//        
-//}  
 function buscarMateriales(){
 	
 	$tipo = $("#tipo_material").val();
@@ -232,7 +165,7 @@ function activaCampos(tipo_presu){
         document.getElementById("largo_muro").disabled=false;
     }
     if(tipo_presu == "techo"){
-        document.getElementById("alto_techo").disabled=false;
+        document.getElementById("aguas_techo").disabled=false;
         document.getElementById("ancho_techo").disabled=false;
         document.getElementById("largo_techo").disabled=false;
     }
@@ -244,19 +177,7 @@ function activaCampos(tipo_presu){
 }
 
 function cambiaUm(a,Um_presu){
-//    alto=document.getElementById("alto").value;
-//    ancho=document.getElementById("ancho").value;
-//    largo=document.getElementById("largo").value; 
-//    if(a=="M"){
-//        document.getElementById("alto").value=alto/100;
-//        document.getElementById("ancho").value=ancho/100;
-//        document.getElementById("largo").value=largo/100;        
-//    }else{
-//        document.getElementById("alto").value=alto*100;
-//        document.getElementById("ancho").value=ancho*100;
-//        document.getElementById("largo").value=largo*100;          
-//    }
-    
+   
     if(Um_presu == "presu"){
         alto=document.getElementById("alto_presu").value;
         ancho=document.getElementById("ancho_presu").value;
@@ -300,15 +221,15 @@ function cambiaUm(a,Um_presu){
         }
     }
     if(Um_presu == "techo"){
-        alto=document.getElementById("alto_techo").value;
+//        alto=document.getElementById("alto_techo").value;
         ancho=document.getElementById("ancho_techo").value;
         largo=document.getElementById("largo_techo").value;
         if(a=="M"){
-            document.getElementById("alto_techo").value=alto/100;
+//            document.getElementById("alto_techo").value=alto/100;
             document.getElementById("ancho_techo").value=ancho/100;
             document.getElementById("largo_techo").value=largo/100;        
         }else{
-            document.getElementById("alto_techo").value=alto*100;
+//            document.getElementById("alto_techo").value=alto*100;
             document.getElementById("ancho_techo").value=ancho*100;
             document.getElementById("largo_techo").value=largo*100;          
         }
