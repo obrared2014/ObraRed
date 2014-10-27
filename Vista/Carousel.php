@@ -120,7 +120,7 @@
                                 <tr>
                                     <td>Aguas: </td>
                                     <td>
-                                        <select name="aguas" id="aguas_techo"  class="form-control" required disabled>
+                                        <select name="aguas" id="aguas_techo"  class="form-control" required >
                                             <option value="">Cantidad de Aguas</option>
                                             <option value="1">1 Aguas</option>
                                             <option value="2">2 Aguas</option>
@@ -129,11 +129,11 @@
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
-                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);"  required="true" /></td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
-                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);"  required="true" /></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>
