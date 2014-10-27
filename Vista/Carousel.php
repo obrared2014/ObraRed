@@ -54,7 +54,7 @@
                                 </tr>
                                 <tr>
 <!--                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->                                
-                                    <td colspan="2"><button type="submit" id="loading" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -97,7 +97,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loading" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" id="loading_muro" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -147,7 +147,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loading" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" id="loading_techo" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -191,7 +191,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loadin" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" id="loading_casa" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -248,13 +248,8 @@
 <!--<a href="Vista/PDF.php">PDF</a>-->
 
 <script>//funcion para inciar boton Loadin
-    (function($) {
-        $('#loading').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 1000);
-        });
-    })(jQuery);
+    (function($) {$('#loading_radier').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
+    (function($) {$('#loading_muro').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
+    (function($) {$('#loading_techo').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
+    (function($) {$('#loading_casa').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
 </script>
