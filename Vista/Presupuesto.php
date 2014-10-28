@@ -9,6 +9,13 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
+        <div class="page-header">
+            <h1><b class="glyphicon glyphicon-list-alt"></b> Crear Presupuesto</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <div class="panel-group" id="accordion">
             <div class="panel panel-default"><!-- Menu Radier -->
                 <div class="panel-heading">
@@ -20,7 +27,75 @@
                 </div>
                 <div id="radier" class="panel-collapse collapse in">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_radier">
+                            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
+                            if (isset($_SESSION["id_persona"])) {
+                                echo $_SESSION["id_persona"];
+                            } else {
+                                0;
+                            }
+                            ?>">
+                            <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Radier">
+                            <input type="hidden" name="construccion" id="construccion" value="1"> <!-- se debe cambiar esto ya que debe encontrar el id-->
+                            <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Zona Geográfica</div>
+                                        <div class="panel-body">
+                                            <select class="form-control" required="true" name="zona_geografica">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Zona Centro</option>
+                                                <option value="2">Zona Norte</option>
+                                                <option value="3">Zona Sur</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Unidad de Medida</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('radier');" onChange="cambiaUm(this.value, 'radier');" required="true">Centimetros
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('radier');" onChange="cambiaUm(this.value, 'radier');">Metros
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Medidas de contrucción</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Seleccion de Materiales</div>
+                                        <div class="panel-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-12">
+                                    <button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -34,7 +109,7 @@
                 </div>
                 <div id="muro" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Muro
                     </div>
                 </div>
             </div>
@@ -48,13 +123,52 @@
                 </div>
                 <div id="techumbre" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Techo
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+//funcion para inciar boton Loadin
+<script>
+    (function($) {
+        $('#loading_radier').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_muro').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_techo').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_casa').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+</script>
 
 
 <!--<div class="row">

@@ -10,10 +10,10 @@
     <div class="col-lg-4">
         <!--Nav tabs--> 
         <ul class="nav nav-tabs" role="tablist">
-            <li class="active "><a class="btn-primary" href="#radier_basico" role="tab" data-toggle="tab">Radier</a></li>
-            <li><a class="btn-primary"  href="#muro_basico" role="tab" data-toggle="tab">Muro</a></li>
-            <li><a class="btn-primary" href="#techo_basico" role="tab" data-toggle="tab">Techumbre</a></li>
-            <li><a class="btn-primary" href="#casa_basica" role="tab" data-toggle="tab">Casa</a></li>
+            <li class="active "><a class="btn-primary" style="width: 88px; text-align: center;" href="#radier_basico" role="tab" data-toggle="tab">Radier</a></li>
+            <li><a class="btn-primary" style="width: 88px; text-align: center;"  href="#muro_basico" role="tab" data-toggle="tab">Muro</a></li>
+            <li><a class="btn-primary" style="width: 88px; text-align: center;" href="#techo_basico" role="tab" data-toggle="tab">Techo</a></li>
+            <li><a class="btn-primary" style="width: 88px; text-align: center;" href="#casa_basica" role="tab" data-toggle="tab">Casa</a></li>
         </ul>
         <!--Tab panes--> 
         <div class="tab-content">
@@ -32,6 +32,19 @@
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
+                                <tr class="active">
+                                    <th colspan="2">Zona Geográfica</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <select class="form-control" required="true" name="zona_geografica">
+                                            <option value="">Seleccione</option>
+                                            <option value="1">Zona Centro</option>
+                                            <option value="2">Zona Norte</option>
+                                            <option value="3">Zona Sur</option>
+                                        </select>
+                                    </td>
+                                </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
                                 <tr>
                                     <td colspan="2" style="text-align: center">
@@ -75,6 +88,19 @@
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
+                                <tr class="active">
+                                    <th colspan="2">Zona Geográfica</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <select class="form-control" required="true" name="zona_geografica">
+                                            <option value="">Seleccione</option>
+                                            <option value="1">Zona Centro</option>
+                                            <option value="2">Zona Norte</option>
+                                            <option value="3">Zona Sur</option>
+                                        </select>
+                                    </td>
+                                </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
                                 <tr>
                                     <td colspan="2" style="text-align: center">
@@ -119,6 +145,19 @@
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
+                                <tr class="active">
+                                    <th colspan="2">Zona Geográfica</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <select class="form-control" required="true" name="zona_geografica">
+                                            <option value="">Seleccione</option>
+                                            <option value="1">Zona Centro</option>
+                                            <option value="2">Zona Norte</option>
+                                            <option value="3">Zona Sur</option>
+                                        </select>
+                                    </td>
+                                </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
                                 <tr>
                                     <td colspan="2" style="text-align: center">
@@ -169,6 +208,19 @@
                     <div class="row">
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
+                                <tr class="active">
+                                    <th colspan="2">Zona Geográfica</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <select class="form-control" required="true" name="zona_geografica">
+                                            <option value="">Seleccione</option>
+                                            <option value="1">Zona Centro</option>
+                                            <option value="2">Zona Norte</option>
+                                            <option value="3">Zona Sur</option>
+                                        </select>
+                                    </td>
+                                </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
                                 <tr>
                                     <td colspan="2" style="text-align: center">
@@ -200,7 +252,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-8"><!-- inicio Carrousel -->
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel"><!-- comienzo carousel -->
             <ol class="carousel-indicators"><!-- Indicadores -->
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -246,10 +298,42 @@
     </div>
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
-
-<script>//funcion para inciar boton Loadin
-    (function($) {$('#loading_radier').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
-    (function($) {$('#loading_muro').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
-    (function($) {$('#loading_techo').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
-    (function($) {$('#loading_casa').click(function() { var btn = $(this); btn.button('loading'); setTimeout(function() { btn.button('reset');}, 2000);});})(jQuery);
+//funcion para inciar boton Loadin
+<script>
+    (function($) {
+        $('#loading_radier').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_muro').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_techo').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
+    (function($) {
+        $('#loading_casa').click(function() {
+            var btn = $(this);
+            btn.button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000);
+        });
+    })(jQuery);
 </script>
