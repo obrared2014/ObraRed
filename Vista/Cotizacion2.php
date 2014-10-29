@@ -10,7 +10,7 @@
 </div>
 <div style="overflow: auto;" id="imprimir">
 <h4>Estimado <?php echo $_SESSION['Persona']?> Nos es grato entregarle la cotización para la construcci&oacute;n de un <?php echo $_SESSION['descripcion']?> 
-    de  <?php echo $_SESSION['aguas']?> Aguas,para cubrir <?php echo $_SESSION['metrosCuadrados']?> m2 con los materiales seleccionados</h4>
+    de  <?php echo $_SESSION['aguas']?> Aguas, para cubrir <?php echo $_SESSION['metrosCuadrados']?> m2 con los materiales seleccionados</h4>
 <br/>
     <table class="table table-striped">
         <span class="form-control"><?php echo "PRESUPUESTO Nº ".$_SESSION['id_presupuesto']?></span>

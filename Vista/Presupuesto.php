@@ -37,7 +37,7 @@
                             ?>">
                             <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Radier">
                             <input type="hidden" name="construccion" id="construccion" value="1"> <!-- se debe cambiar esto ya que debe encontrar el id-->
-                            <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="SI">
+                            <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="NO">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel panel-default">
