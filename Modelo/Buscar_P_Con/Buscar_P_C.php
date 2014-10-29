@@ -8,45 +8,63 @@ function conexion() {
     mysql_select_db("db_obrared", $con);
     return($con);
 }
+//function conexion_2(){
+//    $con_2=new mysqli("localhost","root", "root");
+////    if (mysqli_connect_errno()) {
+////    printf("Conexión fallida: %s\n", mysqli_connect_error());
+////    exit();
+////}
+//}
 //============================================================================
 function Traer_Tipo_Busqueda_C() {
     $con = conexion();
-    $res2 = mysql_query("select * from tipo_busqueda  order by nombre", $con);
+    $res2 = mysql_query("select * from tipo_busqueda", $con);
     Return $res2;
 }
 function Mostrar_Tipo_Busqueda_C($var) {
     $con = conexion();
-    $res2 = mysql_query("select * from tipo_busqueda where id_tipo_b=".$var." order by nombre", $con);
+    $res2 = mysql_query("select * from tipo_busqueda where id_tipo_b=".$var."", $con);
     Return $res2;
 }
 //============================================================================
 function Traer_Regiones_C() {
     $con = conexion();
-    $res = mysql_query("select * from regionm  order by nombre", $con);
+    $res = mysql_query("select * from tbl_region order by region_nombre", $con);
     return $res;
 }
 function Mostrar_Region_C($var) {
     $con = conexion();
-    $res2 = mysql_query("select * from regionm where id_region=".$var."", $con);
+    $res2 = mysql_query("select * from tbl_region where region_id=".$var."", $con);
     Return $res2;
 }
 //============================================================================
 function Traer_Comunas_C($q) {
     $con = conexion();
-    $res = mysql_query("select * from comuna where id_region_comuna=" . $q . " order by nombre", $con);
+    $res = mysql_query("select * from tbl_comuna where comuna_provincia_id=" . $q . " order by comuna_nombre", $con);
+//    $res = mysql_query("select * from comuna where id_region_comuna=" . $q . "", $con);
     
     return $res;
 }
 function Mostrar_Comuna_C($var) {
     $con = conexion();
-    $res2 = mysql_query("select * from comuna where id_comuna=".$var."", $con);
+    $res2 = mysql_query("select * from tbl_comuna where comuna_id=".$var."", $con);
+//        $res2 = mysql_query("select * from comuna where id_comuna=".$var."", $con);
+//
     Return $res2;
 }
-//function Traer_Datos_Comuna_C($var) {
-//    $con = conexion();
-//    $res2 = mysql_query("select * from comuna where id_comuna=".$var."", $con);
-//    Return $res2;
-//}
+//=========================================================================
+function Traer_Provincia_C($q) {
+    $con = conexion();
+    $res = mysql_query("select * from tbl_provincia where provincia_region_id=" . $q . " order by provincia_nombre", $con);
+
+    
+    return $res;
+}
+function Mostrar_Provincia_C($var) {
+    $con = conexion();
+    $res2 = mysql_query("select * from tbl_provincia where provincia_id=".$var."", $con);
+    Return $res2;
+}
 //============================================================================
 function Traer_Locales_C($r)
 {
@@ -71,13 +89,13 @@ function Devuelve_Eleccion_Busqueda_C($k)
     $nombre_buscar=null;
     $con = conexion();    
     if ($k ==='1'){
-          $res = mysql_query("select * from tbl_materiales_tipo order by nombre_tipo_materiales",$con);
+          $res = mysql_query("select * from tbl_materiales_tipo ",$con);
           $id='id_tipo_materiales';
           $nombre='nombre_tipo_materiales';
           $nombre_buscar='Seleccione Tipo de Construccion';
     }
 if ($k === '2'){
-        $res = mysql_query("select * from tipo_local order by nombre_tipo_local",$con);
+        $res = mysql_query("select * from tipo_local ",$con);
         $id='id_tipo_local';
         $nombre='nombre_tipo_local';
         $nombre_buscar='Seleccione Local';
@@ -118,4 +136,16 @@ function Trae_Nombre_Tipo_Local_C($k) {
         $nombre = $fila['nombre_tipo_local'];
     }
     Return $nombre;
+}
+function Comprobar_Datos_en_Tabla_C($id_comuna){
+    $respuesta=true;
+    $con = conexion();
+    $res = mysql_query("select * from tbl_local where id_comuna_local=".$id_comuna."", $con);
+    $numero=  mysql_num_rows($res);
+    if($numero>0){
+        $respuesta=TRUE;
+    }else{
+        $respuesta=FALSE;
+    }
+    Return $respuesta;
 }

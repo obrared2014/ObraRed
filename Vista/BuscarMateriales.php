@@ -1,5 +1,3 @@
-
-
 <script>
 function myFunction(str)
 {
@@ -7,7 +5,7 @@ loadDoc("q="+str,"Vista/proc.php",function()
   {
   if (xmlhttp.readyState===4 && xmlhttp.status===200)
     {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    document.getElementById("myDiv2").innerHTML=xmlhttp.responseText;
     }
   });
 }
@@ -18,7 +16,7 @@ loadDoc("r="+str,"Vista/proc2.php",function()
   {
   if (xmlhttp.readyState===4 && xmlhttp.status===200)
     {
-    document.getElementById("myDiv2").innerHTML=xmlhttp.responseText;
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
     }
   });
 }
@@ -65,17 +63,22 @@ loadDoc("k="+str,"Vista/proc3.php",function()
                             <?php } ?>
                         </select>
                     </div>
+                    
                     <div class="form-group" id="myDiv3"></div>
-                    <div class="form-group">
+                    
+                    <div class="form-group">                       
                         <select name="region" id="region" onchange="myFunction(this.value)" class="form-control" required="true">
-                            <option value="" class="form-control">Seleccione region</option>
+                            <option value="" class="form-control">Seleccione Region</option>
                             <?php while ($fila = mysql_fetch_array($res)) { ?>
-                                <option  value="<?php echo $fila['id_region']; ?>" ><?php echo $fila['nombre']; ?></option>
+                                <option  value="<?php echo $fila['region_id']; ?>" ><?php echo $fila['region_nombre']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
-                    <div class="form-group" id="myDiv"></div><!--div donde aparecen comuna-->
-                    <div class="form-group" id="myDiv2"  ></div><!--div locales -->
+                    
+                    <div class="form-group" id="myDiv2"  ></div><!-- provincia -->
+                    
+                    <div class="form-group" id="myDiv"></div>
+                    
                 </div>
             </div>
             <div class="row">

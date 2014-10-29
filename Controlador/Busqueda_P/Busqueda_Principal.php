@@ -26,7 +26,7 @@ function Mostrar_Region($var) {
     $res = Mostrar_Region_C($var);
     $nombre='';
     while ($fila = mysql_fetch_array($res)) {
-        $nombre=$fila['nombre'];
+        $nombre=$fila['region_nombre'];
     }
     Return $nombre;
 }
@@ -42,7 +42,23 @@ function Mostrar_Comuna($var) {
     $res = Mostrar_Comuna_C($var);
     $nombre='';
     while ($fila = mysql_fetch_array($res)) {
-        $nombre=$fila['nombre'];
+        $nombre=$fila['comuna_nombre'];
+    }
+    Return $nombre;
+}
+//============================================================================
+function Traer_Provincia($q)
+{
+    require_once ('../Modelo/Buscar_P_Con/Buscar_P_C.php');
+    $res= Traer_Provincia_C($q);
+    return $res;
+}
+function Mostrar_Provincia($var) {
+    require_once ('./Modelo/Buscar_P_Con/Buscar_P_C.php');
+    $res = Mostrar_Provincia_C($var);
+    $nombre='';
+    while ($fila = mysql_fetch_array($res)) {
+        $nombre=$fila['provincia_nombre'];
     }
     Return $nombre;
 }
@@ -108,3 +124,9 @@ function Traer_Mat_por_Tipo_Contruccion($r)
     return $res;
 }
 //============================================================================
+function Comprobar_Datos_en_Tabla($idcomuna)
+{
+    require_once ('./Modelo/Buscar_P_Con/Buscar_P_C.php');
+    $res= Comprobar_Datos_en_Tabla_C($idcomuna);
+    return $res;
+}
