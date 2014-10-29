@@ -45,7 +45,7 @@
                                                 <option value="3">Zona Sur</option>
                                             </select>
                                             <span class="input-group-addon">
-                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-toggle="popover" data-trigger="focus" title="Ayuda.!" data-content="Selecciona tu zona geografica para una posterior recomendacion de materiales"></a>
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
                                             </span>
                                         </div>
                                     </td>
@@ -61,15 +61,36 @@
                                 <tr class="active"><th colspan="2">Medidas</th></tr>
                                 <tr>
                                     <td>Alto: </td>
-                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Altura total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
-                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Ancho total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
-                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Largo total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
@@ -98,12 +119,17 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control" required="true" name="zona_geografica">
-                                            <option value="">Seleccione</option>
-                                            <option value="1">Zona Centro</option>
-                                            <option value="2">Zona Norte</option>
-                                            <option value="3">Zona Sur</option>
-                                        </select>
+                                        <div class="input-group col-lg-12">
+                                            <select class="form-control" required="true" name="zona_geografica">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Zona Centro</option>
+                                                <option value="2">Zona Norte</option>
+                                                <option value="3">Zona Sur</option>
+                                            </select>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
@@ -116,18 +142,38 @@
                                 <tr class="active"><th colspan="2">Medidas</th></tr>
                                 <tr>
                                     <td>Alto: </td>
-                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Alto total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
-                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Ancho total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
-                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Largo total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
                                     <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
@@ -155,12 +201,17 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control" required="true" name="zona_geografica">
-                                            <option value="">Seleccione</option>
-                                            <option value="1">Zona Centro</option>
-                                            <option value="2">Zona Norte</option>
-                                            <option value="3">Zona Sur</option>
-                                        </select>
+                                        <div class="input-group col-lg-12">
+                                            <select class="form-control" required="true" name="zona_geografica">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Zona Centro</option>
+                                                <option value="2">Zona Norte</option>
+                                                <option value="3">Zona Sur</option>
+                                            </select>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
@@ -174,23 +225,41 @@
                                 <tr>
                                     <td>Aguas: </td>
                                     <td>
-                                        <select name="aguas" id="aguas_techo"  class="form-control" required disabled>
-                                            <option value="">Cantidad de Aguas</option>
-                                            <option value="1">1 Aguas</option>
-                                            <option value="2">2 Aguas</option>
-                                        </select>
+                                        <div class="input-group col-lg-12">
+                                            <select name="aguas" id="aguas_techo"  class="form-control" required disabled>
+                                                <option value="">Cantidad de Aguas</option>
+                                                <option value="1">1 Aguas</option>
+                                                <option value="2">2 Aguas</option>
+                                            </select>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Corresponde a las caídas de agua que tendrá su techo"></a>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
-                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);"  required="true" disabled/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);"  required="true" disabled/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Ancho total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
-                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);"  required="true" disabled/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);"  required="true" disabled/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Largo total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
                                     <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
@@ -218,12 +287,17 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control" required="true" name="zona_geografica">
-                                            <option value="">Seleccione</option>
-                                            <option value="1">Zona Centro</option>
-                                            <option value="2">Zona Norte</option>
-                                            <option value="3">Zona Sur</option>
-                                        </select>
+                                        <div class="input-group col-lg-12">
+                                            <select class="form-control" required="true" name="zona_geografica">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Zona Centro</option>
+                                                <option value="2">Zona Norte</option>
+                                                <option value="3">Zona Sur</option>
+                                            </select>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
@@ -236,18 +310,38 @@
                                 <tr class="active"><th colspan="2">Medidas</th></tr>
                                 <tr>
                                     <td>Alto: </td>
-                                    <td><input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Alto total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
-                                    <td><input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12"> 
+                                            <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Ancho total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
-                                    <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_casa" onkeypress="soloNumeros(event);" disabled required="true"/></td>
+                                    <td>
+                                        <div class="input-group col-lg-12">
+                                            <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Largo total de lo que será tu radier"></a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
                                     <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
@@ -303,8 +397,6 @@
     </div>
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
-<!--<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="hola mundo">Tooltip on left</button>-->
-
 <script type="text/javascript">
     $(document).ready(function() {$(".ayuda-tooltip").tooltip({});});//data-toggle="tooltip" data-original-title="Default tooltip"
     $(document).ready(function() {$(".ayuda-popover").popover({});});//data-toggle="popover" title="Popover title" data-content="Default popover"
