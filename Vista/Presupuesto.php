@@ -130,9 +130,8 @@
         </div>
     </div>
 </div>
-//funcion para inciar boton Loadin
 <script>
-    (function($) {
+    (function($) {//funcion para inciar boton Loadin
         $('#loading_radier').click(function() {
             var btn = $(this);
             btn.button('loading');
@@ -288,5 +287,3 @@
         document.getElementById("nombreConstruccion").value=seleccionado;
     } 
 </script>-->
-
-

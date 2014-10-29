@@ -37,14 +37,20 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control" required="true" name="zona_geografica">
-                                            <option value="">Seleccione</option>
-                                            <option value="1">Zona Centro</option>
-                                            <option value="2">Zona Norte</option>
-                                            <option value="3">Zona Sur</option>
-                                        </select>
+                                        <div class="input-group col-lg-12">
+                                            <select class="form-control" required="true" name="zona_geografica">
+                                                <option value="">Seleccione</option>
+                                                <option value="1">Zona Centro</option>
+                                                <option value="2">Zona Norte</option>
+                                                <option value="3">Zona Sur</option>
+                                            </select>
+                                            <span class="input-group-addon">
+                                                <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-toggle="popover" data-trigger="focus" title="Ayuda.!" data-content="Selecciona tu zona geografica para una posterior recomendacion de materiales"></a>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
+                                
                                 <tr class="active"><th colspan="2">Unidad de Medida</th></tr>
                                 <tr>
                                     <td colspan="2" style="text-align: center">
@@ -66,8 +72,7 @@
                                     <td><input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/></td>
                                 </tr>
                                 <tr>
-<!--                                    <td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->                                
-                                    <td colspan="2"><button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -123,7 +128,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loading_muro" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -186,7 +191,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loading_techo" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -243,7 +248,7 @@
                                 </tr>
                                 <tr>
                                     <!--<td colspan="2"><input type="submit" class="btn btn-block btn-primary" value="Calcular"></td>-->
-                                    <td colspan="2"><button type="submit" id="loading_casa" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button></td>
+                                    <td colspan="2"><button type="submit" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -298,42 +303,10 @@
     </div>
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
-//funcion para inciar boton Loadin
-<script>
-    (function($) {
-        $('#loading_radier').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_muro').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_techo').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_casa').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
+<!--<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="hola mundo">Tooltip on left</button>-->
+
+<script type="text/javascript">
+    $(document).ready(function() {$(".ayuda-tooltip").tooltip({});});//data-toggle="tooltip" data-original-title="Default tooltip"
+    $(document).ready(function() {$(".ayuda-popover").popover({});});//data-toggle="popover" title="Popover title" data-content="Default popover"
+    (function($){$('.loading').click(function() {var btn = $(this);btn.button('loading');setTimeout(function() {btn.button('reset');},2000);});})(jQuery);
 </script>
