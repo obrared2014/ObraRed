@@ -6,6 +6,7 @@ function conexion() {
         die('Could not connect: ' . mysql_error());
     }
     mysql_select_db("db_obrared", $con);
+    mysql_query("SET NAMES UTF8");
     return($con);
 }
 //function conexion_2(){
@@ -29,7 +30,9 @@ function Mostrar_Tipo_Busqueda_C($var) {
 //============================================================================
 function Traer_Regiones_C() {
     $con = conexion();
-    $res = mysql_query("select * from tbl_region order by region_nombre", $con);
+//    mysql_select_db($con);
+    mysql_query("SET NAMES UTF8");
+    $res = mysql_query("select region_id,region_nombre from tbl_region order by region_nombre", $con);
     return $res;
 }
 function Mostrar_Region_C($var) {

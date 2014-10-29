@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
     <head>
-        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title></title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
         <link rel="stylesheet" href="bootstrap/css/footer.css"/>
