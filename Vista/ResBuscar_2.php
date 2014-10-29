@@ -68,30 +68,6 @@ if (($id_region = filter_input(INPUT_POST, 'region')) == '' ||
             </tbody>
         </table> 
 
-        <div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>One fine body&hellip;</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->                
-        <!-- Button trigger modal -->
-        <button id="ore" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            modal activar
-        </button>
-        <a href="#" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
-        <a href="#" id="example" class="btn large primary" >click for popover</a>
-
     </div>
     <div class="col-lg-5">
         <div id="capa-mapa" ></div>
@@ -157,7 +133,7 @@ google.maps.event.addDomListener(window, 'load', inicializar_mapa);
 
         <?php
                 }//fin else, comprobar datos en tabla local
-        }//fin else  , ninguna eleccion hecha
+        }//fin else  , ninguna eleccion hecha?>
         
 
     
