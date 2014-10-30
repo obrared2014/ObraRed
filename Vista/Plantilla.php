@@ -15,6 +15,8 @@
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <?php // include './Vista/Menu_prueba.php'; ?>
+        <!--<div class="col-lg-10">-->
         <div class="container">
             <?php
                 include 'Cabecera.php';
