@@ -13,7 +13,7 @@
     de <?php echo $_SESSION['metrosCubicos']?> m3 con los materiales seleccionados</h4>
 <br/>
     <table class="table table-striped">
-        <?php echo "PRESUPUESTO Nº ".$_SESSION['id_presupuesto']?>
+        <span class="form-control"><?php echo "PRESUPUESTO Nº ".$_SESSION['id_presupuesto']?></span>
         <thead>
             <tr>
                 <th>Item</th>

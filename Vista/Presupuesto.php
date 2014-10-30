@@ -41,9 +41,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel panel-default">
-                                        <div class="panel-heading">Zona Geográfica</div>
+                                        <div class="panel-heading" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">Zona Geográfica</div>
                                         <div class="panel-body">
-                                            <select class="form-control" required="true" name="zona_geografica">
+                                            <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">
                                                 <option value="">Seleccione</option>
                                                 <option value="1">Zona Centro</option>
                                                 <option value="2">Zona Norte</option>
@@ -71,13 +71,13 @@
                                         <div class="panel-heading">Medidas de contrucción</div>
                                         <div class="panel-body">
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu radier"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu radier"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu radier"/>
                                             </div>
                                         </div>
                                     </div>
@@ -87,12 +87,13 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">Seleccion de Materiales</div>
                                         <div class="panel-body">
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">&nbsp;</div>
-                                <div class="col-lg-12">
-                                    <button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary">Calcular</button>
+                                <div class="col-lg-4 col-lg-offset-4">
+                                    <button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button>
                                 </div>
                             </div>
                         </form>
@@ -130,43 +131,10 @@
         </div>
     </div>
 </div>
-<script>
-    (function($) {//funcion para inciar boton Loadin
-        $('#loading_radier').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_muro').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_techo').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
-    (function($) {
-        $('#loading_casa').click(function() {
-            var btn = $(this);
-            btn.button('loading');
-            setTimeout(function() {
-                btn.button('reset');
-            }, 2000);
-        });
-    })(jQuery);
+<script type="text/javascript">
+    $(document).ready(function() {$(".ayuda-tooltip").tooltip({});});//data-toggle="tooltip" data-original-title="Default tooltip"
+    $(document).ready(function() {$(".ayuda-popover").popover({});});//data-toggle="popover" title="Popover title" data-content="Default popover"
+    (function($){$('.loading').click(function() {var btn = $(this);btn.button('loading');setTimeout(function() {btn.button('reset');},2000);});})(jQuery);
 </script>
 
 
