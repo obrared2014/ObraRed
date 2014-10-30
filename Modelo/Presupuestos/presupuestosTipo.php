@@ -77,7 +77,17 @@
         $anchoP=filter_input(INPUT_POST, "ancho");
         $largoP=filter_input(INPUT_POST, "largo");
         $aguas=filter_input(INPUT_POST, "aguas");
-        $pendiente=0.30;
+        $zona=filter_input(INPUT_POST, "zona_geografica");
+        if($zona=='Norte'){
+            $pendiente=0.20;
+        }
+        if($zona=='Centro'){
+            $pendiente=0.27;
+        }
+        if($zona=='Sur'){
+            $pendiente=0.35;
+        }       
+        
         if($unidadMedida=='C'){
             $anchoP=$anchoP/100;
             $largoP=$largoP/100;

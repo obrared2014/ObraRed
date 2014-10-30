@@ -38,11 +38,11 @@
                                 <tr>
                                     <td colspan="2">
                                         <div class="input-group col-lg-12">
-                                            <select class="form-control" required="true" name="zona_geografica">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
-                                                <option value="1">Zona Centro</option>
-                                                <option value="2">Zona Norte</option>
-                                                <option value="3">Zona Sur</option>
+                                                <option value="Norte">Zona Norte</option>
+                                                <option value="Centro">Zona Centro</option>
+                                                <option value="Sur">Zona Sur</option>
                                             </select>
                                             <span class="input-group-addon">
                                                 <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
@@ -120,11 +120,11 @@
                                 <tr>
                                     <td colspan="2">
                                         <div class="input-group col-lg-12">
-                                            <select class="form-control" required="true" name="zona_geografica">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
-                                                <option value="1">Zona Centro</option>
-                                                <option value="2">Zona Norte</option>
-                                                <option value="3">Zona Sur</option>
+                                                <option value="Norte">Zona Norte</option>
+                                                <option value="Centro">Zona Centro</option>
+                                                <option value="Sur">Zona Sur</option>
                                             </select>
                                             <span class="input-group-addon">
                                                 <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
@@ -202,11 +202,11 @@
                                 <tr>
                                     <td colspan="2">
                                         <div class="input-group col-lg-12">
-                                            <select class="form-control" required="true" name="zona_geografica">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
-                                                <option value="1">Zona Centro</option>
-                                                <option value="2">Zona Norte</option>
-                                                <option value="3">Zona Sur</option>
+                                                <option value="Norte">Zona Norte</option>
+                                                <option value="Centro">Zona Centro</option>
+                                                <option value="Sur">Zona Sur</option>
                                             </select>
                                             <span class="input-group-addon">
                                                 <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
@@ -288,11 +288,11 @@
                                 <tr>
                                     <td colspan="2">
                                         <div class="input-group col-lg-12">
-                                            <select class="form-control" required="true" name="zona_geografica">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
-                                                <option value="1">Zona Centro</option>
-                                                <option value="2">Zona Norte</option>
-                                                <option value="3">Zona Sur</option>
+                                                <option value="Norte">Zona Norte</option>
+                                                <option value="Centro">Zona Centro</option>
+                                                <option value="Sur">Zona Sur</option>
                                             </select>
                                             <span class="input-group-addon">
                                                 <a href="#" tabindex="0" class="glyphicon glyphicon-question-sign ayuda-popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="Los materiales se ajustan según la Zona Geográfica que selecciones."></a>
