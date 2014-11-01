@@ -92,57 +92,6 @@ function isNumeric(o){
 	return r;
 }
 //Fin Validaciones
-function metrosCubicosRadier(){
-//    alert("queeeee");
-    var alto,ancho,largo,metrosCubicos,litros;
-    alto=document.getElementById("alto").value;
-    ancho=document.getElementById("ancho").value;
-    largo=document.getElementById("largo").value;
-    if(isNumeric(alto)&&isNumeric(ancho)&&isNumeric(largo)){
-    var cemento=1;
-    var arena=93;
-    var ripio=160;
-    var agua=27;
-    
-    var precioCemento=5000;
-    var precioArena=16000;
-    var precioRipio=18000;
-    
-    var mezcla;
-    
-
-    metrosCubicos=alto*ancho*largo;
-    if(document.getElementById("centimetros").checked===true){
-        metrosCubicos=metrosCubicos/1000000;
-    }
-    litros=metrosCubicos*1000;
-    mezcla=litros/167;
-    cemento=Math.round(cemento*mezcla);
-    arena=Math.round((arena*mezcla));
-    ripio=Math.round((ripio*mezcla));
-    agua=Math.round(agua*mezcla);
-    
-    arena=arena/1000;
-    ripio=ripio/1000;
-    
-    precioCemento=Math.round(precioCemento*cemento);
-    precioArena=Math.round(precioArena*arena);
-    precioRipio=Math.round(precioRipio*ripio);
-    
-        alert("Metros Cúbicos = "+metrosCubicos);   
-        alert("Litros = "+litros); 
-        alert("Cemento de 42,5 Kilos= "+cemento+", por un total de $"+precioCemento+".- pesos."); 
-        alert("Arena = "+arena+"m3, por un total de $"+precioArena+".- pesos." ); 
-        alert("Ripio = "+ripio+" m3, por un total de $"+precioRipio+".- pesos."); 
-        alert("Agua = "+agua+" Litros"); 
-        alert("El presupuesto aproximado es de $"+(precioArena+precioCemento+precioRipio)+".- pesos."); 
-
-    }else{
-        alert("Debe ingresar sólo valores numéricos");
-    }
-    
-}
-
 //function activaCampos(){
 function activaCampos(tipo_presu){
 //    document.getElementById("alto").disabled=false;
@@ -161,7 +110,7 @@ function activaCampos(tipo_presu){
     }
     if(tipo_presu == "muro"){
         document.getElementById("alto_muro").disabled=false;
-//        document.getElementById("ancho_muro").disabled=false;
+        document.getElementById("ancho_muro").disabled=false;
         document.getElementById("largo_muro").disabled=false;
     }
     if(tipo_presu == "techo"){
@@ -208,15 +157,15 @@ function cambiaUm(a,Um_presu){
     }
     if(Um_presu == "muro"){
         alto=document.getElementById("alto_muro").value;
-//        ancho=document.getElementById("ancho_muro").value;
+        ancho=document.getElementById("ancho_muro").value;
         largo=document.getElementById("largo_muro").value;
         if(a=="M"){
             document.getElementById("alto_muro").value=alto/100;
-//            document.getElementById("ancho_muro").value=ancho/100;
+            document.getElementById("ancho_muro").value=ancho/100;
             document.getElementById("largo_muro").value=largo/100;        
         }else{
             document.getElementById("alto_muro").value=alto*100;
-//            document.getElementById("ancho_muro").value=ancho*100;
+            document.getElementById("ancho_muro").value=ancho*100;
             document.getElementById("largo_muro").value=largo*100;          
         }
     }
@@ -258,7 +207,17 @@ function imprSelec(muestra){
     ventimp.print();
     ventimp.close();
 }
-
+function actvaAnchoMuro(){
+    var casaOpandereta=document.getElementById("tipo_muro").value;
+    
+    if(casaOpandereta=='Pandereta'){
+        document.getElementById("ancho_muro").value=0;
+        document.getElementById("ancho_muro").readOnly=true;
+    }else{
+        document.getElementById("ancho_muro").readOnly=false;
+    }
+    //alert(document.getElementById("tipo_muro").value);
+}
 //    1. 1 saco de cemento (42,5 kgs).
 //    2. 93 lts de arena.
 //    3. 160 lts de ripio.

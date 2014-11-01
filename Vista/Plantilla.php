@@ -108,7 +108,10 @@
                             break;
                         case "Cotizacion2":
                             include 'Cotizacion2.php';
-                            break;                        
+                            break;       
+                        case "Cotizacion3":
+                            include 'Cotizacion3.php';
+                            break;    
                         case "Codigo":
                             include 'Codigo.php';
                             break;

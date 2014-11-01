@@ -81,7 +81,7 @@
                 </form>
             </div>
             <div class="tab-pane" id="muro_basico"><!-- Panel Muro -->
-                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_muro">
+                <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_muro">
                     <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
                     if (isset($_SESSION["id_persona"])) {
                         echo $_SESSION["id_persona"];
@@ -95,15 +95,15 @@
                         <div class="col-lg-12" name="div_medidas" id="div_medidas">
                             <table class="table table-bordered">
                                 <tr class="active">
-                                    <th colspan="2">Zona Geográfica</th>
+                                    <th colspan="2">Tipo de Muro</th>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones">
+                                        <select class="form-control ayuda-tooltip" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()" data-toggle="tooltip" data-original-title="Seleccione si el muro es recto o cerrado">
                                             <option value="">Seleccione</option>
-                                            <option value="Norte">Zona Norte</option>
-                                            <option value="Centro">Zona Centro</option>
-                                            <option value="Sur">Zona Sur</option>
+                                            <option value="muroCasa">Perimetro Casa</option>
+                                            <option value="Pandereta">Pandereta</option>
+                                            
                                         </select>
                                     </td>
                                 </tr>
@@ -124,7 +124,7 @@
                                 <tr>
                                     <td>Ancho: </td>
                                     <td>
-                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_radier" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
                                     </td>
                                 </tr>
                                 <tr>
