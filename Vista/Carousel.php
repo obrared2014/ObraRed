@@ -103,7 +103,6 @@
                                             <option value="">Seleccione</option>
                                             <option value="muroCasa">Perimetro Casa</option>
                                             <option value="Pandereta">Pandereta</option>
-                                            
                                         </select>
                                     </td>
                                 </tr>
@@ -131,7 +130,6 @@
                                     <td>Largo: </td>
                                     <td>
                                         <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu muro"/>
-
                                     </td>
                                 </tr>
                                 <tr>

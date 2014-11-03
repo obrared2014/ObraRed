@@ -25,9 +25,9 @@
                         </a>
                     </h4>
                 </div>
-                <div id="radier" class="panel-collapse collapse in">
+                <div id="radier" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_radier">
+                        <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_radier">
                             <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
                             if (isset($_SESSION["id_persona"])) {
                                 echo $_SESSION["id_persona"];
@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="panel panel-default">
-                                        <div class="panel-heading" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">Zona Geográfica</div>
+                                        <div class="panel-heading" data-toggle="tooltip">Zona Geográfica</div>
                                         <div class="panel-body">
                                             <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">
                                                 <option value="">Seleccione</option>
@@ -87,7 +87,38 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">Seleccion de Materiales</div>
                                         <div class="panel-body">
-                                            
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Cemento">
+                                                        <option value="">Material uno</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Arena">
+                                                        <option value="">Material dos</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material dos" name="descripcion_mat_dos" id="descripcion_mat_dos" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Ripio">
+                                                        <option value="">Material tres</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material tres" name="descripcion_mat_tres" id="descripcion_mat_tres" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +141,149 @@
                 </div>
                 <div id="muro" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Muro
+                        <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_muro">
+                            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
+                            if (isset($_SESSION["id_persona"])) {
+                                echo $_SESSION["id_persona"];
+                            } else {
+                                0;
+                            }
+                            ?>">
+                            <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Muro">
+                            <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="NO">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Tipo de Muro</div>
+                                        <div class="panel-body">
+                                            <select class="form-control ayuda-tooltip" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()" data-toggle="tooltip" data-original-title="Seleccione si el muro es recto o cerrado">
+                                                <option value="">Seleccione</option>
+                                                <option value="muroCasa">Perimetro Casa</option>
+                                                <option value="Pandereta">Pandereta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Unidad de Medida</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('muro');" onChange="cambiaUm(this.value, 'muro');" required="true">Centimetros
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('muro');" onChange="cambiaUm(this.value, 'muro');">Metros
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Medidas de contrucción</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu muro"/>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu muro"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Seleccion de Materiales</div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Cemento">
+                                                        <option value="">Material uno</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Arena">
+                                                        <option value="">Material dos</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material dos" name="descripcion_mat_dos" id="descripcion_mat_dos" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Ladrillos">
+                                                        <option value="">Material tres</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material tres" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cuatro" id="material_cuatro" data-toggle="tooltip" data-original-title="Pilares">
+                                                        <option value="">Material cuatro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material cuatro" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cinco" id="material_cinco" data-toggle="tooltip" data-original-title="Cadenas">
+                                                        <option value="">Material cinco</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material cinco" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_seis" id="material_seis" data-toggle="tooltip" data-original-title="Puertas">
+                                                        <option value="">Material seis</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material seis" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_siete" id="material_siete" data-toggle="tooltip" data-original-title="Ventanas">
+                                                        <option value="">Material siete</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material siete" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-4 col-lg-offset-4">
+                                    <button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -124,7 +297,121 @@
                 </div>
                 <div id="techumbre" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Techo
+                        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_techo">
+                            <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
+                            if (isset($_SESSION["id_persona"])) {
+                                echo $_SESSION["id_persona"];
+                            } else {
+                                0;
+                            }
+                            ?>">
+                            <input type="hidden" name="nombreConstruccion" id="nombreConstruccion" value="Techo">
+                            <input type="hidden" name="presupuestoRapido" id="presupuestoRapido" value="NO">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Zona Geográfica</div>
+                                        <div class="panel-body">
+                                            <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones">
+                                                <option value="">Seleccione</option>
+                                                <option value="Norte">Zona Norte</option>
+                                                <option value="Centro">Zona Centro</option>
+                                                <option value="Sur">Zona Sur</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Unidad de Medida</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="centimetros" value="C" onClick="activaCampos('techo');" onChange="cambiaUm(this.value, 'techo');" required="true">Centimetros
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <input type="radio" name="unidadMedida" id="metros"  value="M" onClick="activaCampos('techo');" onChange="cambiaUm(this.value, 'techo');">Metros
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Medidas de contrucción</div>
+                                        <div class="panel-body">
+                                            <div class="col-lg-4">
+                                                <select name="aguas" id="aguas_techo"  class="form-control ayuda-tooltip" required="true" data-toggle="tooltip" data-original-title="Corresponde a las caídas de agua que tendrá su techo">
+                                                    <option value="">Cantidad de Aguas</option>
+                                                    <option value="1">1 Aguas</option>
+                                                    <option value="2">2 Aguas</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu techo"/>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_techo" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu techo"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Seleccion de Materiales</div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Madera">
+                                                        <option value="">Material uno</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Zinc">
+                                                        <option value="">Material dos</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material dos" name="descripcion_mat_dos" id="descripcion_mat_dos" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Fieltro">
+                                                        <option value="">Material tres</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material tres" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">&nbsp;</div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cuatro" id="material_cuatro" data-toggle="tooltip" data-original-title="Clavos">
+                                                        <option value="">Material cuatro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material cuatro" class="form-control" disabled="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">&nbsp;</div>
+                                <div class="col-lg-4 col-lg-offset-4">
+                                    <button type="submit" id="loading_radier" data-loading-text="Calculando..." class="btn btn-block btn-primary loading">Calcular</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -107,27 +107,20 @@ if($_GET['id_Codigo']== 06 ){
          </div>";
 }
 /*
-=============================
+======================================
 || Error , sin datos en la busqueda ||
-=============================
+======================================
  */
 if($_GET['id_Codigo']== 07 ){
-    echo "
-<div class='row'>
-    <div class='col-lg-12'>
-        <div class='col-lg-3'></div>
-            <div class='col-lg-6'>
-                <div class='panel-body'>
-                    <div class='alert alert-warning' role='alert'>
-                        <strong><h3>:(    ups,  no se encontraron datos en su busqueda !</h3></strong><br/><br/>
-                        :-) </br></br>
-                        <div class='form-group'>
+echo "<div class='row'>
+            <div class='panel-body'>
+                <div class='alert alert-warning' role='alert'>
+                    <strong><h3>:(    ups,  no se encontraron datos en su busqueda !</h3></strong><br/><br/>
+                    Presione aceptar para intentarlo nuevamente</br></br>
+                    <div class='form-group'>
                         <a href='?sec=Buscar'> <button type='button' class='btn btn-block btn-primary'  href='?sec=Buscar' >Aceptar </button></a>
-                        </div>    
-                    </div>
-                </div
+                    </div>     
+                </div>
             </div>
-        <div class='col-lg-3'></div>
-    </div>
-</div>";
+         </div>";
 }
