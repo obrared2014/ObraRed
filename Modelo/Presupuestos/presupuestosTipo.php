@@ -160,12 +160,13 @@
         $tipoPresupuesto=filter_input(INPUT_POST, 'nombreConstruccion');
         $presupuestoRapido=filter_input(INPUT_POST, 'presupuestoRapido');
         $unidadMedida=filter_input(INPUT_POST, "unidadMedida");
-        $alto=filter_input(INPUT_POST, "alto");
+        $altoP=filter_input(INPUT_POST, "alto");
         $anchoP=filter_input(INPUT_POST, "ancho");
         $largoP=filter_input(INPUT_POST, "largo");
         $tipoMuro=filter_input(INPUT_POST, "tipo_muro");
         
         if($unidadMedida=='C'){
+            $altoP=$altoP/100;
             $anchoP=$anchoP/100;
             $largoP=$largoP/100;
         }
@@ -176,7 +177,7 @@
         if($presupuestoRapido!='SI'){//falta hacer el presupuesto avanzado
             $consulta="call crear_presupuesto_muro($idUsuario,'$tipoPresupuesto',$idCemento,$idArena,$idRipio,$altoP,$anchoP,$largoP,'$unidadMedida')";
         }else{
-            $consulta="call crear_presupuesto_muro_rapido($idUsuario,'$tipoPresupuesto',$alto,$anchoP,$largoP,'$tipoMuro')";
+            $consulta="call crear_presupuesto_muro_rapido($idUsuario,'$tipoPresupuesto',$altoP,$anchoP,$largoP,'$tipoMuro')";
         }
 
         $datos = mysql_query($consulta);
