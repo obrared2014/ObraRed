@@ -104,14 +104,14 @@
                             include 'Registro_Materiales.php';
                             break;   
                         case "Cotizacion":
-                            include 'Cotizacion.php';
+                            include 'Cotizaciones.php';
                             break;
-                        case "Cotizacion2":
-                            include 'Cotizacion2.php';
-                            break;       
-                        case "Cotizacion3":
-                            include 'Cotizacion3.php';
-                            break;    
+//                        case "Cotizacion2":
+//                            include 'Cotizacion2.php';
+//                            break;       
+//                        case "Cotizacion3":
+//                            include 'Cotizacion3.php';
+//                            break;    
                         case "Codigo":
                             include 'Codigo.php';
                             break;

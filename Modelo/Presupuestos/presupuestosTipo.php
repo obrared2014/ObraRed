@@ -29,36 +29,38 @@
 
         if($row = mysql_fetch_array($datos)){
             session_start();
-            $_SESSION['id_presupuesto']     = $row['id'];
-            $_SESSION['Persona']            = $row['nombre'];
-            $_SESSION['fecha']              = $row['fecha'];
-            $_SESSION['descripcion']        = $row['tipo'];
-            $_SESSION['alto']               = $row['alto'];
-            $_SESSION['ancho']              = $row['ancho'];
-            $_SESSION['largo']              = $row['largo'];
-            $_SESSION['metrosCubicos']      = $row['metrosCubicos'];
-            $_SESSION['idRegion']           = $row['id_region'];
-            $_SESSION['idCiudad']           = $row['id_ciudad'];
-            $_SESSION['idCemento']          = 1;
-            $_SESSION['idArena']            = 2;
-            $_SESSION['idRipio']            = 3;    
-            $_SESSION['nombreCemento']      = $row['nombreCemento'];
-            $_SESSION['nombreArena']        = $row['nombreArena'];
-            $_SESSION['nombreRipio']        = $row['nombreRipio'];
-            $_SESSION['Cemento']            = $row['cemento'];
-            $_SESSION['Arena']              = $row['arena'];
-            $_SESSION['Ripio']              = $row['ripio'];
-            $_SESSION['precioCemento']      = number_format($row['cementoPrecio'],0,',','.');
-            $_SESSION['precioArena']        = number_format($row['arenaPrecio'],0,',','.');
-            $_SESSION['precioRipio']        = number_format($row['ripioPrecio'],0,',','.');
-            $_SESSION['cantidadCemento']    = number_format($row['cementoCantidad'],2,',','.');
-            $_SESSION['cantidadArena']      = number_format($row['arenaCantidad'],2,',','.');
-            $_SESSION['cantidadRipio']      = number_format($row['ripioCantidad'],2,',','.');
-            $_SESSION['totalCemento']       = number_format($row['totalCemento'],0,',','.');
-            $_SESSION['totalArena']         = number_format($row['totalArena'],0,',','.');
-            $_SESSION['totalRipio']         = number_format($row['totalRipio'],0,',','.');
-            $_SESSION['cantidadAgua']       = $row['aguaCantidad'];
-            $_SESSION['totalPresupuesto']   = number_format($row['precioTotal'],0,',','.');
+            $_SESSION['que']                        = 'Radier';
+            $_SESSION['m2m3']                       = '3';
+            $_SESSION['id_presupuestoRadier']       = $row['id'];
+            $_SESSION['Persona']                    = $row['nombre'];
+            $_SESSION['fecha']                      = $row['fecha'];
+            $_SESSION['descripcionRadier']          = $row['tipo'];
+            $_SESSION['altoRadier']                 = $row['alto'];
+            $_SESSION['anchoRadier']              = $row['ancho'];
+            $_SESSION['largoRadier']              = $row['largo'];
+            $_SESSION['metrosRadier']      = $row['metrosCubicos'];
+            $_SESSION['idRegionRadier']           = $row['id_region'];
+            $_SESSION['idCiudadRadier']           = $row['id_ciudad'];
+            $_SESSION['idCementoRadier']          = 1;
+            $_SESSION['idArenaRadier']            = 2;
+            $_SESSION['idRipioRadier']            = 3;    
+            $_SESSION['nombreCementoRadier']      = $row['nombreCemento'];
+            $_SESSION['nombreArenaRadier']        = $row['nombreArena'];
+            $_SESSION['nombreRipioRadier']        = $row['nombreRipio'];
+            $_SESSION['CementoRadier']            = $row['cemento'];
+            $_SESSION['ArenaRadier']              = $row['arena'];
+            $_SESSION['RipioRadier']              = $row['ripio'];
+            $_SESSION['precioCementoRadier']      = number_format($row['cementoPrecio'],0,',','.');
+            $_SESSION['precioArenaRadier']        = number_format($row['arenaPrecio'],0,',','.');
+            $_SESSION['precioRipioRadier']        = number_format($row['ripioPrecio'],0,',','.');
+            $_SESSION['cantidadCementoRadier']    = number_format($row['cementoCantidad'],2,',','.');
+            $_SESSION['cantidadArenaRadier']      = number_format($row['arenaCantidad'],2,',','.');
+            $_SESSION['cantidadRipioRadier']      = number_format($row['ripioCantidad'],2,',','.');
+            $_SESSION['totalCementoRadier']       = number_format($row['totalCemento'],0,',','.');
+            $_SESSION['totalArenaRadier']         = number_format($row['totalArena'],0,',','.');
+            $_SESSION['totalRipioRadier']         = number_format($row['totalRipio'],0,',','.');
+            $_SESSION['cantidadAguaRadier']       = $row['aguaCantidad'];
+            $_SESSION['totalPresupuestoRadier']   = number_format($row['precioTotal'],0,',','.');
             header("Location:../../Index.php?sec=Cotizacion");
         }                
  
@@ -106,42 +108,44 @@
 //
         if($row = mysql_fetch_array($datos)){
             session_start();
-            $_SESSION['id_presupuesto']     = $row['id'];
+            $_SESSION['que']                        ='Techo';
+            $_SESSION['m2m3']                       = '2';
+            $_SESSION['id_presupuestoTecho']     = $row['id'];
             $_SESSION['Persona']            = $row['nombre'];
             $_SESSION['fecha']              = $row['fecha'];
-            $_SESSION['descripcion']        = $row['tipo'];
-            $_SESSION['ancho']              = $row['ancho'];
-            $_SESSION['largo']              = $row['largo'];
-            $_SESSION['aguas']              = $row['aguas'];
-            $_SESSION['metrosCuadrados']    = $row['metrosCuadrados'];
-            $_SESSION['idRegion']           = $row['id_region'];
-            $_SESSION['idCiudad']           = $row['id_ciudad'];
-            $_SESSION['idTabla']           = 1;
-            $_SESSION['idPlancha']         = 2;
-            $_SESSION['idFieltro']          = 3;    
-            $_SESSION['idClavo']           = 4;    
-            $_SESSION['nombreTabla']        = $row['nombreTabla'];
-            $_SESSION['nombrePlancha']      = $row['nombrePlancha'];
-            $_SESSION['nombreFieltro']      = $row['nombreFieltro'];
-            $_SESSION['nombreClavo']        = $row['nombreClavo'];
-            $_SESSION['tabla']              = $row['tabla'];
-            $_SESSION['plancha']            = $row['plancha'];
-            $_SESSION['fieltro']            = $row['fieltro'];
-            $_SESSION['clavo']              = $row['clavo'];
-            $_SESSION['precioTabla']        = number_format($row['tablaPrecio'],0,',','.');
-            $_SESSION['precioPlancha']      = number_format($row['planchaPrecio'],0,',','.');
-            $_SESSION['precioFieltro']      = number_format($row['fieltroPrecio'],0,',','.');
-            $_SESSION['precioClavo']        = number_format($row['clavoPrecio'],0,',','.');
-            $_SESSION['cantidadTabla']      = number_format($row['tablaCantidad'],2,',','.');
-            $_SESSION['cantidadPlancha']    = number_format($row['planchaCantidad'],2,',','.');
-            $_SESSION['cantidadFieltro']    = number_format($row['fieltroCantidad'],2,',','.');
-            $_SESSION['cantidadClavo']      = number_format($row['clavoCantidad'],2,',','.');
-            $_SESSION['totalTabla']         = number_format($row['totalTablas'],0,',','.');
-            $_SESSION['totalPlancha']       = number_format($row['totalPlanchas'],0,',','.');
-            $_SESSION['totalFieltro']       = number_format($row['totalFieltro'],0,',','.');
-            $_SESSION['totalClavo']         = number_format($row['totalClavos'],0,',','.');
-            $_SESSION['totalPresupuesto']   = number_format($row['precioTotal'],0,',','.');
-            header("Location:../../Index.php?sec=Cotizacion2");
+            $_SESSION['descripcionTecho']        = $row['tipo'];
+            $_SESSION['anchoTecho']              = $row['ancho'];
+            $_SESSION['largoTecho']              = $row['largo'];
+            $_SESSION['aguasTecho']              = $row['aguas'];
+            $_SESSION['metrosTecho']    = $row['metrosCuadrados'];
+            $_SESSION['idRegionTecho']           = $row['id_region'];
+            $_SESSION['idCiudadTecho']           = $row['id_ciudad'];
+            $_SESSION['idTablaTecho']           = 1;
+            $_SESSION['idPlanchaTecho']         = 2;
+            $_SESSION['idFieltroTecho']          = 3;    
+            $_SESSION['idClavoTecho']           = 4;    
+            $_SESSION['nombreTablaTecho']        = $row['nombreTabla'];
+            $_SESSION['nombrePlanchaTecho']      = $row['nombrePlancha'];
+            $_SESSION['nombreFieltroTecho']      = $row['nombreFieltro'];
+            $_SESSION['nombreClavoTecho']        = $row['nombreClavo'];
+            $_SESSION['tablaTecho']              = $row['tabla'];
+            $_SESSION['planchaTecho']            = $row['plancha'];
+            $_SESSION['fieltroTecho']            = $row['fieltro'];
+            $_SESSION['clavoTecho']              = $row['clavo'];
+            $_SESSION['precioTablaTecho']        = number_format($row['tablaPrecio'],0,',','.');
+            $_SESSION['precioPlanchaTecho']      = number_format($row['planchaPrecio'],0,',','.');
+            $_SESSION['precioFieltroTecho']      = number_format($row['fieltroPrecio'],0,',','.');
+            $_SESSION['precioClavoTecho']        = number_format($row['clavoPrecio'],0,',','.');
+            $_SESSION['cantidadTablaTecho']      = number_format($row['tablaCantidad'],2,',','.');
+            $_SESSION['cantidadPlanchaTecho']    = number_format($row['planchaCantidad'],2,',','.');
+            $_SESSION['cantidadFieltroTecho']    = number_format($row['fieltroCantidad'],2,',','.');
+            $_SESSION['cantidadClavoTecho']      = number_format($row['clavoCantidad'],2,',','.');
+            $_SESSION['totalTablaTecho']         = number_format($row['totalTablas'],0,',','.');
+            $_SESSION['totalPlanchaTecho']       = number_format($row['totalPlanchas'],0,',','.');
+            $_SESSION['totalFieltroTecho']       = number_format($row['totalFieltro'],0,',','.');
+            $_SESSION['totalClavoTecho']         = number_format($row['totalClavos'],0,',','.');
+            $_SESSION['totalPresupuestoTecho']   = number_format($row['precioTotal'],0,',','.');
+            header("Location:../../Index.php?sec=Cotizacion");
         }                
  
     }
@@ -179,14 +183,16 @@
 //
         if($row = mysql_fetch_array($datos)){
             session_start();
-            $_SESSION['id_presupuestoMuro']     = $row['id'];
-            $_SESSION['Persona']            = $row['nombre'];
-            $_SESSION['fecha']              = $row['fecha'];
-            $_SESSION['descripcionMuro']    = $row['tipoMuro'];
+            $_SESSION['que']                        = 'Muro';
+            $_SESSION['m2m3']                       = '2';
+            $_SESSION['id_presupuestoMuro']         = $row['id'];
+            $_SESSION['Persona']                    = $row['nombre'];
+            $_SESSION['fecha']                      = $row['fecha'];
+            $_SESSION['descripcionMuro']            = $row['tipoMuro'];
             $_SESSION['altoMuro']           = $row['alto'];
             $_SESSION['anchoMuro']          = $row['ancho'];
             $_SESSION['largoMuro']          = $row['largo'];            
-            $_SESSION['metrosCuadradosMuro']= $row['metrosCuadrados'];
+            $_SESSION['metrosMuro']= $row['metrosCuadrados'];
 //            $_SESSION['idRegion']           = $row['id_region'];
 //            $_SESSION['idCiudad']           = $row['id_ciudad'];
             $_SESSION['idCementoMuro']      = 1;
@@ -231,8 +237,8 @@
             $_SESSION['totalCadenasMuro']       = number_format($row['totalCadenas'],0,',','.');
             $_SESSION['totalPuertaMuro']       = number_format($row['totalPuerta'],0,',','.');
             $_SESSION['totalVentanaMuro']       = number_format($row['totalVentana'],0,',','.');
-            $_SESSION['totalPresupuesto']       = number_format($row['precioTotal'],0,',','.');
-            header("Location:../../Index.php?sec=Cotizacion3");
+            $_SESSION['totalPresupuestoMuro']       = number_format($row['precioTotal'],0,',','.');
+            header("Location:../../Index.php?sec=Cotizacion");
         }                
  
     }
