@@ -1,4 +1,6 @@
 <!--Registro Usuario -->
+<script type="text/javascript" src="Controlador/Javascript/jQueryRut.js"></script>
+<script type="text/javascript" src="Controlador/Javascript/jquery.Rut.js"></script>
 <div class="modal fade" id="formulario-registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -10,7 +12,7 @@
                 <form class="form" action="./Controlador/ValidarRegistro.php" name="registro_usuario" method="POST">
                     <div class="row">
                         <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" id="rut" name="rut" placeholder="Rut" required="true" maxlength="12">
+                            <input type="text" class="form-control form-group" id="rut_" name="rut" placeholder="Rut" required="true" maxlength="12">
                         </div>
                     </div>
                     <div class="row">
@@ -65,3 +67,10 @@
         </div>
     </div>
 </div>
+
+<script>                
+$("#rut_").Rut({
+   on_error: function(){ 'Rut incorrecto'); },
+   format_on: 'keyup'
+})
+</script>
