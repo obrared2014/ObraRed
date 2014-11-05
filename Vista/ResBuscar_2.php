@@ -24,8 +24,8 @@ if (($id_region = filter_input(INPUT_POST, 'region')) == '' ||
                     <th>Direccion</th>
                     <th>Fono</th>
                     <th>Materiales</th>
-                    <th>Stock</th>
-                    <th>Precio Total</th>
+                    <th>Despacho</th>
+                    <th>Atencion</th>
                 </tr>
             </thead>
             <tbody >
@@ -38,12 +38,12 @@ if (($id_region = filter_input(INPUT_POST, 'region')) == '' ||
                     }
                     $tipo_material = Trae_Nombre_Tipo_Material($tipo);
                     $result = Trae_Local_x_Tipo_Material($id_region, $id_comuna, $tipo);
-                    echo '<h4>' . Mostrar_Tipo_Busqueda($eleccion) . ' = ' . $tipo_material . '<br>Comuna =  ' . Mostrar_Comuna($id_comuna) . '  Region =  ' . Mostrar_Region($id_region) . '</h4><br>';
+                    echo '<h4>' . Mostrar_Tipo_Busqueda($eleccion) . ' &nbsp  <i>' . $tipo_material . ' </i>,&nbspComuna &nbsp  <i>' . Mostrar_Comuna($id_comuna) . '</i>,<br>Region  &nbsp <i>' . Mostrar_Region($id_region) . '</i></h4><br>';
                     $i = 0;
                     $icono = 'img/marker1.png';
                     while ($fila = mysql_fetch_array($result)) {
                         $coordenadas_locales[$i] = array($fila['nombre'], $fila['latLocal'], $fila['lonLocal'], $icono, $i);
-                        echo '<tr><td>' . $fila['nombre'] . '</td><td>' . $fila['direccion'] . '</td><td>  ' . $fila['fono'] . '</td><td> eeee</td><td>eeee</td><td>dese</td></tr>';
+                        echo '<tr><td>' . $fila['nombre'] . '</td><td>' . $fila['direccion'] . '</td><td>  ' . $fila['fono'] . '</td><td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">Ver </button></td><td>Si</td><td>Lunes-Viernes</td></tr>';
                         $i++;
                     }                    
                 }
@@ -60,29 +60,43 @@ if (($id_region = filter_input(INPUT_POST, 'region')) == '' ||
                     $icono = 'img/marker1.png';
                     while ($fila = mysql_fetch_array($result)) {
                         $coordenadas_locales[$i] = array($fila['nombre'], $fila['latLocal'], $fila['lonLocal'], $icono, $i);
-                        echo '<tr><td>' . $fila['nombre'] . '</td><td>' . $fila['direccion'] . '</td><td>  ' . $fila['fono'] . '</td><td> eeee</td><td>eeee</td><td>dese</td></tr>';
+                        echo '<tr><td>' . $fila['nombre'] . '</td><td>' . $fila['direccion'] . '</td><td>  ' . $fila['fono'] . '</td><td> eeee</td><td>Si</td><td>Lunes-Viernes</td></tr>';
                         $i++;
                     }
                 }
                 ?>   
             </tbody>
         </table> 
-
+        <!-- MODERIALES____-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Materiales</h4>
+      </div>
+      <div class="modal-body">
+          <h3>Aqui se Mostrara Material Stock etc</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termino modal info mateiales-->
     </div>
     <div class="col-lg-5">
+        <br>
         <div id="capa-mapa" ></div>
+ 
     </div>
     </div>
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script type="text/javascript">
-$(function () {
-    $('#example').popover({
-        title: 'Test',
-        content: 'Hello Popover',
-        placement: 'bottom'
-    });
-});
+
 var pos = null;
 var map = null;
         
@@ -96,22 +110,19 @@ var mapOptions = {
 
 
 var map = new google.maps.Map(document.getElementById("capa-mapa"),
-    mapOptions);
-var icon= 'img/marker3.png';   
+    mapOptions);  
 
 <?php
 for ($index = 0; $index < count($coordenadas_locales); $index++){
     echo 'var pos = new google.maps.LatLng('.$coordenadas_locales[$index][1].','.$coordenadas_locales[$index][2].');';
     echo 'var marker = new google.maps.Marker({
         position: pos,
-        icon:icon,
         map: map,
         title:"'.$coordenadas_locales[$index][0].'",
         animation: google.maps.Animation.DROP
     });';
 } ?>    
-var contentString = '<div id="content"><div id="siteNotice"></div><div id="bodyContent">sandstone rock formation in the southern part of the (last visited June 22, 2009).</p></div></div>';
-
+var contentString = 'hola';
 var infowindow = new google.maps.InfoWindow({
   content: contentString
 });
@@ -124,7 +135,7 @@ google.maps.event.addDomListener(window, 'load', inicializar_mapa);
 </script>
 <style>
         html, body,#capa-mapa {
-          width: 400px;  
+          width: 490px;  
           height: 400px;
 /*          margin: 20px;
           padding: 100px*/
