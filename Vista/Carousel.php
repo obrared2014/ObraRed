@@ -37,7 +37,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">
+                                        <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                             <option value="">Seleccione</option>
                                             <option value="Norte">Zona Norte</option>
                                             <option value="Centro">Zona Centro</option>
@@ -57,19 +57,19 @@
                                 <tr>
                                     <td>Alto: </td>
                                     <td>
-                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
                                     <td>
-                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
                                     <td>
-                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -99,7 +99,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control ayuda-tooltip" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()" data-toggle="tooltip" data-original-title="Seleccione si el muro es recto o cerrado">
+                                        <select class="form-control" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()">
                                             <option value="">Seleccione</option>
                                             <option value="muroCasa">Perimetro Casa</option>
                                             <option value="Pandereta">Pandereta</option>
@@ -117,19 +117,19 @@
                                 <tr>
                                     <td>Alto: </td>
                                     <td>
-                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
                                     <td>
-                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
                                     <td>
-                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -160,7 +160,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones">
+                                        <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                             <option value="">Seleccione</option>
                                             <option value="Norte">Zona Norte</option>
                                             <option value="Centro">Zona Centro</option>
@@ -179,7 +179,7 @@
                                 <tr>
                                     <td>Aguas: </td>
                                     <td>
-                                        <select name="aguas" id="aguas_techo"  class="form-control ayuda-tooltip" required="true" data-toggle="tooltip" data-original-title="Corresponde a las caídas de agua que tendrá su techo">
+                                        <select name="aguas" id="aguas_techo"  class="form-control" required="true">
                                             <option value="">Cantidad de Aguas</option>
                                             <option value="1">1 Aguas</option>
                                             <option value="2">2 Aguas</option>
@@ -189,13 +189,13 @@
                                 <tr>
                                     <td>Ancho: </td>
                                     <td>
-                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_techo" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
                                     <td>
-                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_techo" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu muro"/>
+                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_techo" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -206,7 +206,6 @@
                     </div>
                 </form>
             </div>
-
             <div class="tab-pane" id="casa_basica"><!-- Panel Casa -->
                 <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_casa">
                     <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
@@ -226,7 +225,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">
+                                        <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                             <option value="">Seleccione</option>
                                             <option value="Norte">Zona Norte</option>
                                             <option value="Centro">Zona Centro</option>
@@ -245,19 +244,19 @@
                                 <tr>
                                     <td>Alto: </td>
                                     <td>
-                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_casa" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Ancho: </td>
                                     <td>
-                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_casa" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Largo: </td>
                                     <td>
-                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_casa" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu radier"/>
+                                        <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_casa" onkeypress="soloNumeros(event);" disabled required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -317,7 +316,5 @@
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
 <script type="text/javascript">
-    $(document).ready(function() {$(".ayuda-tooltip").tooltip({});});//data-toggle="tooltip" data-original-title="Default tooltip"
-    $(document).ready(function() {$(".ayuda-popover").popover({});});//data-toggle="popover" title="Popover title" data-content="Default popover"
     (function($){$('.loading').click(function() {var btn = $(this);btn.button('loading');setTimeout(function() {btn.button('reset');},2000);});})(jQuery);
 </script>

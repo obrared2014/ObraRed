@@ -43,7 +43,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" data-toggle="tooltip">Zona Geográfica</div>
                                         <div class="panel-body">
-                                            <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones.">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
                                                 <option value="1">Zona Centro</option>
                                                 <option value="2">Zona Norte</option>
@@ -71,13 +71,13 @@
                                         <div class="panel-heading">Medidas de contrucción</div>
                                         <div class="panel-body">
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu radier"/>
+                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu radier"/>
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu radier"/>
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_radier" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Cemento">
+                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
                                                     </select>
                                                 </div>
@@ -100,7 +100,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Arena">
+                                                    <select class="form-control" required="true" name="material_dos" id="material_dos">
                                                         <option value="">Material dos</option>
                                                     </select>
                                                 </div>
@@ -111,7 +111,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Ripio">
+                                                    <select class="form-control" required="true" name="material_tres" id="material_tres">
                                                         <option value="">Material tres</option>
                                                     </select>
                                                 </div>
@@ -156,7 +156,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">Tipo de Muro</div>
                                         <div class="panel-body">
-                                            <select class="form-control ayuda-tooltip" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()" data-toggle="tooltip" data-original-title="Seleccione si el muro es recto o cerrado">
+                                            <select class="form-control" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()">
                                                 <option value="">Seleccione</option>
                                                 <option value="muroCasa">Perimetro Casa</option>
                                                 <option value="Pandereta">Pandereta</option>
@@ -183,13 +183,13 @@
                                         <div class="panel-heading">Medidas de contrucción</div>
                                         <div class="panel-body">
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control ayuda-tooltip" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Alto total de lo que será tu muro"/>
+                                                <input type="text" placeholder="Alto" maxlength="4" class="form-control" name="alto" id="alto_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control ayuda-tooltip" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Ancho total de lo que será tu muro"/>
+                                                <input type="text" placeholder="Ancho" maxlength="4" class="form-control" name="ancho" id="ancho_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                             <div class="col-lg-4">
-                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control ayuda-tooltip" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true" data-toggle="tooltip" data-original-title="Largo total de lo que será tu muro"/>
+                                                <input type="text" placeholder="Largo" maxlength="4" class="form-control" name="largo" id="largo_muro" onkeypress="soloNumeros(event);" disabled required="true"/>
                                             </div>
                                         </div>
                                     </div>
@@ -201,7 +201,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Cemento">
+                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
                                                     </select>
                                                 </div>
@@ -212,7 +212,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Arena">
+                                                    <select class="form-control" required="true" name="material_dos" id="material_dos">
                                                         <option value="">Material dos</option>
                                                     </select>
                                                 </div>
@@ -223,7 +223,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Ladrillos">
+                                                    <select class="form-control" required="true" name="material_tres" id="material_tres">
                                                         <option value="">Material tres</option>
                                                     </select>
                                                 </div>
@@ -234,7 +234,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cuatro" id="material_cuatro" data-toggle="tooltip" data-original-title="Pilares">
+                                                    <select class="form-control" required="true" name="material_cuatro" id="material_cuatro">
                                                         <option value="">Material cuatro</option>
                                                     </select>
                                                 </div>
@@ -245,7 +245,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cinco" id="material_cinco" data-toggle="tooltip" data-original-title="Cadenas">
+                                                    <select class="form-control" required="true" name="material_cinco" id="material_cinco">
                                                         <option value="">Material cinco</option>
                                                     </select>
                                                 </div>
@@ -256,7 +256,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_seis" id="material_seis" data-toggle="tooltip" data-original-title="Puertas">
+                                                    <select class="form-control" required="true" name="material_seis" id="material_seis">
                                                         <option value="">Material seis</option>
                                                     </select>
                                                 </div>
@@ -267,7 +267,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_siete" id="material_siete" data-toggle="tooltip" data-original-title="Ventanas">
+                                                    <select class="form-control" required="true" name="material_siete" id="material_siete">
                                                         <option value="">Material siete</option>
                                                     </select>
                                                 </div>
@@ -312,7 +312,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">Zona Geográfica</div>
                                         <div class="panel-body">
-                                            <select class="form-control ayuda-tooltip" required="true" name="zona_geografica" id="zona_geografica" data-toggle="tooltip" data-original-title="Los materiales se ajustan según la Zona Geográfica que selecciones">
+                                            <select class="form-control" required="true" name="zona_geografica" id="zona_geografica">
                                                 <option value="">Seleccione</option>
                                                 <option value="Norte">Zona Norte</option>
                                                 <option value="Centro">Zona Centro</option>
@@ -340,7 +340,7 @@
                                         <div class="panel-heading">Medidas de contrucción</div>
                                         <div class="panel-body">
                                             <div class="col-lg-4">
-                                                <select name="aguas" id="aguas_techo"  class="form-control ayuda-tooltip" required="true" data-toggle="tooltip" data-original-title="Corresponde a las caídas de agua que tendrá su techo">
+                                                <select name="aguas" id="aguas_techo"  class="form-control" required="true">
                                                     <option value="">Cantidad de Aguas</option>
                                                     <option value="1">1 Aguas</option>
                                                     <option value="2">2 Aguas</option>
@@ -362,7 +362,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_uno" id="material_uno" data-toggle="tooltip" data-original-title="Madera">
+                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
                                                     </select>
                                                 </div>
@@ -373,7 +373,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_dos" id="material_dos" data-toggle="tooltip" data-original-title="Zinc">
+                                                    <select class="form-control" required="true" name="material_dos" id="material_dos">
                                                         <option value="">Material dos</option>
                                                     </select>
                                                 </div>
@@ -384,7 +384,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_tres" id="material_tres" data-toggle="tooltip" data-original-title="Fieltro">
+                                                    <select class="form-control" required="true" name="material_tres" id="material_tres">
                                                         <option value="">Material tres</option>
                                                     </select>
                                                 </div>
@@ -395,7 +395,7 @@
                                             <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <select class="form-control ayuda-tooltip" required="true" name="material_cuatro" id="material_cuatro" data-toggle="tooltip" data-original-title="Clavos">
+                                                    <select class="form-control" required="true" name="material_cuatro" id="material_cuatro">
                                                         <option value="">Material cuatro</option>
                                                     </select>
                                                 </div>
@@ -419,8 +419,6 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(document).ready(function() {$(".ayuda-tooltip").tooltip({});});//data-toggle="tooltip" data-original-title="Default tooltip"
-    $(document).ready(function() {$(".ayuda-popover").popover({});});//data-toggle="popover" title="Popover title" data-content="Default popover"
     (function($){$('.loading').click(function() {var btn = $(this);btn.button('loading');setTimeout(function() {btn.button('reset');},2000);});})(jQuery);
 </script>
 
