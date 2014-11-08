@@ -207,7 +207,7 @@
                 </form>
             </div>
             <div class="tab-pane" id="casa_basica"><!-- Panel Casa -->
-                <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_casa">
+                <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_casa">
                     <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
                     if (isset($_SESSION["id_persona"])) {
                         echo $_SESSION["id_persona"];

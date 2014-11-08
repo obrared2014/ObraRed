@@ -12,8 +12,9 @@
 <h4>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
     de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h4>
 <br/>
+ 
     <table class="table table-striped">
-        <span class="form-control"><?php echo "PRESUPUESTO Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']]?></span>
+        <span class="form-control"><?php echo $_SESSION['fecha'].'&nbsp;'."PRESUPUESTO Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']]?> </span>
         <thead>
             <tr>
                 <th>Item</th>
@@ -29,9 +30,7 @@
             <?php if($_SESSION['que']=='Muro'){ include 'cotizacion_muro.php'; } ?>
             <?php if($_SESSION['que']=='Techo'){ include 'cotizacion_techo.php'; } ?>
             <?php if($_SESSION['que']=='Casa'){ 
-                include 'cotizacion_radier.php'; 
-                include 'cotizacion_muro.php'; 
-                include 'cotizacion_techo.php'; 
+                include 'cotizacion_casa.php'; 
             } ?>
             <tr>
                 <td colspan="6">&nbsp;</td>      

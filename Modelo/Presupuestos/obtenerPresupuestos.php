@@ -18,6 +18,8 @@
                     obtienePresupuestoTecho();
                 }else if($tipoConstruccion=='Muro'){
                     obtienePresupuestoMuro();
+                }else if($tipoConstruccion=='Casa'){
+                    obtienePresupuestoCasa();
                 }else{
                echo '<script languaje="javascript">
                     location.href = "../../index.php?sec=Presupuesto";
