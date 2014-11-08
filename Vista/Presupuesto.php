@@ -1,4 +1,8 @@
 <!-- presupuesto -->
+<?php 
+include './Modelo/Materiales/consultasMateriales.php';
+include './Modelo/datosBD.php';
+?>
 <div class="row">
     <div class="col-lg-12">
         <ol class="breadcrumb">
@@ -88,16 +92,57 @@
                                         <div class="panel-heading">Seleccion de Materiales</div>
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleArena" id="detalleArena" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Arena</option>
+                                                        <?php
+                                                            $detalle=traeDetallesMateriales('Radier','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleCemento" id="detalleCemento" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Cemento</option>
+                                                        <?php 
+//                                                            include './Modelo/Materiales/consultasMateriales.php';
+//                                                            include './Modelo/datosBD.php';
+                                                            $detalle=traeDetallesMateriales('Radier','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
                                                 </div>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleRipio" id="detalleRipio" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Ripio</option>
+                                                        <?php 
+//                                                            include './Modelo/Materiales/consultasMateriales.php';
+//                                                            include './Modelo/datosBD.php';
+                                                            $detalle=traeDetallesMateriales('Radier','Ripio',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>                                                
+<!--                                                <div class="col-lg-6">
+                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
+                                                </div>-->
                                             </div>
-                                            <div class="row">&nbsp;</div>
+<!--                                            <div class="row">&nbsp;</div>
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <select class="form-control" required="true" name="material_dos" id="material_dos">
@@ -118,7 +163,7 @@
                                                 <div class="col-lg-6">
                                                     <input type="text" value="descripcion material tres" name="descripcion_mat_tres" id="descripcion_mat_tres" class="form-control" disabled="true"/>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
@@ -200,81 +245,109 @@
                                         <div class="panel-heading">Seleccion de Materiales</div>
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleArena" id="detalleArena" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Arena</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
-                                                </div>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleCadena" id="detalleCadena" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Cadena</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Cadenas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>  
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleCemento" id="detalleCemento" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Cemento</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>                                                
                                             </div>
-                                            <div class="row">&nbsp;</div>
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_dos" id="material_dos">
-                                                        <option value="">Material dos</option>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleLadrillo" id="detalleLadrillo" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Ladrillo</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Ladrillos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material dos" name="descripcion_mat_dos" id="descripcion_mat_dos" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detallePilar" id="detallePilar" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Pilar</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Pilares',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>  
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detallePuerta" id="detallePuerta" class="form-control form-group" required="true" disabled>
+                                                        <option value="" >Seleccione Puerta</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Puertas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>                                                
+                                            </div>    
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_tres" id="material_tres">
-                                                        <option value="">Material tres</option>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleVentana" id="detalleVentana" class="form-control form-group" required="true" disabled>
+                                                        <option value="" >Seleccione Ventana</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Muro','Ventanas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material tres" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_cuatro" id="material_cuatro">
-                                                        <option value="">Material cuatro</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material cuatro" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_cinco" id="material_cinco">
-                                                        <option value="">Material cinco</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material cinco" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_seis" id="material_seis">
-                                                        <option value="">Material seis</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material seis" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_siete" id="material_siete">
-                                                        <option value="">Material siete</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material siete" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
+                                            </div>                                             
                                         </div>
                                     </div>
                                 </div>
@@ -361,48 +434,62 @@
                                         <div class="panel-heading">Seleccion de Materiales</div>
                                         <div class="panel-body">
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
                                                         <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleClavo" id="detalleClavo" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Clavos</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Techo','Clavos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material uno" name="descripcion_mat_uno" id="descripcion_mat_uno" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detalleFieltro" id="detalleFieltro" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Fieltro</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Techo','Fieltro',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>  
+                                                <div class="col-lg-4">
+<!--                                                    <select class="form-control" required="true" name="material_uno" id="material_uno">
+                                                        <option value="">Material uno</option>
+                                                    </select>-->
+                                                    <select name="detallePlancha" id="detallePlancha" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Plancha Zinc</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Techo','Zinc',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
+                                                    </select>
+                                                </div>                                                
+                                            </div>    
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_dos" id="material_dos">
-                                                        <option value="">Material dos</option>
+                                                <div class="col-lg-4">
+                                                    <select name="detalleTabla" id="detalleTabla" class="form-control form-group" required="true">
+                                                        <option value="" >Seleccione Tabla</option>
+                                                        <?php 
+                                                            $detalle=traeDetallesMateriales('Techo','Madera',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                            foreach($detalle as $indice => $registro){
+                                                                echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
+                                                            }                                          
+                                                        ?>
                                                     </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material dos" name="descripcion_mat_dos" id="descripcion_mat_dos" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_tres" id="material_tres">
-                                                        <option value="">Material tres</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material tres" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
-                                            <div class="row">&nbsp;</div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <select class="form-control" required="true" name="material_cuatro" id="material_cuatro">
-                                                        <option value="">Material cuatro</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="text" value="descripcion material cuatro" class="form-control" disabled="true"/>
-                                                </div>
-                                            </div>
+                                                </div>                                            
+                                            </div>                                            
                                         </div>
                                     </div>
                                 </div>
