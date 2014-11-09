@@ -31,7 +31,7 @@ include './Modelo/datosBD.php';
                 </div>
                 <div id="radier" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_radier">
+                        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_radier">
                             <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
                             if (isset($_SESSION["id_persona"])) {
                                 echo $_SESSION["id_persona"];
@@ -100,10 +100,12 @@ include './Modelo/datosBD.php';
                                                         <option value="" >Seleccione Arena</option>
                                                         <?php
                                                             $detalle=traeDetallesMateriales('Radier','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                          
                                                             foreach($detalle as $indice => $registro){
                                                                 echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                             }                                          
                                                         ?>
+                                                        
                                                     </select>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -186,7 +188,7 @@ include './Modelo/datosBD.php';
                 </div>
                 <div id="muro" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <form class="form-horizontal" action="" method="POST" name="form_presupuesto_medidas_muro">
+                        <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_muro">
                             <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
                             if (isset($_SESSION["id_persona"])) {
                                 echo $_SESSION["id_persona"];
@@ -201,7 +203,7 @@ include './Modelo/datosBD.php';
                                     <div class="panel panel-default">
                                         <div class="panel-heading">Tipo de Muro</div>
                                         <div class="panel-body">
-                                            <select class="form-control" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuro()">
+                                            <select class="form-control" required="true" name="tipo_muro" id="tipo_muro" onChange="actvaAnchoMuroAvanzado()">
                                                 <option value="">Seleccione</option>
                                                 <option value="muroCasa">Perimetro Casa</option>
                                                 <option value="Pandereta">Pandereta</option>

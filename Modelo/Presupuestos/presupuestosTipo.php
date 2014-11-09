@@ -15,11 +15,12 @@
         $anchoP=filter_input(INPUT_POST, "ancho");
         $largoP=filter_input(INPUT_POST, "largo");
         //$idDetalle=$_POST["detalleMaterial1"];
-        $idCemento=1;
-        $idArena=2;
-        $idRipio=3;
         $descripcion="Cálculo Radier";
         if($presupuestoRapido!='SI'){
+            $idCemento=filter_input(INPUT_POST, 'detalleCemento');
+            $idArena=filter_input(INPUT_POST, 'detalleArena');
+            $idRipio=filter_input(INPUT_POST, 'detalleRipio');
+            
             $consulta="call crear_presupuesto_radier($idUsuario,'$tipoPresupuesto',$idCemento,$idArena,$idRipio,$altoP,$anchoP,$largoP,'$unidadMedida')";
         }else{
             $consulta="call crear_presupuesto_radier_rapido($idUsuario,'$tipoPresupuesto',$altoP,$anchoP,$largoP,'$unidadMedida',0)";
@@ -61,6 +62,8 @@
             $_SESSION['totalRipioRadier']         = number_format($row['totalRipioRadier'],0,',','.');
             $_SESSION['cantidadAguaRadier']       = $row['aguaCantidadRadier'];
             $_SESSION['totalPresupuestoRadier']   = number_format($row['precioTotalRadier'],0,',','.');
+            $diezPorCiento   = $row['precioTotalRadier']*0.10;
+            $_SESSION['totalRadier10']   = number_format($diezPorCiento,0,',','.');            
             header("Location:../../Index.php?sec=Cotizacion");
         }                
  
@@ -94,12 +97,13 @@
             $anchoP=$anchoP/100;
             $largoP=$largoP/100;
         }
-//        $idCemento=1;
-//        $idArena=2;
-//        $idRipio=3;
-//        $descripcion="Cálculo Radier";
-        if($presupuestoRapido!='SI'){//falta hacer el presupuesto avanzado
-            $consulta="call crear_presupuesto_techo($idUsuario,'$tipoPresupuesto',$idCemento,$idArena,$idRipio,$altoP,$anchoP,$largoP,'$unidadMedida')";
+        if($presupuestoRapido!='SI'){
+            $idClavos=filter_input(INPUT_POST, "detalleClavo");
+            $idFieltro=filter_input(INPUT_POST, "detalleFieltro");
+            $idZinc=filter_input(INPUT_POST, "detallePlancha");
+            $idTabla=filter_input(INPUT_POST, "detalleTabla");
+            
+            $consulta="call crear_presupuesto_techo($idUsuario,'$tipoPresupuesto',$anchoP,$largoP,$pendiente,$aguas,$idClavos,$idFieltro,$idZinc,$idTabla)";
         }else{
             $consulta="call crear_presupuesto_techo_rapido($idUsuario,'$tipoPresupuesto',$anchoP,$largoP,$pendiente,$aguas,0)";
         }
@@ -145,6 +149,8 @@
             $_SESSION['totalFieltroTecho']       = number_format($row['totalFieltroTecho'],0,',','.');
             $_SESSION['totalClavoTecho']         = number_format($row['totalClavosTecho'],0,',','.');
             $_SESSION['totalPresupuestoTecho']   = number_format($row['precioTotalTecho'],0,',','.');
+            $diezPorCiento   = $row['precioTotalTecho']*0.10;
+            $_SESSION['totalTecho10']   = number_format($diezPorCiento,0,',','.');
             header("Location:../../Index.php?sec=Cotizacion");
         }                
  
@@ -175,7 +181,22 @@
 //        $idRipio=3;
 //        $descripcion="Cálculo Radier";
         if($presupuestoRapido!='SI'){//falta hacer el presupuesto avanzado
-            $consulta="call crear_presupuesto_muro($idUsuario,'$tipoPresupuesto',$idCemento,$idArena,$idRipio,$altoP,$anchoP,$largoP,'$unidadMedida')";
+//            id_persona int,nombre_tipo_construccion varchar(50), alto float, ancho float,largo float, tipoMuro varchar(30),id_arena int,id_cadenas int,id_cemento int,id_ladrillos int,id_pilares int,id_puerta int,id_ventana int
+            $idArena=filter_input(INPUT_POST, 'detalleArena');
+            $idCadena=filter_input(INPUT_POST, 'detalleCadena');
+            $idCemento=filter_input(INPUT_POST, 'detalleCemento');
+            $idLadrillo=filter_input(INPUT_POST, 'detalleLadrillo');
+            $idPilar=filter_input(INPUT_POST, 'detallePilar');
+            
+            if($tipoMuro!='Pandereta'){
+            $idPuerta=filter_input(INPUT_POST, 'detallePuerta');
+            $idVentana=filter_input(INPUT_POST, 'detalleVentana');
+            }else{
+                $idPuerta=0;
+                $idVentana=0; 
+            }
+            
+            $consulta="call crear_presupuesto_muro($idUsuario,'$tipoPresupuesto',$altoP,$anchoP,$largoP,'$tipoMuro',$idArena,$idCadena,$idCemento,$idLadrillo,$idPilar,$idPuerta,$idVentana)";
         }else{
             $consulta="call crear_presupuesto_muro_rapido($idUsuario,'$tipoPresupuesto',$altoP,$anchoP,$largoP,'$tipoMuro',0)";
         }
@@ -239,6 +260,8 @@
             $_SESSION['totalPuertaMuro']       = number_format($row['totalPuertaMuro'],0,',','.');
             $_SESSION['totalVentanaMuro']       = number_format($row['totalVentanaMuro'],0,',','.');
             $_SESSION['totalPresupuestoMuro']       = number_format($row['precioTotalMuro'],0,',','.');
+            $diezPorCiento   = $row['precioTotalMuro']*0.10;
+            $_SESSION['totalMuro10']   = number_format($diezPorCiento,0,',','.');               
             header("Location:../../Index.php?sec=Cotizacion");
         }                
  
@@ -383,6 +406,8 @@
             $_SESSION['totalClavoTecho']         = number_format($row['totalClavosTecho'],0,',','.');
             $_SESSION['totalPresupuestoTecho']   = number_format($row['precioTotalTecho'],0,',','.');   
             $_SESSION['totalPresupuestoCasa']   = number_format(($row['precioTotalTecho']+$row['precioTotalMuro']+$row['precioTotalRadier']),0,',','.'); 
+            $diezPorCiento   = ($row['precioTotalTecho']+$row['precioTotalMuro']+$row['precioTotalRadier'])*0.10;
+            $_SESSION['totalCasa10']   = number_format($diezPorCiento,0,',','.');   
             header("Location:../../Index.php?sec=Cotizacion");
         }   
     }

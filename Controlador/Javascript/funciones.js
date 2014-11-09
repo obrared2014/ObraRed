@@ -218,6 +218,21 @@ function actvaAnchoMuro(){
     }
     //alert(document.getElementById("tipo_muro").value);
 }
+function actvaAnchoMuroAvanzado(){
+    var casaOpandereta=document.getElementById("tipo_muro").value;
+    
+    if(casaOpandereta=='Pandereta'){
+        document.getElementById("ancho_muro").value=0;
+        document.getElementById("ancho_muro").readOnly=true;
+        document.getElementById("detallePuerta").disabled=true;
+        document.getElementById("detalleVentana").disabled=true;
+    }else{
+        document.getElementById("ancho_muro").readOnly=false;
+        document.getElementById("detallePuerta").disabled=false;
+        document.getElementById("detalleVentana").disabled=false;        
+    }
+    //alert(document.getElementById("tipo_muro").value);
+}
 //    1. 1 saco de cemento (42,5 kgs).
 //    2. 93 lts de arena.
 //    3. 160 lts de ripio.

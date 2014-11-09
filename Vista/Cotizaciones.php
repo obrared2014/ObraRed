@@ -17,12 +17,12 @@
         <span class="form-control"><?php echo $_SESSION['fecha'].'&nbsp;'."PRESUPUESTO Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']]?> </span>
         <thead>
             <tr>
-                <th>Item</th>
-                <th>Material</th>
-                <th>Descripci&oacute;n</th>
-                <th>Cantidad</th>
-                <th>Precio Unitario</th>
-                <th>Precio Total</th>
+                <th class="text-center">Item</th>
+                <th class="text-center">Material</th>
+                <th class="text-center">Descripci&oacute;n</th>
+                <th class="text-center">Cantidad</th>
+                <th class="text-center">Precio Unitario</th>
+                <th class="text-center">Precio Total</th>
             </tr>
         </thead>
         <tbody>
@@ -41,11 +41,11 @@
 
             <tr>
                 <td colspan="4">&nbsp;</td>   
-                <td>Total</td>
-                <td>$<?php echo $_SESSION['totalPresupuesto'.$_SESSION['que']]?></td>  
+                <td class="text-right" colspan="1"><b>Total Presupuesto</b></td>
+                <td class="text-right" colspan="1"><b>$ <?php echo $_SESSION['totalPresupuesto'.$_SESSION['que']]?></b></td>  
             </tr>  
             <tr>
-                <td colspan="6">Cabe destacar que los valores presentados incluyen iva.</td>   
+                <td colspan="6">Cabe destacar que los valores presentados incluyen iva. y debe considerar un 10% adicional del presupuesto cuyo monto asciende a $ <?php echo $_SESSION['total'.$_SESSION['que'].'10']?>.- pesos.</td>   
             </tr>   
             <tr>
                 <td colspan="4">&nbsp;</td>
