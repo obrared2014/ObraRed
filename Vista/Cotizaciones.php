@@ -26,12 +26,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php if($_SESSION['que']=='Radier'){ include 'cotizacion_radier.php'; } ?>
-            <?php if($_SESSION['que']=='Muro'){ include 'cotizacion_muro.php'; } ?>
-            <?php if($_SESSION['que']=='Techo'){ include 'cotizacion_techo.php'; } ?>
-            <?php if($_SESSION['que']=='Casa'){ 
-                include 'cotizacion_casa.php'; 
-            } ?>
+            <?php if($_SESSION['que']=='Radier'){ include 'cotizacion_radier.php'   ; } ?>
+            <?php if($_SESSION['que']=='Muro')  { include 'cotizacion_muro.php'     ; } ?>
+            <?php if($_SESSION['que']=='Techo') { include 'cotizacion_techo.php'    ; } ?>
+            <?php if($_SESSION['que']=='Casa')  {include 'cotizacion_casa.php'      ; } ?>
             <tr>
                 <td colspan="6">&nbsp;</td>      
             </tr>  

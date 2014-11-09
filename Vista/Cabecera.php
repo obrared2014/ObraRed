@@ -32,7 +32,12 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
                         <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
-                        <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>    
+                        <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>  
+                        <?php
+                            if(isset($_SESSION['nombre'])){
+                        ?>
+                        <li><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
+                        <?php } ?>
                     </ul>
                 </li>               
             </ul>

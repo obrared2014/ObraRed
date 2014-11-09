@@ -113,6 +113,10 @@
                         case "Codigo":
                             include 'Codigo.php';
                             break;
+                        case "muestra_presupuestos":
+                            include 'mis_presupuestos.php';
+                            break;
+                        
                     }
                 }
                 include 'Footer.php';
