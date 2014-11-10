@@ -9,12 +9,12 @@
     </div>
 </div>
 <div style="overflow: auto;" id="imprimir">
-<h4>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
-    de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h4>
+<h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
+    de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h5>
 <br/>
  
     <table class="table table-striped">
-        <span class="form-control"><?php echo $_SESSION['fecha'].'&nbsp;'."PRESUPUESTO Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']]?> </span>
+        <span class="form-control"><?php echo "Presupuesto Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']].',&nbsp;realizado el d&iacute;a'.$_SESSION['fecha']?> </span>
         <thead>
             <tr>
                 <th class="text-center">Item</th>
@@ -43,8 +43,11 @@
                 <td class="text-right" colspan="1"><b>$ <?php echo $_SESSION['totalPresupuesto'.$_SESSION['que']]?></b></td>  
             </tr>  
             <tr>
-                <td colspan="6">Cabe destacar que los valores presentados incluyen iva. y debe considerar un 10% adicional del presupuesto cuyo monto asciende a $ <?php echo $_SESSION['total'.$_SESSION['que'].'10']?>.- pesos.</td>   
+                <td colspan="6"><b>Nota:</b> Cabe destacar que los valores presentados incluyen IVA. y debe considerar un 10% adicional del presupuesto cuyo monto asciende a $ <?php echo $_SESSION['total'.$_SESSION['que'].'10']?>.- pesos.</td>   
             </tr>   
+            <tr>
+                <td colspan="6">&nbsp;</td>   
+            </tr>               
             <tr>
                 <td colspan="4">&nbsp;</td>
                 <td colspan="1"><button type="button" class="btn btn-primary">Enviar a E-mail <b class="glyphicon glyphicon-send"></b></button></td> 

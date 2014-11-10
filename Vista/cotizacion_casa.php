@@ -1,5 +1,7 @@
 <!-- cotización Radier-->
-
+        <tr>    
+            <td colspan="6" class="text-left"><b>RADIER</b></td>
+        </tr>  
           <tr>
                 <td class="text-right"><?php echo $_SESSION['idCementoRadier']?></td>
                 <td class="text-left"><?php echo $_SESSION['nombreCementoRadier']?></td>
@@ -25,10 +27,12 @@
                 <td class="text-right">$<?php echo $_SESSION['totalRipioRadier']?></td>            
             </tr>     
             <tr>    
-                <td colspan="6" class="text-center"><b>Precio Total Radier&nbsp;$<?php echo $_SESSION['totalPresupuestoRadier']?>  </b> </td>
+                <td colspan="6" class="text-right"><b>Precio Total Radier&nbsp;$ <?php echo $_SESSION['totalPresupuestoRadier']?>  </b> </td>
             </tr>              
 <!-- cotización muro-->
-
+        <tr>    
+            <td colspan="6" class="text-left"><b>MURO</b></td>
+        </tr>  
             <tr>
                 <td class="text-right"><?php echo $_SESSION['idCementoMuro']?></td>
                 <td class="text-left"><?php echo $_SESSION['nombreCementoMuro']?></td>
@@ -85,9 +89,12 @@
                 <td class="text-right">$<?php echo $_SESSION['precioVentanaMuro']?></td>
                 <td class="text-right">$<?php echo $_SESSION['totalVentanaMuro']?></td>            
             <tr>    
-                <td colspan="6" class="text-center"><b>Precio Total Muro&nbsp;$<?php echo $_SESSION['totalPresupuestoMuro']?>   </b></td>
+                <td colspan="6" class="text-right"><b>Precio Total Muro&nbsp;$ <?php echo $_SESSION['totalPresupuestoMuro']?>   </b></td>
             </tr>                
 <!-- cotización techo-->
+        <tr>    
+            <td colspan="6" class="text-left"><b>TECHUMBRE</b></td>
+        </tr>  
             <tr>
                 <td class="text-right"><?php echo $_SESSION['idTablaTecho']?></td>
                 <td class="text-left"><?php echo $_SESSION['nombreTablaTecho']?></td>
@@ -121,6 +128,6 @@
                 <td class="text-right">$<?php echo $_SESSION['totalClavoTecho']?></td>            
             </tr>      
             <tr>    
-                <td colspan="6" class="text-center"><b>Precio Total Techumbre&nbsp;$<?php echo $_SESSION['totalPresupuestoTecho']?>  </b> </td>
+                <td colspan="6" class="text-right"><b>Precio Total Techumbre&nbsp;$ <?php echo $_SESSION['totalPresupuestoTecho']?>  </b> </td>
             </tr>  
 
