@@ -33,11 +33,6 @@
                         <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
                         <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
                         <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>  
-                        <?php
-                            if(isset($_SESSION['nombre'])){
-                        ?>
-                        <li><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
-                        <?php } ?>
                     </ul>
                 </li>               
             </ul>
@@ -49,6 +44,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['ap_paterno'] ?> <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Perfil"><b class="glyphicon glyphicon-cog"></b>&nbsp;Perfil</a></li>
+                        <li><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
                         <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
