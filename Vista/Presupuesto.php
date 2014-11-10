@@ -380,9 +380,9 @@ include './Modelo/datosBD.php';
                                         </div>  
                                         <div class="col-lg-4">
                                             <select name="detallePlancha" id="detallePlancha" class="form-control" required="true">
-                                                <option value="" >Seleccione Plancha Zinc</option>
+                                                <option value="" >Seleccione Cubre Techo</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Techo','Zinc',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMateriales('Techo','CubreTecho',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
