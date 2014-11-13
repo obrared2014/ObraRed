@@ -39,7 +39,7 @@
             $_SESSION['altoRadier']                 = $row['alto'];
             $_SESSION['anchoRadier']              = $row['ancho'];
             $_SESSION['largoRadier']              = $row['largo'];
-            $_SESSION['metrosRadier']      = $row['metrosCubicos'];
+            $_SESSION['metrosRadier']             = $row['metrosCubicos'];
             $_SESSION['idRegionRadier']           = $row['id_region'];
             $_SESSION['idCiudadRadier']           = $row['id_ciudad'];
             $_SESSION['idCementoRadier']          = 1;

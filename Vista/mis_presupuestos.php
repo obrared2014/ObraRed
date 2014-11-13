@@ -34,7 +34,7 @@
                         <td colspan="4"><b>PRESUPUESTOS PARA RADIER</b></td>
                     </tr>
                     <tr>
-                        <th>Nº</th>
+                        <th>Vinculo</th>
                         <th>Fecha</th>
                         <th>Detalle</th>
                         <th>Precio Total</th>
@@ -52,7 +52,7 @@
                         <td colspan="4"><b>PRESUPUESTOS PARA MURO</b></td>
                     </tr>
                     <tr>
-                        <th>Nº</th>
+                        <th>Vinculo</th>
                         <th>Fecha</th>
                         <th>Detalle</th>
                         <th>Precio Total</th>
@@ -69,7 +69,7 @@
                         <td colspan="4"><b>PRESUPUESTOS PARA RADIER</b></td>
                     </tr>
                     <tr>
-                        <th>Nº</th>
+                        <th>Vinculo</th>
                         <th>Fecha</th>
                         <th>Detalle</th>
                         <th>Precio Total</th>

@@ -14,8 +14,8 @@ function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
   while($row = mysql_fetch_array($result))
   {
     $numero++;  
-  echo "<tr><td width=\"25%\"><font face=\"verdana\"><a href=\"javascript:mostrarPresupuesto(".$row["id"].",'".$tipo."');\">" . 
-	    $numero . "</a></font></td>";
+  echo "<tr><td width=\"25%\"><font face=\"verdana\"><a href=\"javascript:mostrarPresupuesto(".$row["id"].",'".$tipo."');\"> 
+	    <button type='button' class='btn btn-success'>Detalle</button></a></font></td>";
     echo "<td width=\"25%\"><font face=\"verdana\">" . 
 	    $row["fecha".$tipo.""] . "</font></td>";
     echo "<td width=\"25%\"><font face=\"verdana\">" . 
