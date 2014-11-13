@@ -1,5 +1,8 @@
 <!--mis_presupuestos.php-->
-<?php include './Modelo/Presupuestos/informesPresupuestos.php'; ?>
+<?php 
+    include './Modelo/Presupuestos/informesPresupuestos.php'; 
+    $idPersona=$_SESSION['id_persona'];
+?>
 <div class="row">
     <div class="col-lg-12">
         <ol class="breadcrumb">
@@ -38,7 +41,8 @@
                     </tr>
                         <?php
                             $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
-                            traeInformePresupuestos($nombre, 'Radier', 'metrosCubicos', 'm3');
+                            
+                            traeInformePresupuestos($nombre, 'Radier', 'metrosCubicos', 'm3',$idPersona);
                         ?>
                 </table>
             </div>
@@ -55,7 +59,7 @@
                     </tr>
                     <?php
                     $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
-                    traeInformePresupuestos($nombre, 'Muro', 'metrosCuadrados', 'm2');
+                    traeInformePresupuestos($nombre, 'Muro', 'metrosCuadrados', 'm2',$idPersona);
                     ?>
                 </table>
             </div>
@@ -72,7 +76,7 @@
                     </tr>
                     <?php
                         $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
-                        traeInformePresupuestos($nombre, 'Techo', 'metrosCuadrados', 'm2');
+                        traeInformePresupuestos($nombre, 'Techo', 'metrosCuadrados', 'm2',$idPersona);
                     ?>
                 </table>
             </div>

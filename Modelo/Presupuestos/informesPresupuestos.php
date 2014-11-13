@@ -1,12 +1,12 @@
 <?php
-function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3){
+function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
     //$nombre=$_SESSION['nombre'].' '.$_SESSION['ap_paterno'];
   $link = @mysql_connect("localhost", "root","root")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("db_obrared", $link)
       or die ("Error al conectar a la base de datos.");
   $query = "SELECT *  " .
-      "FROM db_obrared.v_presupuesto_".strtolower($tipo)." " .
+      "FROM (select @f1:=".$idPersona." p) param, db_obrared.v_presupuesto_".strtolower($tipo)." " .
 	  "WHERE nombre='".$nombre."'"." and precioTotal".$tipo.">'0'".
 	  "order by precioTotal".$tipo."";
   $result = mysql_query($query);
