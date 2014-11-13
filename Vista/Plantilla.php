@@ -17,6 +17,7 @@
             <?php
                 include 'Cabecera.php';
                 $seccion=filter_input(INPUT_GET, "sec");
+                $idPress=filter_input(INPUT_GET, "idPres");
                 if(empty($seccion)){
                     $seccion='Inicio';
                 }
@@ -116,7 +117,12 @@
                         case "muestra_presupuestos":
                             include 'mis_presupuestos.php';
                             break;
-                        
+                        case "presupuestosAntiguos":
+                            require 'presupuestosAntiguos.php';
+                            break;        
+//                        case "presupuestosAntiguos2":
+//                            include 'CotizacionesAntiguas.php';
+//                            break;                            
                     }
                 }
                 include 'Footer.php';

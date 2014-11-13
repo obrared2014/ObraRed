@@ -233,6 +233,7 @@ function actvaAnchoMuroAvanzado(){
     }
     //alert(document.getElementById("tipo_muro").value);
 }
+
 //    1. 1 saco de cemento (42,5 kgs).
 //    2. 93 lts de arena.
 //    3. 160 lts de ripio.

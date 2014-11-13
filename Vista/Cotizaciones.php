@@ -14,7 +14,7 @@
 <br/>
  
     <table class="table table-striped">
-        <span class="form-control"><?php echo "Presupuesto Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']].',&nbsp;realizado el d&iacute;a'.$_SESSION['fecha']?> </span>
+        <span class="form-control"><?php echo "Presupuesto Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']].',&nbsp;realizado el d&iacute;a '.$_SESSION['fecha']?> </span>
         <thead>
             <tr>
                 <th class="text-center">Item</th>

@@ -83,3 +83,9 @@
         </div>
     </div>
 </div>
+<script> 
+    function mostrarPresupuesto(id,tipo){
+        window.location='Index.php?sec=presupuestosAntiguos&idPres='+id+"&tipo="+tipo+"";
+    }
+
+</script>
