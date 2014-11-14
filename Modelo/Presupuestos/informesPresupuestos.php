@@ -14,7 +14,7 @@ function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
   while($row = mysql_fetch_array($result))
   {
     $numero++;  
-    echo "<tr><td width=\"5%\"><font face=\"verdana\">" . 
+    echo "<tr><td width=\"5%\" style=\"text-align: center;\"><font face=\"verdana\">" . 
 	    $numero . "</font></td>";
     echo "<td width=\"10%\" style=\"text-align: center;\"><font face=\"verdana\">" . 
 	    $row["fecha".$tipo.""] . "</font></td>";
