@@ -14,14 +14,16 @@ function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
   while($row = mysql_fetch_array($result))
   {
     $numero++;  
-  echo "<tr><td width=\"25%\"><font face=\"verdana\"><a href=\"javascript:mostrarPresupuesto(".$row["id"].",'".$tipo."');\"> 
-	    <button type='button' class='btn btn-success'>Detalle</button></a></font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+    echo "<tr><td width=\"5%\"><font face=\"verdana\">" . 
+	    $numero . "</font></td>";
+    echo "<td width=\"10%\" style=\"text-align: center;\"><font face=\"verdana\">" . 
 	    $row["fecha".$tipo.""] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+    echo "<td width=\"20%\"><font face=\"verdana\">Cotizaci&oacute;n para " . 
 	    $row["tipo"] .' de '.$row["$metros"].' '.$m2o3.''. "</font></td>";
-    echo "<td  class='text-right' width=\"25%\"><font face=\"verdana\">" . 
-	    '$'. number_format($row['precioTotal'.$tipo.''],0,',','.')."</font></td></tr>";    
+    echo "<td  class='text-right' width=\"10%\"><font face=\"verdana\">" . 
+	    '$'. number_format($row['precioTotal'.$tipo.''],0,',','.')."</font></td>";    
+    echo "<td width=\"15%\" align=\"center\"><font face=\"verdana\"><a href=\"javascript:mostrarPresupuesto(".$row["id"].",'".$tipo."');\"> 
+	    <button type='button' class='btn btn-success '>Click para ver</button></a></font></td></tr>";    
     
   } 
     echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Cantidad de Presupuestos: " . $numero . 

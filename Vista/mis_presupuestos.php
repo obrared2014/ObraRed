@@ -31,13 +31,14 @@
             <div class="tab-pane active" id="radier_presupuesto"><!-- Panel Radier presupuesto -->
                 <table class="table table-bordered table-condensed table-striped">
                     <tr>        
-                        <td colspan="4"><b>PRESUPUESTOS PARA RADIER</b></td>
+                        <td colspan="5"><b>PRESUPUESTOS PARA RADIER</b></td>
                     </tr>
                     <tr>
-                        <th>Vinculo</th>
-                        <th>Fecha</th>
-                        <th>Detalle</th>
-                        <th>Precio Total</th>
+                        <th style="text-align: center;">Nº</th>
+                        <th style="text-align: center;">Fecha</th>
+                        <th style="text-align: center;">Detalle</th>
+                        <th style="text-align: center;">Precio Total</th>
+                        <th style="text-align: center;">Visualizar</th>
                     </tr>
                         <?php
                             $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
@@ -49,13 +50,14 @@
             <div class="tab-pane" id="muro_presupuesto"><!-- Panel Muro presupuesto -->
                 <table class="table table-bordered table-condensed table-striped">
                     <tr>        
-                        <td colspan="4"><b>PRESUPUESTOS PARA MURO</b></td>
+                        <td colspan="5"><b>PRESUPUESTOS PARA MURO</b></td>
                     </tr>
                     <tr>
-                        <th>Vinculo</th>
-                        <th>Fecha</th>
-                        <th>Detalle</th>
-                        <th>Precio Total</th>
+                        <th style="text-align: center;">Nº</th>
+                        <th style="text-align: center;">Fecha</th>
+                        <th style="text-align: center;">Detalle</th>
+                        <th style="text-align: center;">Precio Total</th>
+                        <th style="text-align: center;">Visualizar</th>
                     </tr>
                     <?php
                     $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
@@ -66,13 +68,14 @@
             <div class="tab-pane" id="techo_presupuesto"><!-- Panel Techo presupuesto -->
                 <table class="table table-bordered table-condensed table-striped">
                     <tr>        
-                        <td colspan="4"><b>PRESUPUESTOS PARA RADIER</b></td>
+                        <td colspan="5"><b>PRESUPUESTOS PARA TECHUMBRE</b></td>
                     </tr>
                     <tr>
-                        <th>Vinculo</th>
-                        <th>Fecha</th>
-                        <th>Detalle</th>
-                        <th>Precio Total</th>
+                        <th style="text-align: center;">Nº</th>
+                        <th style="text-align: center;">Fecha</th>
+                        <th style="text-align: center;">Detalle</th>
+                        <th style="text-align: center;">Precio Total</th>
+                        <th style="text-align: center;">Visualizar</th>
                     </tr>
                     <?php
                         $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
