@@ -1,5 +1,5 @@
 <!-- cotización -->
-<div class="row">
+<div class="row" id="ocultar_uno">
     <div class="col-lg-12">
         <ol class="breadcrumb">
             <li><a href="?sec=Inicio">Inicio</a></li>
@@ -8,11 +8,10 @@
         </ol>
     </div>
 </div>
-<div style="overflow: auto;" id="imprimir">
-<h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
-    de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h5>
-<br/>
- 
+<div style="overflow: auto;">
+    <h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
+        de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h5>
+    <br/>
     <table class="table table-striped">
         <span class="form-control"><?php echo "Presupuesto Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']].',&nbsp;realizado el d&iacute;a '.$_SESSION['fecha']?> </span>
         <thead>
@@ -48,12 +47,19 @@
             <tr>
                 <td colspan="6">&nbsp;</td>   
             </tr>               
-            <tr>
+            <tr id="ocultar_dos">
                 <td colspan="4">&nbsp;</td>
                 <td colspan="1"><button type="button" class="btn btn-primary">Enviar a E-mail <b class="glyphicon glyphicon-send"></b></button></td> 
-                <td colspan="1"><button type="button" class="btn btn-primary" onclick="javascript:imprSelec('imprimir')">Imprimir <b class="glyphicon glyphicon-print"></b></button></td>   
+                <td colspan="1"><button type="button" class="btn btn-primary" onclick="window.print();">Imprimir <b class="glyphicon glyphicon-print"></b></button></td>   
             </tr>  
 
         </tbody>
     </table>
 </div>
+
+<style type="text/css" media="print">
+    @media print {
+    #ocultar_uno {display:none;}
+    #ocultar_dos {display:none;}
+    }
+</style>

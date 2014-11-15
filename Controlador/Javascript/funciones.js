@@ -232,14 +232,6 @@ function cambiaUm(a,Um_presu){
     }
 }
 
-function imprSelec(muestra){
-    var ficha=document.getElementById(muestra);
-    var ventimp=window.open(' ','popimpr');
-    ventimp.document.write(ficha.innerHTML);
-    ventimp.document.close();
-    ventimp.print();
-    ventimp.close();
-}
 function actvaAnchoMuro(){
     var casaOpandereta=document.getElementById("tipo_muro").value;
     
