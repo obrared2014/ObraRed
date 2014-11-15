@@ -5,7 +5,7 @@ function traerMaterialesDetalles($nombreTipo,$nombreMaterial){
     require_once("../../Modelo/Materiales/consultasMateriales.php");
     if(isset($_POST['material'])){
 
-            $material = traeDetallesMateriales($nombreTipo,$nombreMaterial,$basedatos,$puerto,$servidor,$usuario,$contrasena);
+            $material = traeDetallesMaterialesPresupuestos($nombreTipo,$nombreMaterial,$basedatos,$puerto,$servidor,$usuario,$contrasena);
 
             $html = "<option value=''>Seleccione Material Detalle</option>";
             foreach($material as $indice => $registro){

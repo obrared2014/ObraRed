@@ -38,7 +38,7 @@
                         <th style="text-align: center;">Fecha</th>
                         <th style="text-align: center;">Detalle</th>
                         <th style="text-align: center;">Precio Total</th>
-                        <th style="text-align: center;">Visualizar</th>
+                        <th style="text-align: center;">Click para ver</th>
                     </tr>
                         <?php
                             $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
@@ -57,7 +57,7 @@
                         <th style="text-align: center;">Fecha</th>
                         <th style="text-align: center;">Detalle</th>
                         <th style="text-align: center;">Precio Total</th>
-                        <th style="text-align: center;">Visualizar</th>
+                        <th style="text-align: center;">Click para ver</th>
                     </tr>
                     <?php
                     $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
@@ -75,7 +75,7 @@
                         <th style="text-align: center;">Fecha</th>
                         <th style="text-align: center;">Detalle</th>
                         <th style="text-align: center;">Precio Total</th>
-                        <th style="text-align: center;">Visualizar</th>
+                        <th style="text-align: center;">Click para ver</th>
                     </tr>
                     <?php
                         $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];

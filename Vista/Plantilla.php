@@ -120,9 +120,12 @@
                         case "presupuestosAntiguos":
                             require 'presupuestosAntiguos.php';
                             break;        
-//                        case "presupuestosAntiguos2":
-//                            include 'CotizacionesAntiguas.php';
-//                            break;                            
+                        case "mantenedorMateriales":
+                            include 'materiales.php';
+                            break;           
+                        case "detallesMaterial":
+                            include 'materialesMantenedor.php';
+                            break;                           
                     }
                 }
                 include 'Footer.php';

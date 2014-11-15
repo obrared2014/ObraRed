@@ -1,11 +1,12 @@
-function buscarMateriales(){
+function buscarMateriales(busqueda){
 	
 	$tipo = $("#tipo_material").val();
 	
-	if($tipo === ""){
+	if($tipo == ""){
 			$("#material").html("<option value=''>Seleccione Material</option>");
+                        $( "#material" ).change();
                         selecciona_otro();
-	}else if($tipo === "otro"){
+	}else if($tipo == "otro"){
 			$("#material").html("<option value='otro'>Otro</option>");                        
                             selecciona_otro();
                         
@@ -13,7 +14,7 @@ function buscarMateriales(){
 		$.ajax({
 			dataType: "json",
 			data: {"tipo_material": $tipo},
-			url:   'Controlador/Materiales/buscar.php',
+			url:   'Controlador/Materiales/'+busqueda+'.php',
 			type:  'post',
 			beforeSend: function(){
 				//Lo que se hace antes de enviar el formulario
@@ -32,13 +33,45 @@ function buscarMateriales(){
 }   
 function buscarDetalles(){
 	
-	$tipo = $("#material").val();
-
-            selecciona_material($tipo);
+	$tipo = $("#tipo_material").val();
+	$material = $("#material").val();
+//        alert($tipo);alert($material);
+	if($material == ""){
+			$("#detalleMaterial").html("<option value=''>Seleccione Material</option>");
+                        selecciona_otro();
+	}else if($material == "otro"){
+			$("#detalleMaterial").html("<option value='otro'>Otro</option>");                        
+                            selecciona_otro();
+                        
+	}else {
+		$.ajax({
+			dataType: "json",
+			data: {"tipo_material": $tipo,"material": $material},
+			url:   'Controlador/Materiales/buscarDetallesMantenedor.php',
+			type:  'post',
+			beforeSend: function(){
+				//Lo que se hace antes de enviar el formulario
+				},
+			success: function(respuesta){
+				//lo que se si el destino devuelve algo
+				$("#detalleMaterial").html(respuesta.html);
+			},
+			error:	function(xhr,err){ 
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+			}
+		});
+//                selecciona_otro();
+	}
 
 }
 
-
+//function buscarDetalles(){
+//	
+//	$tipo = $("#material").val();
+//
+//            selecciona_material($tipo);
+//
+//}
 
 
 //Cubicar Medidas

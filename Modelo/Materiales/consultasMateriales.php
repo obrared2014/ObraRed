@@ -109,7 +109,7 @@ function devuelveMaterialesDetalles($material = '',$base,$port,$serv,$user,$pass
 	
 	return $resultado;
 }
-function traeDetallesMateriales($nombreTipoConstruccion,$nombreMaterial,$base,$port,$serv,$user,$pass){
+function traeDetallesMaterialesPresupuestos($nombreTipoConstruccion,$nombreMaterial,$base,$port,$serv,$user,$pass){
     
     	$resultado = false;
 	$consulta="call materiales_detalles_presupuestos('$nombreTipoConstruccion','$nombreMaterial')";
@@ -133,6 +133,53 @@ function traeDetallesMateriales($nombreTipoConstruccion,$nombreMaterial,$base,$p
 	
 	return $resultado;
 }
-
+function traeDetallesMaterialesMantenedor($idTipo,$idMaterial,$base,$port,$serv,$user,$pass){
+    
+    	$resultado = false;
+	$consulta="call materiales_detalles_mantenedor($idTipo,$idMaterial)";
+	
+	$conexion = conectarDb($base,$port,$serv,$user,$pass);
+	$sentencia = $conexion->prepare($consulta);
+	$sentencia->bindParam('material',$estado);
+	
+	try {
+		if(!$sentencia->execute()){
+			print_r($sentencia->errorInfo());
+		}
+		$resultado = $sentencia->fetchAll();
+		//$resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+		$sentencia->closeCursor();
+	}
+	catch(PDOException $e){
+		echo "Error al ejecutar la sentencia: \n";
+			print_r($e->getMessage());
+	}
+	
+	return $resultado;
+}
+function mostrarMaterialesMantenedor($idMaterial,$base,$port,$serv,$user,$pass){
+    
+    	$resultado = false;
+	$consulta="call mostrar_detalles_mantenedor($idMaterial)";
+	
+	$conexion = conectarDb($base,$port,$serv,$user,$pass);
+	$sentencia = $conexion->prepare($consulta);
+	$sentencia->bindParam('material',$estado);
+	
+	try {
+		if(!$sentencia->execute()){
+			print_r($sentencia->errorInfo());
+		}
+		$resultado = $sentencia->fetchAll();
+		//$resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+		$sentencia->closeCursor();
+	}
+	catch(PDOException $e){
+		echo "Error al ejecutar la sentencia: \n";
+			print_r($e->getMessage());
+	}
+	
+	return $resultado;
+}
 ?>
 

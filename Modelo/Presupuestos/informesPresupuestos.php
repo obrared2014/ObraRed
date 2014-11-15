@@ -23,7 +23,7 @@ function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
     echo "<td  class='text-right' width=\"10%\"><font face=\"verdana\">" . 
 	    '$'. number_format($row['precioTotal'.$tipo.''],0,',','.')."</font></td>";    
     echo "<td width=\"15%\" align=\"center\"><font face=\"verdana\"><a href=\"javascript:mostrarPresupuesto(".$row["id"].",'".$tipo."');\"> 
-	    <button type='button' class='btn btn-success '>Click para ver</button></a></font></td></tr>";    
+	    <button type='button' class='btn btn-info'><span class='glyphicon glyphicon-search'></span></button></a></font></td></tr>";    
     
   } 
     echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Cantidad de Presupuestos: " . $numero . 

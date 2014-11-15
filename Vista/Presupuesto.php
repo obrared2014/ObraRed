@@ -95,7 +95,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleArena" id="detalleArena" class="form-control" required="true">
                                                 <option value="" >Seleccione Arena</option>
                                                 <?php
-                                                    $detalle=traeDetallesMateriales('Radier','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Radier','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
 
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
@@ -108,7 +108,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleCemento" id="detalleCemento" class="form-control" required="true">
                                                 <option value="" >Seleccione Cemento</option>
                                                 <?php
-                                                    $detalle=traeDetallesMateriales('Radier','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Radier','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -119,7 +119,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleRipio" id="detalleRipio" class="form-control" required="true">
                                                 <option value="" >Seleccione Ripio</option>
                                                 <?php
-                                                    $detalle=traeDetallesMateriales('Radier','Ripio',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Radier','Ripio',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -201,7 +201,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleArena" id="detalleArena" class="form-control" required="true">
                                                 <option value="" >Seleccione Arena</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Arena',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -212,7 +212,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleCadena" id="detalleCadena" class="form-control" required="true">
                                                 <option value="" >Seleccione Cadena</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Cadenas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Cadenas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -223,7 +223,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleCemento" id="detalleCemento" class="form-control" required="true">
                                                 <option value="" >Seleccione Cemento</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Cemento',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -237,7 +237,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleLadrillo" id="detalleLadrillo" class="form-control" required="true">
                                                 <option value="" >Seleccione Ladrillo</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Ladrillos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Ladrillos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -248,7 +248,7 @@ include './Modelo/datosBD.php';
                                             <select name="detallePilar" id="detallePilar" class="form-control" required="true">
                                                 <option value="" >Seleccione Pilar</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Pilares',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Pilares',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -259,7 +259,7 @@ include './Modelo/datosBD.php';
                                             <select name="detallePuerta" id="detallePuerta" class="form-control" required="true" disabled>
                                                 <option value="" >Seleccione Puerta</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Puertas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Puertas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -273,7 +273,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleVentana" id="detalleVentana" class="form-control" required="true" disabled>
                                                 <option value="" >Seleccione Ventana</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Muro','Ventanas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Muro','Ventanas',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -360,7 +360,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleClavo" id="detalleClavo" class="form-control" required="true">
                                                 <option value="" >Seleccione Clavos</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Techo','Clavos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Techo','Clavos',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -371,7 +371,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleFieltro" id="detalleFieltro" class="form-control" required="true">
                                                 <option value="" >Seleccione Fieltro</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Techo','Fieltro',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Techo','Fieltro',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -382,7 +382,7 @@ include './Modelo/datosBD.php';
                                             <select name="detallePlancha" id="detallePlancha" class="form-control" required="true">
                                                 <option value="" >Seleccione Cubre Techo</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Techo','CubreTecho',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Techo','CubreTecho',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          
@@ -396,7 +396,7 @@ include './Modelo/datosBD.php';
                                             <select name="detalleTabla" id="detalleTabla" class="form-control" required="true">
                                                 <option value="" >Seleccione Tabla</option>
                                                 <?php 
-                                                    $detalle=traeDetallesMateriales('Techo','Madera',$basedatos,$puerto,$servidor,$usuario,$contrasena);
+                                                    $detalle=traeDetallesMaterialesPresupuestos('Techo','Madera',$basedatos,$puerto,$servidor,$usuario,$contrasena);
                                                     foreach($detalle as $indice => $registro){
                                                         echo "<option value=".$registro['id_materiales_detalles'].">".$registro['descripcion_materiales_detalles'].' Precio $'.$registro['precio_materiales_detalles']."</option>";
                                                     }                                          

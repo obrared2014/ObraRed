@@ -23,7 +23,7 @@
                     <div class="panel-heading">Tipos de Material </div>
                     <div class="panel-body">
                         <div class="col-lg-6">
-                            <select name="tipo_material" id="tipo_material" class="form-control form-group" required="true" onchange="buscarMateriales();">
+                            <select name="tipo_material" id="tipo_material" class="form-control form-group" required="true" onchange="buscarMateriales('buscar');">
                                 <option value="">Seleccione Tipo</option>
                                     <?php
                                         include_once './Modelo/Materiales/consultasMateriales.php';
@@ -112,7 +112,7 @@
 <script type="text/javascript">
    function selecciona_otro(){
        var valor=document.getElementById('tipo_material').value;
-       if(valor==='otro'){
+       if(valor=='otro'){
            document.getElementById("tipo_otro").style.display="block";
            document.getElementById("tipo_otro").required=true;
            selecciona_material(valor);
@@ -127,8 +127,8 @@
 
    function selecciona_material(tipo_sel){
 //       alert(tipo_sel);
-       if(tipo_sel==='otro'){
-           if(document.getElementById('tipo_material').value==="otro"){
+       if(tipo_sel=='otro'){
+           if(document.getElementById('tipo_material').value=="otro"){
               document.getElementById("material").disabled=true;
 //              document.getElementById("material").style.display="none";
            }           
