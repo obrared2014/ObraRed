@@ -76,6 +76,33 @@ function devuelveMateriales($tipo = '',$basedatos,$puerto,$servidor,$usuario,$co
 	
 	return $resultado;
 }
+function devuelveMaterialesMantenedor($tipo = '',$basedatos,$puerto,$servidor,$usuario,$contrasena){
+	$resultado = false;
+	$consulta = "call lista_materiales_mantenedor";
+	
+	if($tipo != ''){
+		$consulta .= "($tipo)";
+	}
+	
+	$conexion = conectarDb($basedatos,$puerto,$servidor,$usuario,$contrasena);
+	$sentencia = $conexion->prepare($consulta);
+	$sentencia->bindParam('tipo_material',$estado);
+	
+	try {
+		if(!$sentencia->execute()){
+			print_r($sentencia->errorInfo());
+		}
+		$resultado = $sentencia->fetchAll();
+		//$resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+		$sentencia->closeCursor();
+	}
+	catch(PDOException $e){
+		echo "Error al ejecutar la sentencia: \n";
+			print_r($e->getMessage());
+	}
+	
+	return $resultado;
+}
 function devuelveMaterialesDetalles($material = '',$base,$port,$serv,$user,$pass){
     
     

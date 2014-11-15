@@ -1,6 +1,6 @@
                     <div class="col-lg-12">
                         <div class="col-lg-6">
-                            <select name="tipo_material" id="tipo_material" class="form-control form-group" required="true" onchange="buscarMateriales('buscarMantenedor');">
+                            <select name="tipo_material" id="tipo_material" class="form-control form-group" required="true" onchange="buscarMaterialesMantenedor();">
                                 <option value="">Seleccione Tipo</option>
                                     <?php
                                         $idTipo=filter_input(INPUT_GET, "idTipo");

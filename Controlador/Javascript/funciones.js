@@ -1,4 +1,4 @@
-function buscarMateriales(busqueda){
+function buscarMateriales(){
 	
 	$tipo = $("#tipo_material").val();
 	
@@ -14,7 +14,7 @@ function buscarMateriales(busqueda){
 		$.ajax({
 			dataType: "json",
 			data: {"tipo_material": $tipo},
-			url:   'Controlador/Materiales/'+busqueda+'.php',
+			url:   'Controlador/Materiales/buscar.php',
 			type:  'post',
 			beforeSend: function(){
 				//Lo que se hace antes de enviar el formulario
@@ -31,6 +31,43 @@ function buscarMateriales(busqueda){
 	}
         
 }   
+function buscarMaterialesMantenedor(){
+	
+	$tipo = $("#tipo_material").val();
+	
+	if($tipo == ""){
+			$("#material").html("<option value=''>Seleccione Material</option>");
+                        $( "#material" ).change();
+                        selecciona_otro();
+	}else if($tipo == "otro"){
+			$("#material").html("<option value='otro'>Otro</option>");                        
+                            selecciona_otro();
+                        
+	}else {
+//                $("#material").html("<option value=''>Seleccione Material</option>");
+                        
+		$.ajax({
+			dataType: "json",
+			data: {"tipo_material": $tipo},
+			url:   'Controlador/Materiales/buscarMantenedor.php',
+			type:  'post',
+			beforeSend: function(){
+				//Lo que se hace antes de enviar el formulario
+				},
+			success: function(respuesta){
+				//lo que se si el destino devuelve algo
+				$("#material").html(respuesta.html);
+			},
+			error:	function(xhr,err){ 
+				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
+			}
+		});
+                $("#material").html("<option value=''>Seleccione Material</option>");
+                $( "#material" ).change();
+                
+	}
+        
+}  
 function buscarDetalles(){
 	
 	$tipo = $("#tipo_material").val();
