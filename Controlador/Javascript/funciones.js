@@ -62,9 +62,6 @@ function buscarMaterialesMantenedor(){
 				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
 			}
 		});
-                $("#material").html("<option value=''>Seleccione Material</option>");
-                $( "#material" ).change();
-                
 	}
         
 }  

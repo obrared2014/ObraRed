@@ -8,6 +8,7 @@
         </ol>
     </div>
 </div>
+<div class="bg print"></div>
 <div style="overflow: auto;">
     <h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
         de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h5>
@@ -56,10 +57,22 @@
         </tbody>
     </table>
 </div>
-
+<style type="text/css">
+    .bg {
+        background-image: url(img/LOGO_2.png);
+        width: 224px; 
+        height: 78px;
+        display: none;
+    }
+</style>
 <style type="text/css" media="print">
     @media print {
-    #ocultar_uno {display:none;}
-    #ocultar_dos {display:none;}
+    #ocultar_uno {display: none;}
+    #ocultar_dos {display: none;}
     }
+    .bg.print {
+        display: list-item;
+        list-style-image: url(img/LOGO_2.png);
+        list-style-position: inside;
+    } 
 </style>

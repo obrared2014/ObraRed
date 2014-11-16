@@ -23,25 +23,12 @@
         <div class="col-lg-12">&nbsp;</div>       
         <div class="row">
             <div class="col-lg-12">
-  
                 <div class="panel panel-default">
                     <div class="panel-heading">Detalle Material </div>
                     <div class="panel-body">
-<!--                        <div class="col-lg-6">
-                            <select name="detalleMaterial" id="detalleMaterial" class="form-control form-group" required="true" disabled="true" onchange="selecciona_material_detalle(this.value);">
-                                <option value="" >Seleccione Material Detalle</option>
-                            </select>
-                        </div>-->
-                        
                         <div class="col-lg-6">
                             <input type="text" class="form-control form-group" id="material_detalle" name="material_detalle" required="true" placeholder="Escriba Detalle de Material" value="<?php echo $descripcion;?>"/>                            
                         </div>
-<!--                        <div class="col-lg-6">
-                            <select name="materialBase" id="materialBase" class="form-control form-group" required="true" onchange="buscarDetalles();">
-                                <option value="N" >NO</option>
-                                <option value="S" >SI</option>
-                            </select>
-                        </div>-->
                     </div>
                     <div class="panel-body">
                         <div class="col-lg-4">
@@ -56,28 +43,18 @@
                         <div class="col-lg-4">
                             <input type="text" class="form-control form-group" name="precio" id="precio" placeholder="Precio" required="true" value="<?php echo $precio;?>"/>
                         </div>
-<!--                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="precio2" placeholder="Precio Referencial 2"/>
-                        </div>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control form-group" name="precio3" placeholder="Precio Referencial 3">
-                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-4">
-                <!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
+            <div class="col-lg-4 col-lg-offset-4"><!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
                 <?php 
                 $que=filter_input(INPUT_GET, "que");
-                
                 if($que=='modificar'){
                 echo '<input type="submit" class="btn btn-block btn-primary" value="Actualizar"/>'; 
                 } ?>
                 <input name="verOmodificar" id="verOmodificar" type="hidden" value="<?php echo $que;?>"/>
-                
-                
             </div>       
         </div>
     </form>
