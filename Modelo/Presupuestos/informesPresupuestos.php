@@ -7,7 +7,7 @@ function traeInformePresupuestos($nombre,$tipo,$metros,$m2o3,$idPersona){
       or die ("Error al conectar a la base de datos.");
   $query = "SELECT *  " .
       "FROM (select @f1:=".$idPersona." p) param, db_obrared.v_presupuesto_".strtolower($tipo)." " .
-	  "WHERE nombre='".$nombre."'"." and precioTotal".$tipo.">'0'".
+	  "WHERE nombre='".$nombre."'"." and precioTotal".$tipo.">'0' and id_casa='0'".
 	  "order by precioTotal".$tipo."";
   $result = mysql_query($query);
   $numero = 0;
