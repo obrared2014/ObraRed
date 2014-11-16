@@ -13,8 +13,8 @@
             foreach($material as $indice => $registro){
                     $html .= "</thead><tr><td style='text-align: center'>".$numero."</td><td>".$registro['descripcion_materiales_detalles']."</td><td style='text-align: center'>".$registro['estado_materiales_detalles'].
                     "</td><td style='text-align:center;'><a href='?sec=detallesMaterial&que=$ver&idMaterial=".$registro['id_materiales_detalles']."''><button type='button' class='btn btn-success'><span class='glyphicon glyphicon-search'></span></button>".
-                            "</td><td style='text-align:center;'><a href='?sec=detallesMaterial&que=$modificar&idMaterial=".$registro['id_materiales_detalles']."''><button type='button' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></button>".
-                            "</td><td style='text-align:center;'><a href='./Modelo/Materiales/actualizarEstadoMaterial.php?idMaterial=".$registro['id_materiales_detalles']."''><button type='button' class='btn btn-danger'><span class='glyphicon glyphicon-ban-circle'></span></button>";
+                    "</td><td style='text-align:center;'><a href='?sec=detallesMaterial&que=$modificar&idMaterial=".$registro['id_materiales_detalles']."''><button type='button' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span></button>".
+                    "</td><td style='text-align:center;'><a href='./Modelo/Materiales/actualizarEstadoMaterial.php?idMaterial=".$registro['id_materiales_detalles']."''><button type='button' class='btn btn-danger'><span class='glyphicon glyphicon-ban-circle'></span></button>";
                     $numero++;
             }
             $html = $html .="</table>";
