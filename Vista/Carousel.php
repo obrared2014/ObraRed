@@ -271,19 +271,19 @@
     </div>
     <div class="col-lg-1">&nbsp;</div>
     <!-- inicio Carrousel -->
-    <div class="col-lg-7">
+<!--    <div class="col-lg-7">
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-             <!--Indicadores--> 
+             Indicadores 
             <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             </ol>
-            <!--fin indicadores 
-             Slides -->
+            fin indicadores 
+             Slides 
             <div class="carousel-inner">
-                 <!--imagenes 1500 x 500--> 
+                 imagenes 1500 x 500 
                 <div class="item active">
                     <img src="img/img_carousel_001.jpg" class="img-responsive" alt="0">
                     <div class="carousel-caption">
@@ -311,30 +311,38 @@
                     </div>
                 </div>
             </div>
-<!--            Fin slides 
-             Control izquierda -->
+            Fin slides 
+             Control izquierda 
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
-             <!--Control derecha--> 
+             Control derecha 
             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
-         <!--fin carousel--> 
-    </div>
+         fin carousel 
+    </div>-->
     <div class="col-lg-8">
-            <div class="row">
-                <div class="col-lg-3">
-                    <img src="img/caricatura_001.png" style="width: 180px"/>
-                </div>
-                <div class="col-9">
-                    <h3><span class="glyphicon glyphicon-paperclip"></span> Gratis</h3>Recibe varios presupuestos de forma gratuita y sin compromiso
-                    <h3><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h3>No pierdas tiempo buscando empresas. Ellas te contactan a ti.
-                    <h3><span class="glyphicon glyphicon-usd"></span> Ahorra Dinero</h3>Tienes más de un presupuesto para comparar.
-                </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="img/caricatura_001.png" class="img-responsive"/>
             </div>
-            
+            <div class="col-lg-9">
+                <blockquote>
+                    <p><h3><span class="glyphicon glyphicon-paperclip"></span> Gratis</h3></p>
+                    <footer>Realiza varios presupuestos de contrucción de forma gratuita y sin compromiso</footer>
+                </blockquote>
+                <blockquote>
+                    <p><h3><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h3></p>
+                    <footer>No pierdas tiempo realiza tus presupuesto de construcción en segundos</footer>
+                </blockquote>
+                <blockquote>
+                    <p><h3><span class="glyphicon glyphicon-usd"></span> Ahorra Dinero</h3></p>
+                    <footer>Tienes más de un presupuesto de construcción para comparar.</footer>
+                </blockquote>
+            </div>
+        </div>          
     </div>
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
