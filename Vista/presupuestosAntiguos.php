@@ -8,7 +8,9 @@
         mostrarPresupuestoRadier($idPres);
     }elseif($tipo=='Techo'){
         mostrarPresupuestoTecho($idPres);
-    }    
+    }elseif($tipo=='Casa'){
+        mostrarPresupuestoCasa($idPres);
+    }       
     
     ?>
 

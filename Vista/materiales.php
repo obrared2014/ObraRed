@@ -40,4 +40,10 @@
         </div>
     </div>
 </div>
+<script>
+function cambiarSelect(){
+//    $( "#material" ).val(''); 
+    $( "#material" ).change(); 
+}
+</script>   
 

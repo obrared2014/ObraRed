@@ -37,15 +37,9 @@ function buscarMaterialesMantenedor(){
 	
 	if($tipo == ""){
 			$("#material").html("<option value=''>Seleccione Material</option>");
-                        $( "#material" ).change();
-                        selecciona_otro();
-	}else if($tipo == "otro"){
-			$("#material").html("<option value='otro'>Otro</option>");                        
-                            selecciona_otro();
-                        
-	}else {
-//                $("#material").html("<option value=''>Seleccione Material</option>");
-                        
+                        cambiarSelect();
+        }else {
+                      
 		$.ajax({
 			dataType: "json",
 			data: {"tipo_material": $tipo},
@@ -62,6 +56,8 @@ function buscarMaterialesMantenedor(){
 				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
 			}
 		});
+                $("#material").html("<option value=''></option>");
+                cambiarSelect();
 	}
         
 }  
@@ -69,10 +65,8 @@ function buscarDetalles(){
 	
 	$tipo = $("#tipo_material").val();
 	$material = $("#material").val();
-//        alert($tipo);alert($material);
 	if($material == ""){
-			$("#detalleMaterial").html("<option value=''>Seleccione Material</option>");
-                        selecciona_otro();
+                        $("#detalleMaterial").html("");
 	}else if($material == "otro"){
 			$("#detalleMaterial").html("<option value='otro'>Otro</option>");                        
                             selecciona_otro();
@@ -94,6 +88,7 @@ function buscarDetalles(){
 				alert("readyState: "+xhr.readyState+"\nstatus: "+xhr.status+"\n \n responseText: "+xhr.responseText);
 			}
 		});
+
 //                selecciona_otro();
 	}
 

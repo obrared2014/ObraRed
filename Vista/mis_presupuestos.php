@@ -25,6 +25,7 @@
             <li class="active "><a class="btn-primary" style="width: 88px; text-align: center;" href="#radier_presupuesto" role="tab" data-toggle="tab">Radier</a></li>
             <li><a class="btn-primary" style="width: 88px; text-align: center;"  href="#muro_presupuesto" role="tab" data-toggle="tab">Muro</a></li>
             <li><a class="btn-primary" style="width: 88px; text-align: center;" href="#techo_presupuesto" role="tab" data-toggle="tab">Techo</a></li>
+            <li><a class="btn-primary" style="width: 88px; text-align: center;" href="#casa_presupuesto" role="tab" data-toggle="tab">Casa</a></li>
         </ul>
         <!--Tab panes-->
         <div class="tab-content">
@@ -83,6 +84,26 @@
                     ?>
                 </table>
             </div>
+            <div class="tab-pane" id="casa_presupuesto"><!-- Panel Casa presupuesto -->
+                <table class="table table-bordered table-condensed table-striped">
+                    <tr>        
+                        <td colspan="5"><b>PRESUPUESTOS PARA CASA</b></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">Nº</th>
+                        <th style="text-align: center;">Fecha</th>
+                        <th style="text-align: center;">Detalle</th>
+                        <th style="text-align: center;">Precio Total</th>
+                        <th style="text-align: center;">Click para ver</th>
+                    </tr>
+                        <?php
+//                            $idUsuario=$_SESSION['id_persona'];
+//                            $nombre = $_SESSION['nombre'] . ' ' . $_SESSION['ap_paterno'];
+                            traeInformePresupuestosCasa($idPersona,'Casa');
+//                            traeInformePresupuestos($nombre, 'Radier', 'metrosCubicos', 'm3',$idPersona);
+                        ?>
+                </table>
+            </div>            
         </div>
     </div>
 </div>
@@ -90,5 +111,7 @@
     function mostrarPresupuesto(id,tipo){
         window.location='Index.php?sec=presupuestosAntiguos&idPres='+id+"&tipo="+tipo+"";
     }
-
+    function mostrarPresupuestoCasa(id,tipo){
+        window.location='Index.php?sec=presupuestosAntiguos&idPres='+id+"&tipo="+tipo+"";
+    }
 </script>
