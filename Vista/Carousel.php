@@ -269,82 +269,33 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-1">&nbsp;</div>
-    <!-- inicio Carrousel -->
-<!--    <div class="col-lg-7">
-        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-             Indicadores 
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-            fin indicadores 
-             Slides 
+    <div class="col-lg-6 col-lg-offset-1">
+        <div id="carousel-example-generic" style="width: 580px" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner">
-                 imagenes 1500 x 500 
-                <div class="item active">
-                    <img src="img/img_carousel_001.jpg" class="img-responsive" alt="0">
-                    <div class="carousel-caption">
-                        <h3>Con unas simples medidas de tu obra</h3>
-                        <p>Para obtener lo necesario...</p>
-                    </div>    
-                </div>
-                <div class="item">
-                    <img src="img/img_carousel_002.jpg" class="img-responsive" alt="1">
-                    <div class="carousel-caption">
-                        <h3>Levantar una construcción</h3>
-                        <p>Con ObraRed es mucho más fácil</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/img_carousel_003.jpg" class="img-responsive" alt="2">
-                    <div class="carousel-caption">
-                        <h3>Solo compra lo que utilizaras...</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/img_carousel_004.jpg"  class="img-responsive" alt="3">
-                    <div class="carousel-caption">
-                        <h3>Comienza a levantar tu obra mucho más rápido</h3>
-                    </div>
-                </div>
+                <div class="item active"><img src="img/Ferreteria/Ferreterias001.jpg" class="img-responsive" alt="0"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias002.jpg" class="img-responsive" alt="1"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias003.jpg" class="img-responsive" alt="2"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive" alt="3"></div>
             </div>
-            Fin slides 
-             Control izquierda 
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-             Control derecha 
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
         </div>
-         fin carousel 
-    </div>-->
+    </div>
     <div class="col-lg-8">
         <div class="row">
-            <div class="col-lg-3">
-                <img src="img/caricatura_001.png" class="img-responsive"/>
-            </div>
+            <div class="col-lg-3"><img src="img/caricatura_001.png" class="img-responsive"/></div>
             <div class="col-lg-9">
-                <blockquote>
-                    <p><h4><span class="glyphicon glyphicon-paperclip"></span> Gratis</h4></p>
-                    <footer>Realiza varios presupuestos de contrucción de forma gratuita</footer>
-                </blockquote>
-                <blockquote>
-                    <p><h4><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h4></p>
-                    <footer>No pierdas tiempo realiza tus presupuesto de construcción en segundos</footer>
-                </blockquote>
-                <blockquote>
-                    <p><h4><span class="glyphicon glyphicon-usd"></span> Ahorra Dinero</h4></p>
-                    <footer>Tienes más de un presupuesto de construcción para comparar.</footer>
-                </blockquote>
-                <blockquote>
-                    <p><h4><span class="glyphicon glyphicon-usd"></span> Registrate</h4></p>
-                    <footer>Resgistrate en ObraRed y forma parte de nuestra red</footer>
-                </blockquote>
+                <h4><span class="glyphicon glyphicon-star-empty"></span>Gratis</h4>
+                <h4><small>&nbsp;- Realiza varios presupuestos de contrucción de forma gratuita.</small></h4>
+                
+                <h4><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h4>
+                <h4><small>&nbsp;- No pierdas tiempo realiza tus presupuesto de construcción en segundos.</small></h4>
+                
+                <h4><span class="glyphicon glyphicon-usd"></span> Ahorra Dinero</h4>
+                <h4><small>&nbsp;- Tienes más de un presupuesto de construcción para comparar.</small></h4>
+                
+                <h4><span class="glyphicon glyphicon-thumbs-up"></span> Registrate</h4>
+                <h4><small>&nbsp;- Registrate en ObraRed y forma parte de nuestra red.</small></h4>
             </div>
         </div>          
     </div>
