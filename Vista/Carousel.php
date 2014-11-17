@@ -290,14 +290,20 @@
         <br/><br/>
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item active"><img src="img/Ferreteria/Ferreterias001.jpg" class="img-responsive" alt="0"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias002.jpg" class="img-responsive" alt="1"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias003.jpg" class="img-responsive" alt="2"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias007.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias008.jpg" class="img-responsive" alt="3"></div>
+                <div class="item active"><img src="img/Ferreteria/Ferreterias001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias008.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Barracas/Barraca_001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Transportes/Transporte_001.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Barracas/Barraca_002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Transportes/Transporte_002.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Barracas/Barraca_003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Transportes/Transporte_003.jpg" class="img-responsive"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias007.jpg" class="img-responsive"></div>
             </div>
         </div>
     </div>
