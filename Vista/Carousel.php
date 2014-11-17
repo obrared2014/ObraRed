@@ -278,6 +278,8 @@
                 <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive" alt="3"></div>
                 <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive" alt="3"></div>
                 <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias007.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias008.jpg" class="img-responsive" alt="3"></div>
             </div>
         </div>
     </div>
