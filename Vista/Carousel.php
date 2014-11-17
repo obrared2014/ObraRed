@@ -273,7 +273,7 @@
             <div class="col-lg-3"><img src="img/caricatura_001.png" class="img-responsive"/></div>
             <div class="col-lg-9">
                 <h4><span class="glyphicon glyphicon-star-empty"></span>Gratis</h4>
-                <h4><small>&nbsp;- Realiza varios presupuestos de contrucción de forma gratuita.</small></h4>
+                <h4><small>&nbsp;- Realiza varios presupuestos de construcción de forma gratuita.</small></h4>
                 
                 <h4><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h4>
                 <h4><small>&nbsp;- No pierdas tiempo realiza tus presupuesto de construcción en segundos.</small></h4>
