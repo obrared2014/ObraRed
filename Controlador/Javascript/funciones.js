@@ -159,7 +159,6 @@ function activaCampos(tipo_presu){
 //    document.getElementById("alto").disabled=false;
 //    document.getElementById("ancho").disabled=false;
 //    document.getElementById("largo").disabled=false;
-
     if(tipo_presu == "presu"){
         document.getElementById("alto_presu").disabled=false;
         document.getElementById("ancho_presu").disabled=false;
@@ -169,24 +168,39 @@ function activaCampos(tipo_presu){
         document.getElementById("alto_radier").disabled=false;
         document.getElementById("ancho_radier").disabled=false;
         document.getElementById("largo_radier").disabled=false;
+        
+        valorVacio('radier');
     }
     if(tipo_presu == "muro"){
         document.getElementById("alto_muro").disabled=false;
         document.getElementById("ancho_muro").disabled=false;
         document.getElementById("largo_muro").disabled=false;
+        valorVacio('muro');
     }
     if(tipo_presu == "techo"){
         document.getElementById("aguas_techo").disabled=false;
         document.getElementById("ancho_techo").disabled=false;
         document.getElementById("largo_techo").disabled=false;
+        valorVacio('techo');
     }
     if(tipo_presu == "casa"){
         document.getElementById("alto_casa").disabled=false;
         document.getElementById("ancho_casa").disabled=false;
         document.getElementById("largo_casa").disabled=false;
+        valorVacio('casa');
     }
 }
-
+function valorVacio(que){
+//    alert("vacio");
+    var alto='alto_'+que;
+    var ancho='ancho_'+que;
+    var largo='largo_'+que;
+    if(que!='techo'){
+        document.getElementById(alto).value="";
+    }
+    document.getElementById(ancho).value="";
+    document.getElementById(largo).value="";
+}
 function cambiaUm(a,Um_presu){
    
     if(Um_presu == "presu"){
