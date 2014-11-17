@@ -331,7 +331,7 @@
             <div class="col-lg-9">
                 <blockquote>
                     <p><h3><span class="glyphicon glyphicon-paperclip"></span> Gratis</h3></p>
-                    <footer>Realiza varios presupuestos de contrucción de forma gratuita y sin compromiso</footer>
+                    <footer>Realiza varios presupuestos de contrucción de forma gratuita</footer>
                 </blockquote>
                 <blockquote>
                     <p><h3><span class="glyphicon glyphicon-time"></span> Ahorra Tiempo</h3></p>
@@ -340,6 +340,10 @@
                 <blockquote>
                     <p><h3><span class="glyphicon glyphicon-usd"></span> Ahorra Dinero</h3></p>
                     <footer>Tienes más de un presupuesto de construcción para comparar.</footer>
+                </blockquote>
+                <blockquote>
+                    <p><h3><span class="glyphicon glyphicon-usd"></span> Registrate</h3></p>
+                    <footer>Resgistrate en ObraRed y forma parte de nuestra red</footer>
                 </blockquote>
             </div>
         </div>          
