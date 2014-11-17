@@ -1,5 +1,8 @@
 <!-- cotización Radier-->
         <tr>    
+            <td colspan="6" class="text-left">&nbsp;</td>
+        </tr>  
+        <tr>    
             <td colspan="6" class="text-left"><b>RADIER</b></td>
         </tr>  
           <tr>
