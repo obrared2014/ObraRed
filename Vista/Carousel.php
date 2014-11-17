@@ -140,7 +140,6 @@
                     </div>
                 </form>
             </div>
-
             <div class="tab-pane" id="techo_basico"><!-- Panel Techo -->
                 <form class="form-horizontal" action="./Modelo/Presupuestos/obtenerPresupuestos.php" method="POST" name="form_presupuesto_medidas_techo">
                     <input type="hidden" name="idUsuario" id="idUsuario" value="0<?php
@@ -269,20 +268,6 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6 col-lg-offset-1">
-        <div id="carousel-example-generic" style="width: 580px" class="carousel slide " data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active"><img src="img/Ferreteria/Ferreterias001.jpg" class="img-responsive" alt="0"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias002.jpg" class="img-responsive" alt="1"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias003.jpg" class="img-responsive" alt="2"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias007.jpg" class="img-responsive" alt="3"></div>
-                <div class="item"><img src="img/Ferreteria/Ferreterias008.jpg" class="img-responsive" alt="3"></div>
-            </div>
-        </div>
-    </div>
     <div class="col-lg-8">
         <div class="row">
             <div class="col-lg-3"><img src="img/caricatura_001.png" class="img-responsive"/></div>
@@ -300,6 +285,21 @@
                 <h4><small>&nbsp;- Registrate en ObraRed y forma parte de nuestra red.</small></h4>
             </div>
         </div>          
+    </div>
+    <div class="col-lg-4 col-lg-offset-2">
+        <br/><br/>
+        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active"><img src="img/Ferreteria/Ferreterias001.jpg" class="img-responsive" alt="0"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias002.jpg" class="img-responsive" alt="1"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias003.jpg" class="img-responsive" alt="2"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias004.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias005.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias006.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias007.jpg" class="img-responsive" alt="3"></div>
+                <div class="item"><img src="img/Ferreteria/Ferreterias008.jpg" class="img-responsive" alt="3"></div>
+            </div>
+        </div>
     </div>
 </div>
 <!--<a href="Vista/PDF.php">PDF</a>-->
