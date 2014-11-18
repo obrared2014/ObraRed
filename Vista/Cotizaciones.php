@@ -43,7 +43,7 @@
                 <td class="text-right" colspan="1"><b>$ <?php echo $_SESSION['totalPresupuesto'.$_SESSION['que']]?></b></td>  
             </tr>  
             <tr>
-                <td colspan="6"><b>Nota:</b> Cabe destacar que los valores presentados incluyen IVA. y debe considerar un 10% adicional del presupuesto cuyo monto asciende a $ <?php echo $_SESSION['total'.$_SESSION['que'].'10']?>.- pesos.</td>   
+                <td colspan="6"><b>Nota:</b> Los valores presentados incluyen IVA. y debe considerar un 10% adicional del presupuesto cuyo monto asciende a $ <?php echo $_SESSION['total'.$_SESSION['que'].'10']?>.- pesos.</td>   
             </tr>   
             <tr>
                 <td colspan="6">&nbsp;</td>   
