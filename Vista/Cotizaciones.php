@@ -10,8 +10,8 @@
 </div>
 <div class="bg print"></div>
 <div style="overflow: auto;">
-    <h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle la cotización para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
-        de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los materiales seleccionados</h5>
+    <h5>Estimado <?php echo $_SESSION['Persona']?> nos es grato entregarle un presupuesto para la construcci&oacute;n de <?php echo $_SESSION['descripcion'.$_SESSION['que']]?> 
+        de <?php echo $_SESSION['metros'.$_SESSION['que']]?> m<?php echo $_SESSION['m2m3']?>  con los siguientes materiales</h5>
     <br/>
     <table class="table table-striped">
         <span class="form-control"><?php echo "Presupuesto Nº ".$_SESSION['id_presupuesto'.$_SESSION['que']].',&nbsp;realizado el d&iacute;a '.$_SESSION['fecha']?> </span>
