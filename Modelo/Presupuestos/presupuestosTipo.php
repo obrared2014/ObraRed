@@ -171,6 +171,9 @@
         $largoP=filter_input(INPUT_POST, "largo");
         $tipoMuro=filter_input(INPUT_POST, "tipo_muro");
         
+        if($tipoMuro=='Pandereta'){
+            $anchoP=0;
+        }
         if($unidadMedida=='C'){
             $altoP=$altoP/100;
             $anchoP=$anchoP/100;
@@ -194,6 +197,7 @@
             }else{
                 $idPuerta=0;
                 $idVentana=0; 
+                
             }
             
             $consulta="call crear_presupuesto_muro($idUsuario,'$tipoPresupuesto',$altoP,$anchoP,$largoP,'$tipoMuro',$idArena,$idCadena,$idCemento,$idLadrillo,$idPilar,$idPuerta,$idVentana)";
