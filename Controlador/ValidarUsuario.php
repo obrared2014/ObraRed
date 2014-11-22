@@ -26,6 +26,7 @@ if($error==1){
                     $_SESSION['actividad'] = $row ['actividad'];
                     $_SESSION['telefono'] = $row ['telefono'];
                     $_SESSION['direccion'] = $row ['direccion'];
+                    $_SESSION['perfil'] = $row ['perfil'];
                     header("Location:../Index.php?sec=Presupuesto");
                 }
             }

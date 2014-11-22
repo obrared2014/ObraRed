@@ -45,6 +45,7 @@
                         <li><a href="?sec=Perfil"><b class="glyphicon glyphicon-cog"></b>&nbsp;Perfil</a></li>
                         <li><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
                         <li><a href="?sec=mantenedorMateriales"><b class="glyphicon glyphicon-briefcase"></b>&nbsp;Materiales</a></li> 
+                        <li><a href="?sec=mantenedorUsuarios"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Usuarios</a></li>  
                         <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>  
                         <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>

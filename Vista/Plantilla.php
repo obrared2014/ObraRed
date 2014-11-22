@@ -125,7 +125,13 @@
                             break;           
                         case "detallesMaterial":
                             include 'materialesMantenedor.php';
-                            break;                           
+                            break;     
+                        case "mantenedorUsuarios":
+                            include 'usuarios.php';
+                            break;    
+                        case "detallesPersona":
+                            include 'usuariosMantenedor.php';
+                            break;                         
                     }
                 }
                 include 'Footer.php';

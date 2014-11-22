@@ -54,6 +54,8 @@
 function cambiarSelect(){
 //    $( "#material" ).val(''); 
     $( "#material" ).change(); 
+    
 }
+
 </script>   
 

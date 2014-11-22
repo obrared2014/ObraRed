@@ -9,27 +9,37 @@
                 </script>';        
             }else{
                 
-                $idMaterialDetalle=filter_input(INPUT_GET, "idMaterialDetalle");
-                $idMaterial=filter_input(INPUT_GET, "idMaterial");
-                $idTipoMaterial=filter_input(INPUT_GET, "idTipoMaterial");
+                $nombrePersona= htmlentities($_POST["nombre"], ENT_QUOTES,'UTF-8');
+                $aPp= htmlentities($_POST["apPaterno"], ENT_QUOTES,'UTF-8');
+                $aPm= htmlentities($_POST["apMaterno"], ENT_QUOTES,'UTF-8');
+                $correo= htmlentities($_POST["email"], ENT_QUOTES,'UTF-8');
+                $act= htmlentities($_POST["actividad"], ENT_QUOTES,'UTF-8');
+                $phone= htmlentities($_POST["fono"], ENT_QUOTES,'UTF-8');
+                $address= htmlentities($_POST["direccion"], ENT_QUOTES,'UTF-8');
+                $perfiles= htmlentities($_POST["perfil"], ENT_QUOTES,'UTF-8');
+                $rutt= htmlentities($_POST["rut"], ENT_QUOTES,'UTF-8');
+                $id = $_POST["idPersona"];
+//                $alto = $_POST["alto"];
+//                $largo = $_POST["largo"];
+//                $ancho = $_POST["ancho"];
+//                $precio = $_POST["precio"];
+//                $id = $_POST["idMaterial"];
+//                
+                $modificar='modificar';
                 
-                $actualizar = mysql_query("call actualizar_base_material($idTipoMaterial,$idMaterial,$idMaterialDetalle)");
+                $actualizar = mysql_query("call actualizar_persona($id,'$nombrePersona','$aPp','$aPm','$correo','$act','$phone','$address','$perfiles','$rutt')");
                 
 //                if($insertar>0){
                 if($actualizar){ 
                         echo '
                         <script languaje="javascript">
                             alert("Datos actualizados satisfactoriamente");
-                            
-                            location.href = "../../index.php?sec=mantenedorMateriales";
-
-
-                         
+                            location.href = "../../index.php?sec=detallesPersona&que='.$modificar.'&idPersona='.$id.'";
                         </script>';  
                 }else{
                       echo ' <script languaje="javascript">
                             alert("Error al ingresar los datos");
-                            location.href = "../../index.php??sec=mantenedorMateriales";
+                            location.href = "../../index.php??sec=detallesPersona&que='.$modificar.'&idPersona='.$id.'";
                         </script>';
                 }                
 
