@@ -31,6 +31,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-star"></b>&nbsp;Presupuesto <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Presupuesto"><b class="glyphicon glyphicon-list-alt"></b>&nbsp;Crear Presupuesto</a></li>
+                        <li style="display: none;" id="mis_presupuestos"><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
                         <li><a href="?sec=Buscar"><b class="glyphicon glyphicon-search"></b>&nbsp;Buscar</a></li>
                     </ul>
                 </li>               
@@ -43,21 +44,15 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bienvenido <?php echo $_SESSION['nombre'].' '.$_SESSION['ap_paterno'] ?> <b class="glyphicon glyphicon-user"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="?sec=Perfil"><b class="glyphicon glyphicon-cog"></b>&nbsp;Perfil</a></li>
-                        <li><a href="?sec=muestra_presupuestos"><b class="glyphicon glyphicon-folder-open"></b>&nbsp;Mis Presupuestos</a></li> 
                         <li><a href="?sec=mantenedorMateriales"><b class="glyphicon glyphicon-briefcase"></b>&nbsp;Materiales</a></li> 
                         <li><a href="?sec=mantenedorUsuarios"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Usuarios</a></li>  
                         <li><a href="?sec=Agrega_Materiales"><b class="glyphicon glyphicon-floppy-open"></b>&nbsp;Agregar Materiales</a></li>  
                         <li><a href="Controlador/Logout.php"><b class="glyphicon glyphicon-off"></b>&nbsp;Cerrar Sesión</a></li>
                     </ul>
                 </li>
-                <!--<script type="text/javascript">document.getElementById("drop_presupuesto").style.display="block";</script>-->
-                <!--<script type="text/javascript">document.getElementById("presupuesto").style.display="block";</script>-->
                 <script type="text/javascript">document.getElementById("servicios_logout").style.display="none";</script>
                 <script type="text/javascript">document.getElementById("servicios_login").style.display="block";</script>
-                <!--<script type="text/javascript">document.getElementById("contacto_logout").style.display="none";</script>-->
-                <!--<script type="text/javascript">document.getElementById("contacto_login").style.display="block";</script>-->
-                <!--<script type="text/javascript">document.getElementById("buscar").style.display="block";</script>-->
-                <!--<script type="text/javascript">document.getElementById("AgregaMateriales").style.display="block";</script>-->
+                <script type="text/javascript">document.getElementById("mis_presupuestos").style.display="block";</script>
             </ul>
             <?php }else{ ?>
                 <ul class="nav navbar-nav navbar-right">

@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-lg-offset-4"><!--<button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
+            <div class="col-lg-4 col-lg-offset-4">
                 <?php 
                 $que=filter_input(INPUT_GET, "que");
                 if($que=='modificar'){

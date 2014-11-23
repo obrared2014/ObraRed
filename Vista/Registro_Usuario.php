@@ -1,6 +1,4 @@
 <!--Registro Usuario -->
-<!--<script type="text/javascript" src="Controlador/Javascript/jQueryRut.js"></script>
-<script type="text/javascript" src="Controlador/Javascript/jquery.Rut.js"></script>-->
 <div class="modal fade" id="formulario-registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -59,18 +57,6 @@
                     </div>                   
                 </form>
             </div>
-<!--            <div class="modal-footer">
-                <input type="submit" class="btn btn-block btn-primary btn-large" value="Registrar"/>
-                <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_usuario.submit();">Enviar <span class="glyphicon glyphicon-ok"></span></button>
-                <button type="button" class="btn btn-block btn-danger" data-dismiss="modal">Cerrar <span class="glyphicon glyphicon-remove"></span></button>
-            </div>-->
         </div>
     </div>
 </div>
-
-<!--<script>                
-$("#rut_").Rut({
-   on_error: function(){ 'Rut incorrecto'); },
-   format_on: 'keyup'
-})
-</script>-->

@@ -22,7 +22,6 @@
                     $seccion='Inicio';
                 }
                 if(!$_SESSION){
-//                    include 'Oferta.php';
                     switch($seccion){
                         case "Inicio":
                             include 'Carousel.php';

@@ -39,92 +39,82 @@
         <form class="form" action="./Modelo/usuarios/actualizarUsuarios.php" name="registro_usuarios" method="POST">
             <input name="idPersona" id="idPersona" type="hidden" value="<?php echo $idPersona;?>"/>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Nombre</div>
+                        <div class="panel-heading">Datos Personales</div>
                         <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="nombre" name="nombre" required="true" placeholder="Escriba Nombre" value="<?php echo $nombre;?>"/>                            
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Rut</span>
+                                    <input type="text" class="form-control form-group" id="rut" name="rut" required="true" placeholder="Escriba Rut" value="<?php echo $run;?>"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">&nbsp;</div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Nombre</span>
+                                    <input type="text" class="form-control form-group" id="nombre" name="nombre" required="true" placeholder="Escriba Nombre" value="<?php echo $nombre;?>"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Ap. Paterno</span>
+                                    <input type="text" class="form-control form-group" id="apPaterno" name="apPaterno" required="true" placeholder="Escriba Apellido Paterno" value="<?php echo $apPaterno;?>"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Ap. Materno</span>
+                                    <input type="text" class="form-control form-group" id="apMaterno" name="apMaterno" required="true" placeholder="Escriba Apellido Materno" value="<?php echo $apMaterno;?>"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">&nbsp;</div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">E-Mail</span>
+                                    <input type="text" class="form-control form-group" id="email" name="email" required="true" placeholder="Escriba E-Mail" value="<?php echo $email;?>"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Dirección</span>
+                                    <input type="text" class="form-control form-group" id="direccion" name="direccion" required="true" placeholder="Escriba Direcci&oacute;n" value="<?php echo $dir;?>"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Apellido Paterno</div>
+                        <div class="panel-heading">Datos de Cuenta</div>
                         <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="apPaterno" name="apPaterno" required="true" placeholder="Escriba Apellido Paterno" value="<?php echo $apPaterno;?>"/>                            
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Usuario</span>
+                                    <input type="text" class="form-control form-group" id="" name="" required="true" placeholder="Escriba usuario" value=""/>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Apellido Materno</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="apMaterno" name="apMaterno" required="true" placeholder="Escriba Apellido Materno" value="<?php echo $apMaterno;?>"/>                            
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Actividad</span>
+                                    <input type="text" class="form-control form-group" id="actividad" name="actividad" required="true" placeholder="Escriba Actividad" value="<?php echo $trabajo;?>"/>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>   
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">E-Mail</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="email" name="email" required="true" placeholder="Escriba E-Mail" value="<?php echo $email;?>"/>                            
+                            <div class="col-lg-12">&nbsp;</div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Teléfono</span>
+                                    <input type="text" class="form-control form-group" id="fono" name="fono" required="true" placeholder="Escriba Tel&eacute;fono" value="<?php echo $fono;?>"/>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>    
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Actividad</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="actividad" name="actividad" required="true" placeholder="Escriba Actividad" value="<?php echo $trabajo;?>"/>                            
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Perfil</span>
+                                    <input type="text" class="form-control form-group" id="perfil" name="perfil" required="true" readonly value="<?php echo $perfil;?>"/>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div> 
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Tel&eacute;fono</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="fono" name="fono" required="true" placeholder="Escriba Tel&eacute;fono" value="<?php echo $fono;?>"/>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>         
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Direcci&oacute;n</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="direccion" name="direccion" required="true" placeholder="Escriba Direcci&oacute;n" value="<?php echo $dir;?>"/>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Perfil</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="perfil" name="perfil" required="true" readonly value="<?php echo $perfil;?>"/>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>          
-                <div class="col-lg-4"  name="cambioPerfil" id="cambioPerfil">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Seleccione Perfil</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <select name="selPerfil" id="selPerfil" onChange="javascript:cambiaPerfil(this.value);">
+                            <div class="col-lg-4" name="cambioPerfil" id="cambioPerfil">
+                                <select class="form-control" name="selPerfil" id="selPerfil" onChange="javascript:cambiaPerfil(this.value);">
                                     <option value="">Seleccione Perfil</option>
                                     <option value="ADMIN">ADMIN</option>
                                     <option value="REGISTRO">REGISTRO</option>
@@ -133,44 +123,9 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Rut</div>
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-                                <input type="text" class="form-control form-group" id="rut" name="rut" required="true" placeholder="Escriba Rut" value="<?php echo $run;?>"/>                            
-                            </div>
-                        </div>
-                    </div>
-                </div>                
-<!--                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Medidas Material</div>
-                        <div class="panel-body">
-                            <div class="col-lg-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Alto</span>
-                                    <input type="text" class="form-control form-group" name="alto" id="alto" placeholder="Alto" required="true" value="<?php echo $alto;?>"/>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Ancho</span>
-                                    <input type="text" class="form-control form-group" name="ancho" id="ancho" placeholder="Ancho" required="true" value="<?php echo $ancho;?>"/>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="input-group">
-                                    <span class="input-group-addon">Largo</span>
-                                    <input type="text" class="form-control form-group" name="largo" id="largo" placeholder="Largo" required="true" value="<?php echo $largo;?>"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+                </div>
             </div>
-            <!--<div class="col-lg-4 col-lg-offset-4"><button type="button" class="btn btn-block btn-primary" data-dismiss="modal" onclick="registro_materiales.submit()">Registrar <span class="glyphicon glyphicon-ok"></span></button>-->
+            <div class="col-lg-4 col-lg-offset-4">
                 <?php 
                 $que=filter_input(INPUT_GET, "que");
                 if($que=='modificar'){

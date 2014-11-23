@@ -335,4 +335,3 @@ function actvaAnchoMuroAvanzado(){
 //    4. 27 lts de agua.
 //
 //Esta mezcla rinde 167 lts.
-
