@@ -53,19 +53,19 @@
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">Nombre</span>
-                                    <input type="text" class="form-control form-group" id="nombre" name="nombre" required="true" placeholder="Escriba Nombre" value="<?php echo $nombre;?>"/>
+                                    <input type="text" class="form-control form-group" id="nombre" name="nombre" required="true" placeholder="Escriba Nombre" onkeypress="ValidaSoloLetras();" value="<?php echo $nombre;?>"/>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">Ap. Paterno</span>
-                                    <input type="text" class="form-control form-group" id="apPaterno" name="apPaterno" required="true" placeholder="Escriba Apellido Paterno" value="<?php echo $apPaterno;?>"/>
+                                    <input type="text" class="form-control form-group" id="apPaterno" name="apPaterno" required="true" placeholder="Escriba Apellido Paterno" onkeypress="ValidaSoloLetras();" value="<?php echo $apPaterno;?>"/>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">Ap. Materno</span>
-                                    <input type="text" class="form-control form-group" id="apMaterno" name="apMaterno" required="true" placeholder="Escriba Apellido Materno" value="<?php echo $apMaterno;?>"/>
+                                    <input type="text" class="form-control form-group" id="apMaterno" name="apMaterno" required="true" placeholder="Escriba Apellido Materno" onkeypress="ValidaSoloLetras();" value="<?php echo $apMaterno;?>"/>
                                 </div>
                             </div>
                             <div class="col-lg-12">&nbsp;</div>
@@ -97,14 +97,14 @@
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">Actividad</span>
-                                    <input type="text" class="form-control form-group" id="actividad" name="actividad" required="true" placeholder="Escriba Actividad" value="<?php echo $trabajo;?>"/>
+                                    <input type="text" class="form-control form-group" id="actividad" name="actividad" required="true" placeholder="Escriba Actividad" onkeypress="ValidaSoloLetras();" value="<?php echo $trabajo;?>"/>
                                 </div>
                             </div>
                             <div class="col-lg-12">&nbsp;</div>
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">Teléfono</span>
-                                    <input type="text" class="form-control form-group" id="fono" name="fono" required="true" placeholder="Escriba Tel&eacute;fono" value="<?php echo $fono;?>"/>
+                                    <input type="text" class="form-control form-group" id="fono" name="fono" required="true" placeholder="Escriba Tel&eacute;fono" onkeypress="ValidaSoloNumeros()();" value="<?php echo $fono;?>"/>
                                 </div>
                             </div>
                             <div class="col-lg-4">
