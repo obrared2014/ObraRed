@@ -43,7 +43,7 @@ loadDoc("k="+str,"Vista/proc3.php",function()
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-search"></b> Buscar</h1>
+            <h2><b class="glyphicon glyphicon-search"></b> Buscar</h2>
         </div>
         <form class="form" method="post" action="Index.php?sec=ResBuscar" name="buscar_materiales">
             <div class="panel panel-default">

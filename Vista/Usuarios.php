@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-user"></b> Mantenedor de Usuarios</h1>
+            <h2><b class="glyphicon glyphicon-user"></b> Mantenedor de Usuarios</h2>
         </div>
     </div>
     <div class="col-lg-12">

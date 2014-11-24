@@ -29,7 +29,7 @@
 <div class="row">
     <div class="col-lg-10">
         <div class="page-header">
-            <h3><b class="glyphicon glyphicon-eye-open"></b> Datos Usuario <?php echo $nombre." ".$apPaterno; ?></h3>
+            <h2><b class="glyphicon glyphicon-eye-open"></b> Datos Usuario <?php echo $nombre." ".$apPaterno; ?></h2>
         </div>
     </div>
     <div class="col-lg-2">

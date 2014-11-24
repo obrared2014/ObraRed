@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-eye-open"></b> Visión</h1>
+            <h2><b class="glyphicon glyphicon-eye-open"></b> Visión</h2>
         </div>
     </div>
     <div class="col-lg-3">

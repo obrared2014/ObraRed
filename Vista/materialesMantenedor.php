@@ -25,7 +25,7 @@
 <div class="row">
     <div class="col-lg-10">
         <div class="page-header">
-            <h3><b class="glyphicon glyphicon-eye-open"></b> Detalle Material <?php echo $registro['descripcion_materiales_detalles']; ?></h3>
+            <h2><b class="glyphicon glyphicon-eye-open"></b> Detalle Material <?php echo $registro['descripcion_materiales_detalles']; ?></h2>
         </div>
     </div>
     <div class="col-lg-2">

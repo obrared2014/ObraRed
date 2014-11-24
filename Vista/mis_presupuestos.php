@@ -14,7 +14,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-folder-open"></b> Mis Presupuestos</h1>
+            <h2><b class="glyphicon glyphicon-folder-open"></b> Mis Presupuestos</h2>
         </div>
     </div>
 </div>

@@ -14,7 +14,7 @@ include './Modelo/datosBD.php';
 <div class="row">
     <div class="col-lg-12">
         <div class="page-header">
-            <h1><b class="glyphicon glyphicon-list-alt"></b> Crear Presupuesto</h1>
+            <h2><b class="glyphicon glyphicon-list-alt"></b> Crear Presupuesto</h2>
         </div>
     </div>
 </div>
