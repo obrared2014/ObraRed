@@ -14,6 +14,7 @@
         $fono=$registro['telefono'];
         $dir=$registro['direccion'];
         $perfil=$registro['perfil'];
+        $username=$registro['login_usuario'];
 //        $base=$registro['material_base_materiales_detalles'];
     }    
 ?>
@@ -90,8 +91,8 @@
                         <div class="panel-body">
                             <div class="col-lg-4">
                                 <div class="input-group">
-                                    <span class="input-group-addon">Usuario</span>
-                                    <input type="text" class="form-control form-group" id="" name="" required="true" placeholder="Escriba usuario" value=""/>
+                                    <span class="input-group-addon">Username</span>
+                                    <input type="text" class="form-control form-group" id="" name="" required="true" placeholder="Escriba usuario" value="<?php echo $username;?>" readonly/>
                                 </div>
                             </div>
                             <div class="col-lg-4">
