@@ -49,8 +49,8 @@
                 <td colspan="6">&nbsp;</td>   
             </tr>               
             <tr id="ocultar_dos">
-                <td colspan="4">&nbsp;</td>
-                <td colspan="1"><button type="button" class="btn btn-primary">Enviar a E-mail <b class="glyphicon glyphicon-send"></b></button></td> 
+                <td colspan="5">&nbsp;</td>
+                <!--<td colspan="1"><button type="button" class="btn btn-primary">Enviar a E-mail <b class="glyphicon glyphicon-send"></b></button></td>--> 
                 <td colspan="1"><button type="button" class="btn btn-primary" onclick="window.print();">Imprimir <b class="glyphicon glyphicon-print"></b></button></td>   
             </tr>  
 

@@ -13,10 +13,10 @@
             <h2><b class="glyphicon glyphicon-ok-sign"></b> Misión</h2>
         </div>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-xs-3">
         <img src="img/misionvision.jpg" class="img-responsive" alt="Responsive image">
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 col-xs-9">
         <h3>
             <span>
                 Entregar a nuestros clientes una ayuda de excelencia con una 

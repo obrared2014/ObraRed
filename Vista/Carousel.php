@@ -270,8 +270,8 @@
     </div>
     <div class="col-lg-8">
         <div class="row">
-            <div class="col-lg-3"><img src="img/caricatura_001.png" class="img-responsive"/></div>
-            <div class="col-lg-9">
+            <div class="col-lg-3 col-xs-3"><img src="img/caricatura_001.png" class="img-responsive"/></div>
+            <div class="col-lg-9 col-xs-9">
                 <h4><span class="glyphicon glyphicon-star-empty"></span>Gratis</h4>
                 <h4><small>&nbsp;- Realiza varios presupuestos de construcción de forma gratuita.</small></h4>
                 
@@ -286,7 +286,7 @@
             </div>
         </div>          
     </div>
-    <div class="col-lg-4 col-lg-offset-2">
+    <div class="col-lg-4 col-lg-offset-2 col-xs-offset-2">
         <br/><br/>
         <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner">

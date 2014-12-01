@@ -13,10 +13,10 @@
             <h2><b class="glyphicon glyphicon-question-sign"></b> Quienes Somos</h2>
         </div>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-xs-3">
         <img src="img/quienes_somos.jpg" class="img-responsive" alt="Responsive image">
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 col-xs-9">
         <h3>
             <span>
                 ObraRed es una empresa nacida en el año 2014 con la idea de 
